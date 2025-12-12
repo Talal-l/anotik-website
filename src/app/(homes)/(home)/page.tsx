@@ -14,11 +14,11 @@ import Footer from "@/layout/footer/footer-one";
 import Header from "@/layout/header/header-one";
 import DigitalAgencyWrapper from "./_components/digital-agency-wrapper";
 import CustomCursor from "@/components/common/custom-cursor";
+import SplitTextDemo from "@/components/common/split-text-demo";
 
 export default function HomePage() {
   return (
     <>
-
       {/* custom cursor start */}
       <CustomCursor />
       {/* custom cursor end */}
@@ -28,10 +28,16 @@ export default function HomePage() {
       {/* Header area end */}
 
       {/* Main wrapper start */}
-      <MainWrapper bodyCls={['body-wrapper','body-digital-agency', 'font-heading-instrumentsans-medium']}>
+      <MainWrapper
+        bodyCls={[
+          "body-wrapper",
+          "body-digital-agency",
+          "font-heading-instrumentsans-medium",
+        ]}
+      >
         <DigitalAgencyWrapper>
           <main>
-
+            <SplitTextDemo></SplitTextDemo>
             {/* Hero area start */}
             <HeroOne />
             {/* Hero area end */}

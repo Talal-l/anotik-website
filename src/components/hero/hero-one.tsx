@@ -1,7 +1,7 @@
-import Image from 'next/image'
-import shape_3 from '@/assets/imgs/shape/shape-3.webp';
-import shape_2 from '@/assets/imgs/shape/shape-2.webp';
-import shape_1 from '@/assets/imgs/shape/shape-1.webp';
+import Image from "next/image";
+import shape_3 from "@/assets/imgs/shape/shape-3.webp";
+import shape_2 from "@/assets/imgs/shape/shape-2.webp";
+import shape_1 from "@/assets/imgs/shape/shape-1.webp";
 
 export default function HeroOne() {
   return (
@@ -17,16 +17,8 @@ export default function HeroOne() {
             >
               <div className="circle-text-wrapper">
                 <div className="circle-text">
-                  <Image
-                    src={shape_3}
-                    alt="image"
-                    className="text"
-                  />
-                  <Image
-                    src={shape_2}
-                    alt="image"
-                    className="icon"
-                  />
+                  <Image src={shape_3} alt="image" className="text" />
+                  <Image src={shape_2} alt="image" className="icon" />
                 </div>
               </div>
             </div>
@@ -45,7 +37,7 @@ export default function HeroOne() {
                         alt="image"
                         data-direction="right"
                         data-delay="1.80"
-                        style={{height:'auto'}}
+                        style={{ height: "auto" }}
                       />
                     </span>
                     quality work
@@ -76,8 +68,8 @@ export default function HeroOne() {
               </div>
               <div className="text-wrapper fade-anim" data-delay="0.75">
                 <p className="text">
-                  We’re a digital products design & development agency that works
-                  passionately with the digital experiences.
+                  We’re a digital products design & development agency that
+                  works passionately with the digital experiences.
                 </p>
               </div>
             </div>
@@ -88,5 +80,5 @@ export default function HeroOne() {
         </div>
       </div>
     </section>
-  )
+  );
 }
