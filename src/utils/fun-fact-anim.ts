@@ -10,7 +10,7 @@ export const funFactAnimation = () => {
         end: "70% top",
         pin: true,
         scrub: 2,
-      }
-    })
+      },
+    });
   }
-}
+};

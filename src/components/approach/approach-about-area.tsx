@@ -23,8 +23,7 @@ export default function ApproachAboutArea() {
               <div className="approach-box">
                 <h2 className="title">
                   Problem <br />
-                  discovery{" "}
-                  <Image src={shape} alt="image" />
+                  discovery <Image src={shape} alt="image" />
                 </h2>
                 <div className="approach-list">
                   <ul>
@@ -40,8 +39,7 @@ export default function ApproachAboutArea() {
               <div className="approach-box">
                 <h2 className="title">
                   Design <br />
-                  system ready{" "}
-                  <Image src={shape} alt="image" />
+                  system ready <Image src={shape} alt="image" />
                 </h2>
                 <div className="approach-list">
                   <ul>

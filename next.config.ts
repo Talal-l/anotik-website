@@ -5,16 +5,16 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
-        protocol: 'https',
+        protocol: "https",
         hostname: "rrdevs.net",
-        port: '',
-        pathname: '/**',
+        port: "",
+        pathname: "/**",
       },
-    ]
+    ],
   },
-  sassOptions:{
+  sassOptions: {
     quietDeps: true,
-  }
+  },
 };
 
 export default nextConfig;

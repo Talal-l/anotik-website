@@ -1,4 +1,3 @@
-
 interface ApproachItem {
   number: string;
   title: string;
@@ -43,8 +42,9 @@ const ServiceDetailsApproach = () => {
               </div>
               <div className="title-wrapper fade-anim" data-direction="right">
                 <h2 className="section-title font-sequelsans-romanbody">
-                  Whether you’re a startup or industry star, we’re here to promote
-                  your brand by creative research and real human centred design.
+                  Whether you’re a startup or industry star, we’re here to
+                  promote your brand by creative research and real human centred
+                  design.
                 </h2>
               </div>
             </div>

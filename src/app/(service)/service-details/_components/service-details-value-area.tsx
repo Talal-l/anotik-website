@@ -32,7 +32,7 @@ const ServiceDetailsValueArea = () => {
                 src={gallery_img}
                 alt="image"
                 data-speed="0.8"
-                style={{ height: 'auto' }}
+                style={{ height: "auto" }}
               />
             </div>
             <div className="section-content">

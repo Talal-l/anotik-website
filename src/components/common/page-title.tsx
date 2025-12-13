@@ -1,4 +1,3 @@
-
 export default function PageTitle({ title }: { title: string }) {
   return (
     <section className="page-title-area">
@@ -10,5 +9,5 @@ export default function PageTitle({ title }: { title: string }) {
         </div>
       </div>
     </section>
-  )
+  );
 }

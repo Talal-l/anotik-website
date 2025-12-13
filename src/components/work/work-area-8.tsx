@@ -125,7 +125,13 @@ const WorkAreaEight = () => {
                       data-cursor-text="View Project"
                     >
                       <Link href="/portfolio-details">
-                        <Image src={work.image} alt={work.title} width={900} height={630} style={{height:'auto'}} />
+                        <Image
+                          src={work.image}
+                          alt={work.title}
+                          width={900}
+                          height={630}
+                          style={{ height: "auto" }}
+                        />
                       </Link>
                     </div>
                   </div>

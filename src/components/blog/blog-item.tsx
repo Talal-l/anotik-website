@@ -36,12 +36,10 @@ export default function BlogItem({ item }: { item: IBlog }) {
             <span className="name">
               By <span>{item.author}</span>
             </span>
-            <span className="date has-left-line">
-              {item.date}
-            </span>
+            <span className="date has-left-line">{item.date}</span>
           </div>
         </div>
       </div>
     </article>
-  )
+  );
 }

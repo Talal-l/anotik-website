@@ -68,7 +68,7 @@ export default function AboutAreaDetails() {
         <ul className="wrapper-gallery">
           {gallery_images.map((g, i) => (
             <li key={i}>
-              <Image src={g} alt={`image-${i}`} style={{height:"auto"}} />
+              <Image src={g} alt={`image-${i}`} style={{ height: "auto" }} />
             </li>
           ))}
         </ul>

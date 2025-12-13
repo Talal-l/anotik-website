@@ -10,7 +10,11 @@ type IProps = {
   showMobileMenu?: boolean;
 };
 
-export default function SideToggle({ isOpen, onSideToggle,showMobileMenu }: IProps) {
+export default function SideToggle({
+  isOpen,
+  onSideToggle,
+  showMobileMenu,
+}: IProps) {
   const [navTitle, setNavTitle] = React.useState<string>("");
 
   //openMobileMenu
@@ -45,7 +49,9 @@ export default function SideToggle({ isOpen, onSideToggle,showMobileMenu }: IPro
               </button>
             </div>
             {/* mobile menu */}
-            <div className={`mobile-menu ${showMobileMenu?'':'d-xl-none'} fix mean-container`}>
+            <div
+              className={`mobile-menu ${showMobileMenu ? "" : "d-xl-none"} fix mean-container`}
+            >
               <div className="mean-bar">
                 <nav className="mean-nav">
                   <ul>
@@ -76,7 +82,7 @@ export default function SideToggle({ isOpen, onSideToggle,showMobileMenu }: IPro
                           <a
                             className="mean-expand"
                             onClick={() => openMobileMenu(menu.title)}
-                            style={{ fontSize: "28px",cursor:"pointer" }}
+                            style={{ fontSize: "28px", cursor: "pointer" }}
                           >
                             {navTitle === menu.title ? "-" : "+"}
                           </a>

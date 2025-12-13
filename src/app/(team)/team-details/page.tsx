@@ -28,11 +28,9 @@ export default function TeamDetailsPage() {
       >
         <TeamDetailsWrapper>
           <main>
-
             {/* team details area start */}
-            <TeamDetailsArea/>
+            <TeamDetailsArea />
             {/* team details area end */}
-
           </main>
 
           {/* Footer area start */}

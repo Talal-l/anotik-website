@@ -34,21 +34,19 @@ const awardsData = [
 ];
 
 export const AwardBoxWrapper = () => {
-  return (
-    awardsData.map((award, idx) => (
-      <div className="award-box" key={award.category + idx}>
-        <div className="category">{award.category}</div>
-        <ul className="award-list">
-          {award.items.map((item, i) => (
-            <li key={item.title + item.year + i}>
-              {item.title}
-              <span>{item.year}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
-    ))
-  );
+  return awardsData.map((award, idx) => (
+    <div className="award-box" key={award.category + idx}>
+      <div className="category">{award.category}</div>
+      <ul className="award-list">
+        {award.items.map((item, i) => (
+          <li key={item.title + item.year + i}>
+            {item.title}
+            <span>{item.year}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  ));
 };
 
 export default function AwardArea() {
@@ -68,7 +66,7 @@ export default function AwardArea() {
           </div>
           <div className="awards-wrapper-box">
             <div className="awards-wrapper fade-anim" data-direction="right">
-              <AwardBoxWrapper/>
+              <AwardBoxWrapper />
             </div>
           </div>
         </div>

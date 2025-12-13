@@ -4,11 +4,10 @@
 
 @use "variables" as *;
 
-// for image transparency 
+// for image transparency
 // img[src$=".webp"] {
 //   filter: brightness(0.1);
 // }
-
 
 html {
   --container-max-widths: 1320px;
@@ -31,7 +30,7 @@ html {
 }
 
 body {
-  background-color: #F8F8F8;
+  background-color: #f8f8f8;
   color: var(--secondary);
 }
 
@@ -81,7 +80,6 @@ body {
 
 // BG Color
 .bg {
-
   &-white {
     background-color: var(--white);
   }
@@ -185,13 +183,13 @@ section {
   background-color: var(--black-9);
 }
 
-// wordpress reset style 
+// wordpress reset style
 .admin-bar header,
 .admin-bar .body-wrapper {
   margin-top: 32px;
 }
 
-// swiper rtl support 
+// swiper rtl support
 .swiper,
 .swiper-container {
   direction: ltr;

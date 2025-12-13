@@ -106,9 +106,9 @@ export default function ServiceAreaSix() {
           </div>
 
           {/* Service Content Wrapper */}
-          <ServiceContentWrapper/>
+          <ServiceContentWrapper />
         </div>
       </div>
     </section>
   );
-};
+}

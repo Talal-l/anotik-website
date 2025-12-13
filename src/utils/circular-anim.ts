@@ -1,6 +1,5 @@
 import gsap from "gsap";
 
-
 export const circularAnim = () => {
   if (document.querySelectorAll(".circular-shape-wrapper").length > 0) {
     const cs = gsap.timeline({
@@ -12,8 +11,13 @@ export const circularAnim = () => {
         end: "bottom top",
         pin: true,
         scrub: 1,
-      }
-    })
-    cs.to(".shape-thumb img", { scale: 100, rotation: 90, autoAlpha: 1, delay: 0.1 })
+      },
+    });
+    cs.to(".shape-thumb img", {
+      scale: 100,
+      rotation: 90,
+      autoAlpha: 1,
+      delay: 0.1,
+    });
   }
-}
+};

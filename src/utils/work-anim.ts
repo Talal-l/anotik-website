@@ -25,14 +25,15 @@ export const workAnimation = () => {
           end: "bottom top",
           scrub: false,
         },
-      }
+      },
     );
   }
-}
+};
 
 export const workAnimationTwo = (): void => {
   if (document.querySelectorAll(".works-wrapper-5").length > 0) {
-    const cards: NodeListOf<HTMLElement> = document.querySelectorAll(".card-wrap");
+    const cards: NodeListOf<HTMLElement> =
+      document.querySelectorAll(".card-wrap");
 
     cards.forEach((card: HTMLElement) => {
       const cardElement = card.querySelector<HTMLElement>(".card");

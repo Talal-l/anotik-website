@@ -11,7 +11,7 @@ const TextSlider = () => {
           autoplay={{ delay: 1 }}
           loop={true}
           className="text-slider-active"
-          slidesPerView={'auto'}
+          slidesPerView={"auto"}
           spaceBetween={35}
           speed={10000}
           allowTouchMove={false}

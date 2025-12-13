@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 interface FAQItem {
   id: string;
@@ -66,8 +66,10 @@ export const AccordionWrapper = () => {
   const toggleFAQ = (id: string) => {
     setFaqs((prevFaqs) =>
       prevFaqs.map((faq) =>
-        faq.id === id ? { ...faq, isOpen: !faq.isOpen } : { ...faq, isOpen: false }
-      )
+        faq.id === id
+          ? { ...faq, isOpen: !faq.isOpen }
+          : { ...faq, isOpen: false },
+      ),
     );
   };
   return (
@@ -77,7 +79,7 @@ export const AccordionWrapper = () => {
           <div key={faq.id} className="accordion-item">
             <h2 className="accordion-header">
               <button
-                className={`accordion-button ${faq.isOpen ? '' : 'collapsed'}`}
+                className={`accordion-button ${faq.isOpen ? "" : "collapsed"}`}
                 type="button"
                 onClick={() => toggleFAQ(faq.id)}
                 aria-expanded={faq.isOpen}
@@ -88,7 +90,7 @@ export const AccordionWrapper = () => {
             </h2>
             <div
               id={faq.id}
-              className={`accordion-collapse collapse ${faq.isOpen ? 'show' : ''}`}
+              className={`accordion-collapse collapse ${faq.isOpen ? "show" : ""}`}
               data-bs-parent="#accordionExample"
             >
               <div className="accordion-body">{faq.answer}</div>
@@ -97,11 +99,10 @@ export const AccordionWrapper = () => {
         ))}
       </div>
     </div>
-  )
-}
+  );
+};
 
 const FAQArea = () => {
-
   return (
     <section className="faq-area">
       <div className="container large">
@@ -122,7 +123,6 @@ const FAQArea = () => {
           {/* accordion wrapper */}
           <AccordionWrapper />
           {/* accordion wrapper */}
-
         </div>
       </div>
     </section>

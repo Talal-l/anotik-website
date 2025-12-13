@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
     e.preventDefault();
     // Add subscription logic here (e.g., API call)
     alert(`Subscribed with email: ${email}`);
-    setEmail(''); // Clear the input field after subscribing
+    setEmail(""); // Clear the input field after subscribing
   };
 
   return (
@@ -21,11 +21,7 @@ const Footer: React.FC = () => {
         <div className="footer-top-inner">
           <div className="footer-logo">
             <Link href="/">
-              <Image
-                src={logo}
-                alt="site-logo"
-                style={{ height: "auto" }}
-              />
+              <Image src={logo} alt="site-logo" style={{ height: "auto" }} />
             </Link>
           </div>
           <div className="info-text">
@@ -77,7 +73,7 @@ const Footer: React.FC = () => {
                     <li key={item}>
                       <Link href="/contact">{item}</Link>
                     </li>
-                  )
+                  ),
                 )}
               </ul>
             </div>

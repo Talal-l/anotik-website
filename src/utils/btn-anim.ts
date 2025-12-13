@@ -1,5 +1,5 @@
-import $ from 'jquery';
-import { gsap } from 'gsap';
+import $ from "jquery";
+import { gsap } from "gsap";
 
 export const rrBtnAnimation = (): void => {
   // Button circle hover effect
@@ -41,7 +41,7 @@ export const rrBtnAnimation = (): void => {
     function callParallax(
       e: JQuery.MouseMoveEvent,
       wrapper: Element,
-      target: Element
+      target: Element,
     ) {
       parallaxIt(e, wrapper, target, 100);
     }
@@ -50,7 +50,7 @@ export const rrBtnAnimation = (): void => {
       e: JQuery.MouseMoveEvent,
       wrapper: Element,
       target: Element,
-      movement: number
+      movement: number,
     ) {
       const $wrapper = $(wrapper);
       const offset = $wrapper.offset();

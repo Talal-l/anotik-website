@@ -1,19 +1,17 @@
-
-
 export default function InfoAreaAbout() {
   return (
     <section className="info-area-page-about">
       <div className="container large">
         <div className="info-area-page-about-inner section-spacing-top">
-
           <div className="section-header fade-anim">
             <div className="section-title-wrapper">
               <div className="subtitle-wrapper">
                 <span className="section-subtitle">Who are we?</span>
               </div>
               <div className="title-wrapper">
-                <h2 className="section-title font-sequelsans-romanbody">We deliver creative
-                  ideas to a crowded world.</h2>
+                <h2 className="section-title font-sequelsans-romanbody">
+                  We deliver creative ideas to a crowded world.
+                </h2>
               </div>
             </div>
           </div>
@@ -40,5 +38,5 @@ export default function InfoAreaAbout() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -21,8 +21,7 @@ export default function NotFound() {
                 </div>
                 <div className="title-wrapper">
                   <h2 className="section-title font-sequelsans-romanbody">
-                    Oops sorry! page {" "}
-                    {"didn't"} found
+                    Oops sorry! page {"didn't"} found
                   </h2>
                 </div>
               </div>

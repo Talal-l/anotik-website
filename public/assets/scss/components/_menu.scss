@@ -5,32 +5,31 @@
 @use "../utils/variables" as *;
 
 .main-menu {
-  &.menu-dark>ul>li>a {
+  &.menu-dark > ul > li > a {
     color: var(--black);
   }
 
-  &.menu-light>ul>li>a {
+  &.menu-light > ul > li > a {
     color: var(--white);
-
   }
 
-  >ul {
+  > ul {
     display: flex;
 
-    >li {
+    > li {
       &:hover {
-        >a {
+        > a {
           color: var(--primary);
         }
 
-        >ul {
+        > ul {
           opacity: 1;
           pointer-events: all;
           inset-inline-start: 0;
 
           &.dp-menu li {
             &:hover {
-              >ul {
+              > ul {
                 opacity: 1;
                 pointer-events: all;
                 inset-inline-start: 100%;
@@ -54,7 +53,6 @@
       color: var(--primary);
       padding: 37px 15px;
       text-transform: capitalize;
-
     }
   }
 
@@ -91,12 +89,12 @@
       padding: 0 25px;
 
       &:hover {
-        >a {
+        > a {
           color: var(--white);
           background-color: transparent;
         }
 
-        >ul {
+        > ul {
           opacity: 1;
           transform: none !important;
           pointer-events: all;
@@ -120,7 +118,6 @@
           transform: rotate(-90deg);
           margin-left: auto;
         }
-
       }
     }
   }
@@ -130,9 +127,8 @@
   }
 
   li {
-
     &.menu-item-has-children {
-      >a {
+      > a {
         &:after {
           content: "\f107";
           font-family: var(--font_awesome);
@@ -165,7 +161,7 @@
     }
 
     li:has(ul) {
-      >a {
+      > a {
         &:after {
           content: "";
         }
@@ -188,7 +184,7 @@
 
         &:hover {
           color: var(--white);
-          background: #2C2C2F;
+          background: #2c2c2f;
         }
       }
     }
@@ -230,7 +226,7 @@
       }
     }
 
-    >li {
+    > li {
       &:not(:first-child) {
         border-left: 1px solid #333337;
       }
@@ -253,7 +249,6 @@
       }
 
       li {
-
         a {
           padding-left: 30px;
         }
@@ -286,7 +281,7 @@
       }
     }
 
-    >li {
+    > li {
       &:not(:first-child) {
         border-left: 1px solid #333337;
       }
@@ -358,11 +353,10 @@
     }
   }
 
-
   .new {
     font-size: 10px;
     font-weight: 600;
-    background: #FFA38E;
+    background: #ffa38e;
     color: var(--black);
     padding: 3px 7px;
     line-height: 1;
@@ -466,7 +460,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    background: linear-gradient(270deg, rgba(28, 29, 32, 0.00) 0%, #1C1D20 100%);
+    background: linear-gradient(270deg, rgba(28, 29, 32, 0) 0%, #1c1d20 100%);
   }
 
   .laptop-view {
@@ -508,7 +502,12 @@
     line-height: 1;
     margin-bottom: 24px;
     color: var(--white);
-    background: linear-gradient(136deg, #9479FF 0%, #FFA6D6 47.92%, #FFFCE3 100%);
+    background: linear-gradient(
+      136deg,
+      #9479ff 0%,
+      #ffa6d6 47.92%,
+      #fffce3 100%
+    );
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -584,8 +583,6 @@
   }
 }
 
-
-
 .sidebar-menu {
   li {
     display: block;
@@ -616,18 +613,16 @@
   }
 }
 
-
 /* mean menu customize */
 .offcanvas__menu-wrapper.mean-container {
-
-  .mean-nav>ul {
+  .mean-nav > ul {
     padding: 0;
     margin: 0;
     width: 100%;
     list-style-type: none;
     display: block !important;
 
-    >li:last-child>a {
+    > li:last-child > a {
       border-bottom: 1px solid var(--black-4);
     }
   }
@@ -639,7 +634,7 @@
     .new {
       font-size: 10px;
       font-weight: 600;
-      background: #FFA38E;
+      background: #ffa38e;
       color: var(--black);
       padding: 3px 7px;
       line-height: 1;
@@ -665,7 +660,9 @@
         align-items: center;
         outline: none;
         transform: translateY(var(--y)) translateZ(0);
-        transition: transform .4s ease, box-shadow .4s ease;
+        transition:
+          transform 0.4s ease,
+          box-shadow 0.4s ease;
         box-sizing: border-box;
 
         @media #{$sm} {
@@ -686,7 +683,6 @@
           &:hover {
             background: var(--secondary);
             opacity: 1;
-
           }
         }
       }
@@ -694,7 +690,6 @@
       li {
         &:first-child {
           border-top: 1px solid var(--black-4);
-
         }
 
         a {
@@ -750,13 +745,9 @@
   }
 }
 
-
-
-
 // Light Version
 .light {
   .main-menu {
-
     li {
       a {
         &:hover {
@@ -788,11 +779,9 @@
         }
       }
     }
-
   }
 
   .sidebar-menu {
-
     li {
       a {
         color: var(--black);

@@ -4,7 +4,6 @@ import shape_2 from "@/assets/imgs/shape/shape-16.webp";
 import shape_3 from "@/assets/imgs/shape/shape-17.webp";
 import shape_4 from "@/assets/imgs/shape/shape-18.webp";
 
-
 const featureItems = [
   {
     imageSrc: shape_1,
@@ -41,7 +40,10 @@ const ServiceDetailsFeature = () => {
                     <Image src={item.imageSrc} alt="icon" />
                   </div>
                   <div className="content">
-                    <h3 className="title" dangerouslySetInnerHTML={{ __html: item.title }} />
+                    <h3
+                      className="title"
+                      dangerouslySetInnerHTML={{ __html: item.title }}
+                    />
                     <p className="text">{item.text}</p>
                   </div>
                 </div>

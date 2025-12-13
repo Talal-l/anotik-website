@@ -2,13 +2,16 @@ import gsap from "gsap";
 
 export const parallaxSliderAnimation = (): void => {
   if (document.querySelectorAll(".parallax-slider-wrapper").length > 0) {
-    const selectAll = (e: string): NodeListOf<Element> => document.querySelectorAll(e);
+    const selectAll = (e: string): NodeListOf<Element> =>
+      document.querySelectorAll(e);
 
     const tracks: NodeListOf<Element> = selectAll(".parallax-slider-wrapper");
 
     tracks.forEach((track: Element) => {
-      const trackWrapper: NodeListOf<HTMLElement> = track.querySelectorAll<HTMLElement>(".parallax-slider");
-      const allImgs: NodeListOf<HTMLElement> = track.querySelectorAll<HTMLElement>(".image");
+      const trackWrapper: NodeListOf<HTMLElement> =
+        track.querySelectorAll<HTMLElement>(".parallax-slider");
+      const allImgs: NodeListOf<HTMLElement> =
+        track.querySelectorAll<HTMLElement>(".image");
 
       const trackWrapperWidth = (): number => {
         let width = 0;
@@ -27,9 +30,10 @@ export const parallaxSliderAnimation = (): void => {
           scrub: 3,
           start: "center center",
           end: (): string => "+=" + (track.scrollWidth - window.innerWidth),
-          onRefresh: (self: ScrollTrigger) => self.getTween()?.resetTo("totalProgress", 0),
-          invalidateOnRefresh: true
-        }
+          onRefresh: (self: ScrollTrigger) =>
+            self.getTween()?.resetTo("totalProgress", 0),
+          invalidateOnRefresh: true,
+        },
       });
 
       allImgs.forEach((img: HTMLElement) => {
@@ -45,7 +49,7 @@ export const parallaxSliderAnimation = (): void => {
               end: "right left",
               scrub: true,
             },
-          }
+          },
         );
       });
     });

@@ -12,7 +12,7 @@ export default function useScrollSmooth() {
     const hasSmooth = document.querySelector("#has_smooth");
 
     if (isScrollSmooth && hasSmooth?.classList.contains("has-smooth")) {
-      gsap.registerPlugin(ScrollSmoother,ScrollTrigger);
+      gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
 
       const deviceWidth = window.screen.width;
       if (deviceWidth > 767) {

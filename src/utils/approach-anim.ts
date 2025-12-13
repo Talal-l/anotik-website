@@ -2,7 +2,6 @@ import gsap from "gsap";
 
 export const approachAnimation = () => {
   if (document.querySelectorAll(".approach-area").length > 0) {
-
     const boxes = document.querySelectorAll(".approach-area .approach-box");
 
     gsap.from(boxes, {
@@ -16,13 +15,15 @@ export const approachAnimation = () => {
         start: "top 100%",
         end: "bottom 40%",
         toggleActions: "play none none reverse",
-      }
+      },
     });
   }
-}
+};
 
 export const approachAnimationTwo = () => {
-  if (document.querySelectorAll(".approach-area-service-details-page").length > 0) {
+  if (
+    document.querySelectorAll(".approach-area-service-details-page").length > 0
+  ) {
     const boxes = document.querySelectorAll(".approach-box");
     gsap.from(boxes, {
       x: "100%",
@@ -35,7 +36,7 @@ export const approachAnimationTwo = () => {
         start: "top 100%",
         end: "bottom 40%",
         toggleActions: "play none none reverse",
-      }
+      },
     });
   }
-}
+};

@@ -73,8 +73,8 @@ export const TeamListWrapper = () => {
         </div>
       ))}
     </div>
-  )
-}
+  );
+};
 
 const TeamListArea: React.FC = () => {
   return (

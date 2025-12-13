@@ -1,4 +1,4 @@
-import ClientCapsules from './client-capsules';
+import ClientCapsules from "./client-capsules";
 
 export default function ClientAreaFour() {
   return (
@@ -9,17 +9,16 @@ export default function ClientAreaFour() {
             <div className="section-title-wrapper">
               <div className="title-wrapper">
                 <h2 className="section-title font-sequelsans-romanbody">
-                  <span>Client:</span> Helping brands to grow and say
-                  their success stories to the world.
+                  <span>Client:</span> Helping brands to grow and say their
+                  success stories to the world.
                 </h2>
               </div>
             </div>
             <div className="text-wrapper">
               <p className="text">
-                We’re a great team of creatives with a strongest
-                capabilities to helping progressive fields achieve their
-                goals. With the best talent on every project done
-                successfully
+                We’re a great team of creatives with a strongest capabilities to
+                helping progressive fields achieve their goals. With the best
+                talent on every project done successfully
               </p>
             </div>
           </div>
@@ -34,5 +33,5 @@ export default function ClientAreaFour() {
         </div>
       </div>
     </section>
-  )
+  );
 }

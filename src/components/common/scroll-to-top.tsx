@@ -8,7 +8,8 @@ export default function ScrollToTop() {
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
-      const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const windowHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
       const progress = (scrollTop / windowHeight) * 100;
       setScrollProgress(progress);
       setIsVisible(scrollTop > 50);

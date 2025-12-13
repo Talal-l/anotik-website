@@ -7,13 +7,12 @@ export const wordAnimation = () => {
     const animation_word_anim_items = document.querySelectorAll(".word-anim");
 
     animation_word_anim_items.forEach((word_anim_item) => {
-
-      let stagger_value: any = 0.04
-      let translateX_value: any = false
-      let translateY_value: any = false
-      let onscroll_value: any = 1
-      let data_delay: any = 0.1
-      let data_duration: any = 0.75
+      let stagger_value: any = 0.04;
+      let translateX_value: any = false;
+      let translateY_value: any = false;
+      let onscroll_value: any = 1;
+      let data_delay: any = 0.1;
+      let data_duration: any = 0.75;
 
       if (word_anim_item.getAttribute("data-stagger")) {
         stagger_value = word_anim_item.getAttribute("data-stagger");
@@ -39,8 +38,8 @@ export const wordAnimation = () => {
       if (onscroll_value == 1) {
         if (translateX_value && !translateY_value) {
           const split_word = new SplitText(word_anim_item, {
-            type: "chars, words"
-          })
+            type: "chars, words",
+          });
           gsap.from(split_word.words, {
             duration: data_duration,
             x: translateX_value,
@@ -49,15 +48,15 @@ export const wordAnimation = () => {
             delay: data_delay,
             scrollTrigger: {
               trigger: word_anim_item,
-              start: 'top 90%'
-            }
+              start: "top 90%",
+            },
           });
         }
 
         if (translateY_value && !translateX_value) {
           const split_word = new SplitText(word_anim_item, {
-            type: "chars, words"
-          })
+            type: "chars, words",
+          });
           gsap.from(split_word.words, {
             duration: 1,
             delay: data_delay,
@@ -66,15 +65,15 @@ export const wordAnimation = () => {
             stagger: stagger_value,
             scrollTrigger: {
               trigger: word_anim_item,
-              start: 'top 90%'
-            }
+              start: "top 90%",
+            },
           });
         }
 
         if (translateY_value && translateX_value) {
           const split_word = new SplitText(word_anim_item, {
-            type: "chars, words"
-          })
+            type: "chars, words",
+          });
           gsap.from(split_word.words, {
             duration: 1,
             delay: data_delay,
@@ -84,15 +83,15 @@ export const wordAnimation = () => {
             stagger: stagger_value,
             scrollTrigger: {
               trigger: word_anim_item,
-              start: 'top 90%'
-            }
+              start: "top 90%",
+            },
           });
         }
 
         if (!translateX_value && !translateY_value) {
           const split_word = new SplitText(word_anim_item, {
-            type: "chars, words"
-          })
+            type: "chars, words",
+          });
           gsap.from(split_word.words, {
             duration: 1,
             delay: data_delay,
@@ -101,66 +100,64 @@ export const wordAnimation = () => {
             stagger: stagger_value,
             scrollTrigger: {
               trigger: word_anim_item,
-              start: 'top 85%',
-            }
+              start: "top 85%",
+            },
           });
         }
       } else {
         if (translateX_value > 0 && !translateY_value) {
           const split_word = new SplitText(word_anim_item, {
-            type: "chars, words"
-          })
+            type: "chars, words",
+          });
           gsap.from(split_word.words, {
             duration: 1,
             delay: data_delay,
             x: translateX_value,
             autoAlpha: 0,
-            stagger: stagger_value
+            stagger: stagger_value,
           });
         }
 
         if (translateY_value > 0 && !translateX_value) {
           const split_word = new SplitText(word_anim_item, {
-            type: "chars, words"
-          })
+            type: "chars, words",
+          });
           gsap.from(split_word.words, {
             duration: 1,
             delay: data_delay,
             y: translateY_value,
             autoAlpha: 0,
-            stagger: stagger_value
+            stagger: stagger_value,
           });
         }
 
         if (translateY_value > 0 && translateX_value > 0) {
           const split_word = new SplitText(word_anim_item, {
-            type: "chars, words"
-          })
+            type: "chars, words",
+          });
           gsap.from(split_word.words, {
             duration: 1,
             delay: data_delay,
             x: translateX_value,
             y: translateY_value,
             autoAlpha: 0,
-            stagger: stagger_value
+            stagger: stagger_value,
           });
         }
 
         if (!translateX_value && !translateY_value) {
           const split_word = new SplitText(word_anim_item, {
-            type: "chars, words"
-          })
+            type: "chars, words",
+          });
           gsap.from(split_word.words, {
             duration: 1,
             delay: data_delay,
             x: 20,
             autoAlpha: 0,
-            stagger: stagger_value
+            stagger: stagger_value,
           });
         }
-
       }
-
     });
   }
-}
+};

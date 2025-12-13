@@ -5,7 +5,7 @@ export type IBlog = {
   author: string;
   date: string;
   delay?: string;
-}
+};
 export const blogDataOne: IBlog[] = [
   {
     id: 1,
@@ -40,7 +40,6 @@ export const blogDataOne: IBlog[] = [
     delay: "0.90",
   },
 ];
-
 
 export const blogItemsTwo: IBlog[] = [
   {

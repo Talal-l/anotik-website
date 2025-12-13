@@ -28,7 +28,6 @@
 // Button Hover Animation
 .btn {
   &-hover {
-
     &-default {
       transition: all 0.5s;
 
@@ -92,7 +91,6 @@
         border-color: var(--primary);
         background-color: transparent !important;
         border-color: transparent;
-
 
         &::after {
           height: 400%;
@@ -186,7 +184,7 @@
         height: 0px;
         width: 100%;
         z-index: -1;
-        content: '';
+        content: "";
         background-color: var(--primary);
         transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) 0s;
       }
@@ -214,7 +212,7 @@
         height: 100%;
         width: 0px;
         z-index: -1;
-        content: '';
+        content: "";
         background-color: var(--primary);
         transition: all 0.4s cubic-bezier(0.42, 0, 0.58, 1) 0s;
       }

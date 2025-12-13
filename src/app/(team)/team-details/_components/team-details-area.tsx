@@ -8,7 +8,7 @@ export default function TeamDetailsArea() {
         <div className="team-details-area-inner section-spacing-top">
           <div className="section-content-wrapper fade-anim">
             <div className="team-thumb">
-              <Image src={team_img} alt="image" style={{height:'auto'}} />
+              <Image src={team_img} alt="image" style={{ height: "auto" }} />
             </div>
             <div className="section-content">
               <div className="section-title-wrapper">
@@ -22,11 +22,17 @@ export default function TeamDetailsArea() {
                 </div>
               </div>
               <div className="text-wrapper">
-                <p className="text">I’m leading experts in disciplines ranging from data science and neural networks
-                  to low-level devices, software engineering, and architecture.</p>
-                <p className="text">By combining our strong experience in AI-enriched technology areas and product
-                  development mindset, we provide unique smart products co-creation services enabling cities,
-                  industries, and people to make their way into a new era of the digital efficiently and securely.
+                <p className="text">
+                  I’m leading experts in disciplines ranging from data science
+                  and neural networks to low-level devices, software
+                  engineering, and architecture.
+                </p>
+                <p className="text">
+                  By combining our strong experience in AI-enriched technology
+                  areas and product development mindset, we provide unique smart
+                  products co-creation services enabling cities, industries, and
+                  people to make their way into a new era of the digital
+                  efficiently and securely.
                 </p>
               </div>
               <div className="social-links">
@@ -36,10 +42,9 @@ export default function TeamDetailsArea() {
                 <a href="#">LinkedIn</a>
               </div>
             </div>
-
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

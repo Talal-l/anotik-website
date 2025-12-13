@@ -16,8 +16,8 @@ import client_22 from "@/assets/imgs/client/client-22.webp";
 
 type Props = {
   isHome?: boolean;
-}
-export default function ClientCapsules({isHome}: Props) {
+};
+export default function ClientCapsules({ isHome }: Props) {
   const clients = [
     { src: client_9, bgTheme: isHome ? true : false },
     { src: client_10, bgTheme: false },

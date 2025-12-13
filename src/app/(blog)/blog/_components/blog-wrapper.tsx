@@ -10,7 +10,7 @@ type Props = {
 
 export default function BlogWrapper({ children }: Props) {
   useGSAP(() => {
-    gsap.registerPlugin( ScrollToPlugin,ScrollTrigger);
+    gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
     const timer = setTimeout(() => {
       fadeAnimation();
     }, 100);

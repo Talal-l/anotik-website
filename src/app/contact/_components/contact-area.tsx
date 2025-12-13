@@ -4,9 +4,9 @@ import { FormEvent, useState } from "react";
 export default function ContactArea() {
   const [budget, setBudget] = useState("");
 
-  const handleSubmit = (e:FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-  }
+  };
   return (
     <section className="contact-area-contact-page">
       <div className="container large">

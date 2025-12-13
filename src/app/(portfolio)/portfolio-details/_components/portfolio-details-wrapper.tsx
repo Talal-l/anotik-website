@@ -10,7 +10,7 @@ type Props = {
 
 export default function PortfolioDetailsWrapper({ children }: Props) {
   useGSAP(() => {
-    gsap.registerPlugin(ScrollToPlugin, ScrollTrigger,CustomEase);
+    gsap.registerPlugin(ScrollToPlugin, ScrollTrigger, CustomEase);
     const timer = setTimeout(() => {
       fadeAnimation();
     }, 100);

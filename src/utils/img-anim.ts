@@ -11,10 +11,10 @@ export const scaleAnim = () => {
       ease: "power1.out",
       scrollTrigger: {
         trigger: item,
-        start: 'top bottom',
+        start: "top bottom",
         end: "bottom top",
-        toggleActions: 'play reverse play reverse'
-      }
+        toggleActions: "play reverse play reverse",
+      },
     });
   });
   image.forEach((image) => {
@@ -26,13 +26,13 @@ export const scaleAnim = () => {
       duration: 1,
       scrollTrigger: {
         trigger: image,
-        start: 'top bottom',
+        start: "top bottom",
         end: "bottom top",
-        toggleActions: 'play reverse play reverse'
-      }
+        toggleActions: "play reverse play reverse",
+      },
     });
-  })
-}
+  });
+};
 
 export const growAnimation = () => {
   const grow = document.querySelectorAll(".grow");
@@ -44,36 +44,35 @@ export const growAnimation = () => {
       scrollTrigger: {
         trigger: item,
         scrub: 2,
-        start: 'top 90%',
+        start: "top 90%",
         end: "top center",
-      }
+      },
     });
   });
-}
+};
 
 export const hoverRevealImageAnimation = () => {
   if (document.querySelectorAll(".hover-image-wrpper").length > 0) {
-    const categoriesWrapper = document.querySelector('.hover-image-wrpper');
-    const imageHover = document.querySelector('.image-hover');
+    const categoriesWrapper = document.querySelector(".hover-image-wrpper");
+    const imageHover = document.querySelector(".image-hover");
     if (categoriesWrapper) {
-      categoriesWrapper.addEventListener('mousemove', (e) => {
+      categoriesWrapper.addEventListener("mousemove", (e) => {
         const { clientX: mouseX, clientY: mouseY } = e as MouseEvent;
         gsap.to(imageHover, {
           x: mouseX,
           y: mouseY,
           xPercent: -50,
           yPercent: -50,
-          ease: 'power3.out',
+          ease: "power3.out",
           duration: 0.2,
         });
       });
     }
   }
-
-}
+};
 
 export const goFullAnimation = () => {
-   if (document.querySelectorAll(".go_full").length > 0) {
+  if (document.querySelectorAll(".go_full").length > 0) {
     const go_full = document.querySelectorAll(".go_full");
     go_full.forEach((item) => {
       gsap.set(item, {
@@ -90,11 +89,11 @@ export const goFullAnimation = () => {
           scrub: 0,
           start: "top bottom",
           end: "bottom bottom",
-        }
+        },
       });
     });
   }
-}
+};
 
 export const thumbAnimation = () => {
   // section-content__thumb image
@@ -115,19 +114,19 @@ export const thumbAnimation = () => {
           toggleActions: "play none none none",
           scrub: 2,
         },
-      }
+      },
     );
   }
-}
+};
 
 export const aboutThreeThumbAnimation = () => {
   if (document.querySelectorAll(".about_3__thumb-anim").length > 0) {
-    const about_3_thumb_anim = document.querySelector(".about_3__thumb-anim")
+    const about_3_thumb_anim = document.querySelector(".about_3__thumb-anim");
     if (about_3_thumb_anim) {
-      const about_3_thumb_1 = document.querySelector(".thumb-1")
-      const about_3_thumb_2 = document.querySelector(".thumb-2")
-      const about_3_thumb_3 = document.querySelector(".thumb-3")
-      const about_3_thumb_4 = document.querySelector(".thumb-4")
+      const about_3_thumb_1 = document.querySelector(".thumb-1");
+      const about_3_thumb_2 = document.querySelector(".thumb-2");
+      const about_3_thumb_3 = document.querySelector(".thumb-3");
+      const about_3_thumb_4 = document.querySelector(".thumb-4");
 
       gsap.to(about_3_thumb_1, {
         xPercent: -26,
@@ -137,9 +136,9 @@ export const aboutThreeThumbAnimation = () => {
           start: "top bottom",
           end: "bottom center",
           pinSpacing: false,
-          scrub: true
-        }
-      })
+          scrub: true,
+        },
+      });
 
       gsap.to(about_3_thumb_2, {
         xPercent: 0,
@@ -149,9 +148,9 @@ export const aboutThreeThumbAnimation = () => {
           start: "top bottom",
           end: "bottom center",
           pinSpacing: false,
-          scrub: true
-        }
-      })
+          scrub: true,
+        },
+      });
 
       gsap.to(about_3_thumb_3, {
         xPercent: 30,
@@ -161,9 +160,9 @@ export const aboutThreeThumbAnimation = () => {
           start: "top bottom",
           end: "bottom center",
           pinSpacing: false,
-          scrub: true
-        }
-      })
+          scrub: true,
+        },
+      });
       gsap.to(about_3_thumb_4, {
         xPercent: -172,
         yPercent: 34,
@@ -172,9 +171,9 @@ export const aboutThreeThumbAnimation = () => {
           start: "top bottom",
           end: "bottom center",
           pinSpacing: false,
-          scrub: true
-        }
-      })
+          scrub: true,
+        },
+      });
     }
   }
-}
+};

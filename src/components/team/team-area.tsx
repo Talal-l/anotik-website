@@ -32,7 +32,13 @@ export const TeamWrapperArea = () => {
         <div className="team-box" key={member.name + idx}>
           <div className="thumb">
             <Link href="/team-details">
-              <Image src={member.img} alt={member.name} width={440} height={600} style={{ height: "auto" }} />
+              <Image
+                src={member.img}
+                alt={member.name}
+                width={440}
+                height={600}
+                style={{ height: "auto" }}
+              />
             </Link>
           </div>
           <div className="content">
@@ -44,8 +50,8 @@ export const TeamWrapperArea = () => {
         </div>
       ))}
     </div>
-  )
-}
+  );
+};
 
 export default function TeamArea() {
   return (

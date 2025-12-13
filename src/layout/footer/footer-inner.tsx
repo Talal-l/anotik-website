@@ -1,9 +1,9 @@
 "use client";
-import React, { useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
-import logo from '@/assets/imgs/logo/logo-2.png';
-import icon from '@/assets/imgs/icon/icon-1.webp';
+import React, { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import logo from "@/assets/imgs/logo/logo-2.png";
+import icon from "@/assets/imgs/icon/icon-1.webp";
 
 interface NavItem {
   title: string;
@@ -11,36 +11,36 @@ interface NavItem {
 }
 
 const companyLinks: NavItem[] = [
-  { title: 'agency', link: '#' },
-  { title: 'Solutions', link: '#' },
-  { title: 'Community', link: '#' },
-  { title: 'Work', link: '#' },
-  { title: 'Contact', link: '#' },
+  { title: "agency", link: "#" },
+  { title: "Solutions", link: "#" },
+  { title: "Community", link: "#" },
+  { title: "Work", link: "#" },
+  { title: "Contact", link: "#" },
 ];
 
 const socialLinks: NavItem[] = [
-  { title: 'Facebook', link: '#' },
-  { title: 'Twitter', link: '#' },
-  { title: 'Dribbble', link: '#' },
-  { title: 'Instagram', link: '#' },
-  { title: 'Awwwards', link: '#' },
-  { title: 'YouTube', link: '#' },
+  { title: "Facebook", link: "#" },
+  { title: "Twitter", link: "#" },
+  { title: "Dribbble", link: "#" },
+  { title: "Instagram", link: "#" },
+  { title: "Awwwards", link: "#" },
+  { title: "YouTube", link: "#" },
 ];
 
 const officeLinks: NavItem[] = [
-  { title: 'New York', link: '#' },
-  { title: 'Toronto', link: '#' },
-  { title: 'Berlin', link: '#' },
-  { title: 'London', link: '#' },
+  { title: "New York", link: "#" },
+  { title: "Toronto", link: "#" },
+  { title: "Berlin", link: "#" },
+  { title: "London", link: "#" },
 ];
 
 const FooterInner: React.FC = () => {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
 
   const handleSubscribe = () => {
     // Handle subscription logic here (e.g., API call)
     alert(`Subscribed with email: ${email}`);
-    setEmail(''); // Clear the input field after subscribing
+    setEmail(""); // Clear the input field after subscribing
   };
 
   return (
@@ -55,7 +55,8 @@ const FooterInner: React.FC = () => {
           <div className="info-text">
             <div className="text-wrapper">
               <p className="text">
-                Redox is a startup digital agency of design, development and marketing that works friendly with global client
+                Redox is a startup digital agency of design, development and
+                marketing that works friendly with global client
               </p>
             </div>
             <div className="info-link">
@@ -74,7 +75,11 @@ const FooterInner: React.FC = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                   />
-                  <button type="button" className="subscribe-btn" onClick={handleSubscribe}>
+                  <button
+                    type="button"
+                    className="subscribe-btn"
+                    onClick={handleSubscribe}
+                  >
                     <Image src={icon} alt="image" />
                   </button>
                 </div>
@@ -82,7 +87,7 @@ const FooterInner: React.FC = () => {
               <div className="subscription-text">
                 <div className="text-wrapper">
                   <p className="text">
-                    By subscribing you agree with our{' '}
+                    By subscribing you agree with our{" "}
                     <a href="#">Privacy Policy</a>
                   </p>
                 </div>
@@ -125,7 +130,9 @@ const FooterInner: React.FC = () => {
         <div className="copyright-area-inner">
           <div className="copyright-text">
             <p className="text">
-              © {new Date().getFullYear()} <a href="https://themeforest.net/user/ravextheme">RavexTheme.</a> All right reserved
+              © {new Date().getFullYear()}{" "}
+              <a href="https://themeforest.net/user/ravextheme">RavexTheme.</a>{" "}
+              All right reserved
             </p>
           </div>
         </div>

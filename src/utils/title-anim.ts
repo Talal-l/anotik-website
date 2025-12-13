@@ -59,7 +59,7 @@ export const titleAnimation = () => {
       });
     }
   });
-}
+};
 
 export const fadeAnimation = () => {
   const fadeArrayItems = document.querySelectorAll<HTMLElement>(".fade-anim");
@@ -68,12 +68,21 @@ export const fadeAnimation = () => {
     const fadeArray = gsap.utils.toArray<HTMLElement>(".fade-anim");
 
     fadeArray.forEach((item) => {
-      const fade_direction: string = item.getAttribute("data-direction") || "bottom";
-      const fade_offset: number = parseFloat(item.getAttribute("data-offset") || "50");
-      const duration_value: number = parseFloat(item.getAttribute("data-duration") || "1.15");
-      const delay_value: number = parseFloat(item.getAttribute("data-delay") || "0.15");
+      const fade_direction: string =
+        item.getAttribute("data-direction") || "bottom";
+      const fade_offset: number = parseFloat(
+        item.getAttribute("data-offset") || "50",
+      );
+      const duration_value: number = parseFloat(
+        item.getAttribute("data-duration") || "1.15",
+      );
+      const delay_value: number = parseFloat(
+        item.getAttribute("data-delay") || "0.15",
+      );
       const ease_value: string = item.getAttribute("data-ease") || "power2.out";
-      const onscroll_value: number = parseInt(item.getAttribute("data-on-scroll") || "1");
+      const onscroll_value: number = parseInt(
+        item.getAttribute("data-on-scroll") || "1",
+      );
 
       const animation_settings: gsap.TweenVars = {
         opacity: 0,
@@ -114,13 +123,13 @@ export const goVisibleAnimation = () => {
         scrollTrigger: {
           trigger: item,
           scrub: 1,
-          start: 'top 40%',
+          start: "top 40%",
           end: "top 30%",
-        }
+        },
       });
     });
   }
-}
+};
 
 export const RRTitleAnimation = () => {
   const hoverText = document.querySelectorAll(".rr_title_anim");
@@ -130,17 +139,19 @@ export const RRTitleAnimation = () => {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: splitTextLine,
-          start: 'top 90%',
-          end: 'bottom 60%',
+          start: "top 90%",
+          end: "bottom 60%",
           scrub: false,
           markers: false,
-          toggleActions: 'play none none reverse'
-        }
+          toggleActions: "play none none reverse",
+        },
       });
 
-      const itemSplitted = new SplitText(splitTextLine, { type: "words, lines" });
+      const itemSplitted = new SplitText(splitTextLine, {
+        type: "words, lines",
+      });
       gsap.set(splitTextLine, { perspective: 400 });
-      itemSplitted.split({ type: "lines" })
+      itemSplitted.split({ type: "lines" });
       tl.from(itemSplitted.lines, {
         duration: 1,
         delay: 0.3,
@@ -148,19 +159,21 @@ export const RRTitleAnimation = () => {
         rotationX: -80,
         force3D: true,
         transformOrigin: "top center -50",
-        stagger: 0.1
+        stagger: 0.1,
       });
     });
   }
-}
+};
 
 export const charAnimation = () => {
   const charAnimItems = document.querySelectorAll<HTMLElement>(".char-anim");
   if (charAnimItems.length > 0) {
     charAnimItems.forEach((item) => {
       const stagger_value = Number(item.getAttribute("data-stagger")) || 0.05;
-      const translateX_value = Number(item.getAttribute("data-translateX")) || 20;
-      const translateY_value = Number(item.getAttribute("data-translateY")) || 0;
+      const translateX_value =
+        Number(item.getAttribute("data-translateX")) || 20;
+      const translateY_value =
+        Number(item.getAttribute("data-translateY")) || 0;
       const onscroll_value = Number(item.getAttribute("data-on-scroll")) || 1;
       const data_delay = Number(item.getAttribute("data-delay")) || 0.1;
       const data_duration = Number(item.getAttribute("data-duration")) || 1;
@@ -298,7 +311,6 @@ export const charAnimation = () => {
   }
 };
 
-
 export const textInvertWithScrollAnimation = () => {
   const split = new SplitText(".text-invert", { type: "lines" });
   split.lines.forEach((target) => {
@@ -308,10 +320,9 @@ export const textInvertWithScrollAnimation = () => {
       scrollTrigger: {
         trigger: target,
         scrub: 1,
-        start: 'top 85%',
+        start: "top 85%",
         end: "bottom center",
-      }
+      },
     });
   });
-}
-
+};

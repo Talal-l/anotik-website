@@ -21,5 +21,5 @@ export default function CtaArea() {
         </div>
       </section>
     </div>
-  )
+  );
 }

@@ -7,3 +7,9 @@ dist
 package-lock.json
 yarn.lock
 bun.lock
+vendors
+**/vendors/**
+**/vendor/**
+**/assets/plugins/**
+*.min.js
+*.min.css

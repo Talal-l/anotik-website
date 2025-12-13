@@ -8,7 +8,7 @@ type IProps = {
 
 export default function SmoothScrollWrapper({ children }: IProps) {
   useScrollSmooth();
-  
+
   return (
     <>
       <ScrollToTop />

@@ -1,6 +1,5 @@
 // heading
-@mixin heading ($font_family) {
-
+@mixin heading($font_family) {
   h1,
   h2,
   h3,
@@ -11,7 +10,7 @@
   }
 }
 
-// dark 
+// dark
 @mixin dark {
   .dark & {
     @content;

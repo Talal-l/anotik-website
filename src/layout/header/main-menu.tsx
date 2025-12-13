@@ -8,14 +8,11 @@ export default function MainMenu() {
         {menuData.map((item, index) => (
           <li
             key={index}
-            className={item.children ? 'menu-item-has-children' : ''}
+            className={item.children ? "menu-item-has-children" : ""}
           >
             <Link href={item.href}>{item.title}</Link>
             {item.children && (
-              <ul
-                className={`dp-menu ${item.title === 'Home' ? 'col-2' : ''
-                  }`}
-              >
+              <ul className={`dp-menu ${item.title === "Home" ? "col-2" : ""}`}>
                 {item.children.map((child, childIndex) => (
                   <li key={childIndex}>
                     <Link href={child.href}>{child.title}</Link>
@@ -27,5 +24,5 @@ export default function MainMenu() {
         ))}
       </ul>
     </nav>
-  )
+  );
 }
