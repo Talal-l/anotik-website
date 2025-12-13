@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import HeaderTwo from "@/layout/header/header-two";
 import MainWrapper from "@/components/wrapper/main-wrapper";
 import FooterInner from "@/layout/footer/footer-inner";
 import TeamDetailsWrapper from "./_components/team-details-wrapper";
@@ -15,7 +14,6 @@ export default function TeamDetailsPage() {
   return (
     <>
       {/* Header area start */}
-      <HeaderTwo />
       {/* Header area end */}
 
       {/* Main wrapper start */}
