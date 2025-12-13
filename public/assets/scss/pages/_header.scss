@@ -84,6 +84,36 @@
     }
   }
 
+  .header__theme-toggle {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+
+    .theme-toggle {
+      background: transparent;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      color: var(--primary);
+
+      &:hover {
+        background-color: var(--theme);
+        color: var(--white);
+        border-color: var(--theme);
+      }
+
+      i {
+        font-size: 18px;
+      }
+    }
+  }
+
   .header__button {
     @media #{$xs} {
       display: none;
