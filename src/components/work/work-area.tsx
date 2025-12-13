@@ -9,48 +9,48 @@ const WorkArea = () => {
           <div className="section-title-wrapper">
             <div className="title-wrapper">
               <h2 className="section-title font-instrumentsans-medium">
-                Featured Work
+                Our Work
               </h2>
             </div>
           </div>
           <div className="text-wrapper">
-            <p className="text">Excellency in creative designs</p>
+            <p className="text">Technical solutions that deliver results</p>
           </div>
           <div className="total-count">
-            <span className="number">(26)</span>
+            <span className="number">(—)</span>
           </div>
         </div>
         <div className="works-wrapper-box">
           <div className="works-wrapper-1 fade-anim">
             {[
               {
-                title: "Panda Automap",
+                title: "Project One",
                 tag: "Development",
                 image: "/assets/imgs/project/image-1.webp",
               },
               {
-                title: "Saudi Venture Capital",
-                tag: "Graphics",
+                title: "Project Two",
+                tag: "Infrastructure",
                 image: "/assets/imgs/project/image-2.webp",
               },
               {
-                title: "Rebrand Lawberry",
-                tag: "Motion, Design",
+                title: "Project Three",
+                tag: "Automation",
                 image: "/assets/imgs/project/image-3.webp",
               },
               {
-                title: "Selicon Cloud Cave",
-                tag: "UI Design",
+                title: "Project Four",
+                tag: "Backend Systems",
                 image: "/assets/imgs/project/image-4.webp",
               },
               {
-                title: "Mountain Upwork",
-                tag: "Branding",
+                title: "Project Five",
+                tag: "DevOps",
                 image: "/assets/imgs/project/image-5.webp",
               },
               {
-                title: "Blacky Motorola",
-                tag: "UI Design",
+                title: "Project Six",
+                tag: "AI Integration",
                 image: "/assets/imgs/project/image-6.webp",
               },
             ].map((work, index) => (

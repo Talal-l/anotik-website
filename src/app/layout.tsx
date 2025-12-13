@@ -134,9 +134,9 @@ const Sequel_sans_medium = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Redox - Creative Agency and Portfolio Next js Template",
+  title: "Anotik - Development and Maintenance Company",
   description:
-    "Redox is a creative agency and portfolio template built with Next.js, designed to showcase your work and services effectively.",
+    "Anotik removes the burden of tech for businesses. We provide website & app development, backend systems, DevOps, server maintenance, automation, and AI integrations as your long-term technical partner.",
 };
 
 export default function RootLayout({

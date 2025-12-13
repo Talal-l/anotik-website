@@ -6,9 +6,9 @@ import PortfolioDetailsWrapper from "./_components/portfolio-details-wrapper";
 import PortfolioDetailsArea from "./_components/portfolio-details-area";
 
 export const metadata: Metadata = {
-  title: "Portfolio details Page - Redox Next js Template",
+  title: "Portfolio Details - Anotik",
   description:
-    "Redox is a agency and portfolio template built with Next.js, designed to showcase your work and services effectively.",
+    "Detailed view of Anotik's technical project including development, infrastructure, and implementation details.",
 };
 
 export default function PortfolioDetailsPage() {

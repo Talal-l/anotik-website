@@ -10,9 +10,9 @@ import { TeamListWrapper } from "@/components/team/team-list-area";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Team Page - Redox Next js Template",
+  title: "Team - Anotik",
   description:
-    "Redox is a agency and portfolio template built with Next.js, designed to showcase your work and services effectively.",
+    "Meet the Anotik team that owns your technical infrastructure and removes the burden of tech for your business.",
 };
 
 export default function TeamPage() {

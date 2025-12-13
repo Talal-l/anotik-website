@@ -4784,7 +4784,6 @@ video.video-area {
   font-family: var(--font_thunder);
   font-size: 360px;
   font-weight: 700;
-  line-height: 20px;
   text-transform: uppercase;
   color: var(--white);
   display: inline-block;

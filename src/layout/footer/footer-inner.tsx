@@ -55,12 +55,11 @@ const FooterInner: React.FC = () => {
           <div className="info-text">
             <div className="text-wrapper">
               <p className="text">
-                Redox is a startup digital agency of design, development and
-                marketing that works friendly with global client
+                Anotik removes the burden of tech for businesses. We build, maintain, and own your technology infrastructure as your long-term technical partner.
               </p>
             </div>
             <div className="info-link">
-              <a href="mailto:info@redox.com">info@redox.com</a>
+              <a href="mailto:info@anotik.com">info@anotik.com</a>
             </div>
           </div>
         </div>

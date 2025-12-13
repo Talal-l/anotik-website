@@ -7,9 +7,9 @@ import BlogWrapper from "./_components/blog-wrapper";
 import HeaderOne from "@/layout/header/header-one";
 
 export const metadata: Metadata = {
-  title: "Blog Page - Redox Next js Template",
+  title: "Blog - Anotik",
   description:
-    "Redox is a agency and portfolio template built with Next.js, designed to showcase your work and services effectively.",
+    "Technical insights, updates, and best practices from Anotik on development, infrastructure, DevOps, and automation.",
 };
 
 export default function BlogPage() {

@@ -116,8 +116,8 @@ export default function SideToggle({
                     <i className="fa-solid fa-envelope"></i>
                   </span>
                   <span className="text">
-                    <a href="mailto:hello@redoxagency.com">
-                      hello@redoxagency.com
+                    <a href="mailto:info@anotik.com">
+                      info@anotik.com
                     </a>
                   </span>
                 </div>

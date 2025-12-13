@@ -49,24 +49,24 @@ work page css
 
 // Colors
 :root {
-  --primary: #111111;
-  --secondary: #555555;
-  --border: rgba(17, 17, 17, 0.1);
-  --bg: #111111;
-  --theme: #ff6a3a;
+  --primary: #19BB80;
+  --secondary: #A32148;
+  --border: rgba(25, 187, 128, 0.1);
+  --bg: #00000D;
+  --theme: #19BB80;
 
-  --black: #111111;
+  --black: #00000D;
   --black-2: #999999;
   --white: #ffffff;
-  --white-2: #999999;
+  --white-2: #F0F2ED;
 
-  --action: #ff6a3a;
+  --action: #19BB80;
 
   .dark {
     --primary: #ffffff;
-    --secondary: #999999;
+    --secondary: #A32148;
     --border: rgba(255, 255, 255, 0.1);
-    --bg: #171717;
+    --bg: #00000D;
   }
 }
 

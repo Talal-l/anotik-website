@@ -17,7 +17,7 @@ export default function ServiceContentWrapper() {
           </div>
           <div className="text-wrapper">
             <p className="text text-invert">
-              A practical guide explaining how and why Redox should be part of
+              A practical guide explaining how and why Anotik should be part of
               every project to ensure its high quality and seamless user
               experience.
             </p>

@@ -10,9 +10,9 @@ import ServiceDetailsFeature from "./_components/service-details-feature";
 import ServiceDetailsValueArea from "./_components/service-details-value-area";
 
 export const metadata: Metadata = {
-  title: "Services Details Page - Redox Next js Template",
+  title: "Service Details - Anotik",
   description:
-    "Redox is a agency and portfolio template built with Next.js, designed to showcase your work and services effectively.",
+    "Detailed information about Anotik's development, infrastructure, DevOps, maintenance, automation, and AI integration services.",
 };
 
 export default function ServiceDetailsPage() {

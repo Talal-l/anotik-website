@@ -30,8 +30,8 @@ export default function ContactArea() {
                 <p className="text">
                   We’re excited to hear from you and let’s start something
                   special together <br />
-                  <a href="mailTo:hello@redoxagency.com">
-                    hello@redoxagency.com
+                  <a href="mailTo:info@anotik.com">
+                    info@anotik.com
                   </a>
                 </p>
               </div>

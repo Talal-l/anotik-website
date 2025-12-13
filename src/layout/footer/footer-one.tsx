@@ -27,12 +27,11 @@ const Footer: React.FC = () => {
           <div className="info-text">
             <div className="text-wrapper">
               <p className="text">
-                Redox is a startup digital agency of design, development and
-                marketing that works friendly with global client
+                Anotik removes the burden of tech for businesses. We build, maintain, and own your technology infrastructure as your long-term technical partner.
               </p>
             </div>
             <div className="info-link">
-              <a href="mailto:info@redox.com">info@redox.com</a>
+              <a href="mailto:info@anotik.com">info@anotik.com</a>
             </div>
           </div>
         </div>
@@ -68,7 +67,7 @@ const Footer: React.FC = () => {
             <div className="footer-widget-box">
               <h2 className="title">Company</h2>
               <ul className="footer-nav-list">
-                {["agency", "Solutions", "Community", "Work", "Contact"].map(
+                {["About", "Services", "Work", "Contact"].map(
                   (item) => (
                     <li key={item}>
                       <Link href="/contact">{item}</Link>
@@ -78,26 +77,25 @@ const Footer: React.FC = () => {
               </ul>
             </div>
             <div className="footer-widget-box">
-              <h2 className="title">Social</h2>
+              <h2 className="title">Services</h2>
               <ul className="footer-nav-list">
                 {[
-                  "Facebook",
-                  "Twitter",
-                  "Dribbble",
-                  "Instagram",
-                  "Awwwards",
-                  "YouTube",
+                  "Development",
+                  "DevOps",
+                  "Maintenance",
+                  "Automation",
+                  "AI Integration",
                 ].map((item) => (
                   <li key={item}>
-                    <Link href="/contact">{item}</Link>
+                    <Link href="/services">{item}</Link>
                   </li>
                 ))}
               </ul>
             </div>
             <div className="footer-widget-box">
-              <h2 className="title">Office</h2>
+              <h2 className="title">Support</h2>
               <ul className="footer-nav-list">
-                {["New York", "Toronto", "Berlin", "London"].map((item) => (
+                {["Get Support", "Documentation", "Status"].map((item) => (
                   <li key={item}>
                     <Link href="/contact">{item}</Link>
                   </li>
@@ -111,9 +109,7 @@ const Footer: React.FC = () => {
         <div className="copyright-area-inner">
           <div className="copyright-text">
             <p className="text">
-              © {new Date().getFullYear()}{" "}
-              <a href="https://themeforest.net/user/ravextheme">RavexTheme.</a>{" "}
-              All right reserved
+              © {new Date().getFullYear()} Anotik. All rights reserved
             </p>
           </div>
         </div>

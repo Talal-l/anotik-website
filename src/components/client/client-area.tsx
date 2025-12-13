@@ -13,16 +13,14 @@ const ClientArea = ({ isHome = false }: Props) => {
             <div className="section-title-wrapper">
               <div className="title-wrapper">
                 <h2 className="section-title font-instrumentsans-medium word-anim">
-                  <span>Client:</span> Helping brands to grow and say their
-                  success stories to the world.
+                  <span>Clients:</span> Businesses that trust us to own their
+                  technology.
                 </h2>
               </div>
             </div>
             <div className="text-wrapper fade-anim">
               <p className="text">
-                We’re a great team of creatives with a strongest capabilities to
-                helping progressive fields achieve their goals. With the best
-                talent on every project done successfully
+                We partner with small-to-mid businesses that need reliable technical infrastructure without the operational overhead. Our clients focus on growth while we handle the tech.
               </p>
             </div>
           </div>

@@ -7,9 +7,9 @@ import PageTitle from "@/components/common/page-title";
 import { AccordionWrapper } from "@/components/faq/faq-area";
 
 export const metadata: Metadata = {
-  title: "Faq Page - Redox Next js Template",
+  title: "FAQ - Anotik",
   description:
-    "Redox is a agency and portfolio template built with Next.js, designed to showcase your work and services effectively.",
+    "Frequently asked questions about Anotik's development, infrastructure, maintenance, and automation services.",
 };
 
 export default function FaqPage() {

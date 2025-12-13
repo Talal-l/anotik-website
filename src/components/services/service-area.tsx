@@ -3,53 +3,52 @@ import Link from "next/link";
 import React from "react";
 
 const ServiceArea = () => {
-  // Service data
   const services = [
     {
       number: "(01)",
-      title: "Branding",
+      title: "Development",
       list: [
-        "Creative Direction",
-        "Brand Identity",
-        "Branding Strategy",
-        "Graphic Design",
-        "Startup",
+        "Web Applications",
+        "Mobile Apps",
+        "Backend Systems",
+        "API Development",
+        "System Integration",
       ],
       image: "/assets/imgs/gallery/image-3.webp",
     },
     {
       number: "(02)",
-      title: "UI-UX Design",
+      title: "Infrastructure & DevOps",
       list: [
-        "UI UX Consulting",
-        "UX Research",
-        "Usability Testing",
-        "Wireframing",
-        "Prototyping",
+        "Cloud Setup",
+        "Server Management",
+        "CI/CD Pipelines",
+        "Monitoring & Alerts",
+        "Scalability Planning",
       ],
       image: "/assets/imgs/gallery/image-4.webp",
     },
     {
       number: "(03)",
-      title: "Development",
+      title: "Maintenance & Support",
       list: [
-        "WordPress",
-        "Webflow",
-        "Laravel Framework",
-        "React & Flutter",
-        "Design System",
+        "Ongoing Maintenance",
+        "Security Updates",
+        "Performance Optimization",
+        "Bug Fixes",
+        "24/7 Support",
       ],
       image: "/assets/imgs/gallery/image-5.webp",
     },
     {
       number: "(04)",
-      title: "Digital Marketing",
+      title: "Automation & AI",
       list: [
-        "Online Marketing",
-        "SEO-Marketing",
-        "Strategy",
-        "Market Research",
-        "Social Reform",
+        "Process Automation",
+        "AI Integrations",
+        "Workflow Optimization",
+        "Data Processing",
+        "Custom Solutions",
       ],
       image: "/assets/imgs/gallery/image-6.webp",
     },
@@ -63,7 +62,7 @@ const ServiceArea = () => {
             <div className="section-title-wrapper fade-anim">
               <div className="title-wrapper">
                 <h2 className="section-title font-instrumentsans-medium word-anim">
-                  Complex <br /> proficiency
+                  What we <br /> do
                 </h2>
               </div>
             </div>

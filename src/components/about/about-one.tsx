@@ -13,17 +13,13 @@ export default function AboutOne() {
             <div className="section-title-wrapper">
               <div className="title-wrapper">
                 <h2 className="section-title font-instrumentsans-medium">
-                  Redox
+                  Anotik
                 </h2>
               </div>
             </div>
             <div className="text-wrapper">
               <p className="text">
-                We’re a dynamic startup agency specializing in innovative
-                solutions for businesses looking to elevate their brand
-                presence. We offer a range of services including digital
-                marketing, branding, web development, and creative strategy to
-                help company
+                We own your technology so you don't have to. Anotik handles development, infrastructure, maintenance, and automation for small-to-mid businesses that need a reliable technical partner, not a one-off agency.
               </p>
             </div>
             <div className="btn-wrapper ">
@@ -32,8 +28,8 @@ export default function AboutOne() {
                 className="rr-btn  btn-text-fli hover-bg-theme"
               >
                 <span className="btn-wrap">
-                  <span className="text-one">Learn More</span>
-                  <span className="text-two">Learn More</span>
+                  <span className="text-one">Talk to us</span>
+                  <span className="text-two">Talk to us</span>
                 </span>
               </Link>
             </div>

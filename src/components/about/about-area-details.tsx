@@ -21,12 +21,11 @@ export default function AboutAreaDetails() {
           <div className="section-header fade-anim">
             <div className="section-title-wrapper">
               <div className="subtitle-wrapper">
-                <span className="section-subtitle">About studio</span>
+                <span className="section-subtitle">About Anotik</span>
               </div>
               <div className="title-wrapper">
                 <h2 className="section-title font-sequelsans-romanbody">
-                  Crafting digital products with a unique — vision of making
-                  user experience better.
+                  We own your technology infrastructure so you can focus on your business.
                 </h2>
               </div>
             </div>
@@ -34,29 +33,25 @@ export default function AboutAreaDetails() {
           <div className="section-content-wrapper fade-anim">
             <div className="info-list">
               <ul>
-                <li>Art Direction</li>
-                <li>Capability</li>
-                <li>Sustainability </li>
+                <li>Ownership</li>
+                <li>Reliability</li>
+                <li>Long-term Partnership</li>
               </ul>
             </div>
             <div className="section-content">
               <div className="text-wrapper" data-direction="right">
                 <p className="text">
-                  Redox is the first and only creative agency for your real
-                  exploration. It’s one private place to save everything you can
-                  realize about digital beautifully design.
+                  Anotik removes the technical burden from businesses. We build, maintain, and own your technology stack as your long-term partner, not a one-off agency.
                 </p>
                 <p className="text">
-                  As a global creative agency, we understand the importance of
-                  staying ahead of the game. That’s why we partner with some of
-                  the {"world's"} best talent to bring fresh ideas
+                  Our approach is simple: we take full responsibility for your technical infrastructure. You focus on growing your business while we handle development, DevOps, maintenance, automation, and AI integrations.
                 </p>
               </div>
               <div className="btn-wrapper" data-direction="right">
-                <Link href="/about" className="rr-btn">
+                <Link href="/services" className="rr-btn">
                   <span className="btn-wrap">
-                    <span className="text-one">Explore Services</span>
-                    <span className="text-two">Explore Services</span>
+                    <span className="text-one">View Services</span>
+                    <span className="text-two">View Services</span>
                   </span>
                 </Link>
               </div>

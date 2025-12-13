@@ -16,7 +16,7 @@ export default function ServiceAreaSix() {
               </div>
               <div className="title-wrapper">
                 <h2 className="section-title font-sequelsans-romanbody">
-                  We think out of the box when it comes to creative
+                  Technical services that remove operational burden
                 </h2>
               </div>
             </div>
@@ -28,49 +28,49 @@ export default function ServiceAreaSix() {
               {[
                 {
                   number: "(01)",
-                  title: "Branding",
+                  title: "Development",
                   services: [
-                    "Creative Direction",
-                    "Brand Identity",
-                    "Branding Strategy",
-                    "Graphic Design",
-                    "Startup",
+                    "Web Applications",
+                    "Mobile Apps",
+                    "Backend Systems",
+                    "API Development",
+                    "System Integration",
                   ],
                   img: "/assets/imgs/gallery/image-3.webp",
                 },
                 {
                   number: "(02)",
-                  title: "UI-UX Design",
+                  title: "Infrastructure & DevOps",
                   services: [
-                    "UI UX Consulting",
-                    "UX Research",
-                    "Usability Testing",
-                    "Wireframing",
-                    "Prototyping",
+                    "Cloud Setup",
+                    "Server Management",
+                    "CI/CD Pipelines",
+                    "Monitoring & Alerts",
+                    "Scalability Planning",
                   ],
                   img: "/assets/imgs/gallery/image-4.webp",
                 },
                 {
                   number: "(03)",
-                  title: "Development",
+                  title: "Maintenance & Support",
                   services: [
-                    "WordPress",
-                    "Webflow",
-                    "Laravel Framework",
-                    "React & Flutter",
-                    "Design System",
+                    "Ongoing Maintenance",
+                    "Security Updates",
+                    "Performance Optimization",
+                    "Bug Fixes",
+                    "24/7 Support",
                   ],
                   img: "/assets/imgs/gallery/image-5.webp",
                 },
                 {
                   number: "(04)",
-                  title: "Digital Marketing",
+                  title: "Automation & AI",
                   services: [
-                    "Online Marketing",
-                    "SEO-Marketing",
-                    "Strategy",
-                    "Market Research",
-                    "Social Reform",
+                    "Process Automation",
+                    "AI Integrations",
+                    "Workflow Optimization",
+                    "Data Processing",
+                    "Custom Solutions",
                   ],
                   img: "/assets/imgs/gallery/image-6.webp",
                 },

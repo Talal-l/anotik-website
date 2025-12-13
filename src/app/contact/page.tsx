@@ -7,9 +7,9 @@ import PageTitle from "@/components/common/page-title";
 import Header from "@/layout/header/header-one";
 
 export const metadata: Metadata = {
-  title: "Contact Page - Redox Next js Template",
+  title: "Contact - Anotik",
   description:
-    "Redox is a agency and portfolio template built with Next.js, designed to showcase your work and services effectively.",
+    "Get in touch with Anotik to discuss your technical needs. We're here to help remove the burden of tech for your business.",
 };
 
 export default function ContactPage() {

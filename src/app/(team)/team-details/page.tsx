@@ -6,9 +6,9 @@ import TeamDetailsWrapper from "./_components/team-details-wrapper";
 import TeamDetailsArea from "./_components/team-details-area";
 
 export const metadata: Metadata = {
-  title: "Team Details Page - Redox Next js Template",
+  title: "Team Details - Anotik",
   description:
-    "Redox is a agency and portfolio template built with Next.js, designed to showcase your work and services effectively.",
+    "Learn more about Anotik team members who handle your development, infrastructure, and maintenance needs.",
 };
 
 export default function TeamDetailsPage() {

@@ -29,7 +29,7 @@ export default function HeroOne() {
                     className="section-title font-instrumentsans-medium char-anim"
                     data-delay="0.45"
                   >
-                    Let’s sharpen your brand with
+                    We remove the burden
                     <span>
                       <Image
                         className="title-shape-1 fade-anim"
@@ -40,7 +40,7 @@ export default function HeroOne() {
                         style={{ height: "auto" }}
                       />
                     </span>
-                    quality work
+                    of tech for your business
                   </h2>
                 </div>
               </div>
@@ -50,17 +50,17 @@ export default function HeroOne() {
                 <div className="features-wrapper">
                   <div className="feature-box">
                     <div className="content">
-                      <span className="number">98%</span>
+                      <span className="number">100%</span>
                       <p className="text">
-                        Average clients satisfied and repeating
+                        Ownership of your technical infrastructure
                       </p>
                     </div>
                   </div>
                   <div className="feature-box">
                     <div className="content">
-                      <span className="number">120+</span>
+                      <span className="number">24/7</span>
                       <p className="text">
-                        Successfully projects done in 24 countries
+                        Ongoing support and maintenance coverage
                       </p>
                     </div>
                   </div>
@@ -68,14 +68,13 @@ export default function HeroOne() {
               </div>
               <div className="text-wrapper fade-anim" data-delay="0.75">
                 <p className="text">
-                  We’re a digital products design & development agency that
-                  works passionately with the digital experiences.
+                  Anotik is your long-term technical partner. We build, maintain, and own your technology infrastructure so you can focus on your business.
                 </p>
               </div>
             </div>
           </div>
           <div className="big-text-wrapper">
-            <h2 className="big-text">Redox</h2>
+            <h2 className="big-text">Anotik</h2>
           </div>
         </div>
       </div>

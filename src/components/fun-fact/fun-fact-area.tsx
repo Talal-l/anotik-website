@@ -7,8 +7,8 @@ export default function FunFactArea() {
             <div className="section-title-wrapper">
               <div className="title-wrapper">
                 <h2 className="section-title font-instrumentsans-medium word-anim">
-                  Perfect <br />
-                  —activity
+                  Reliability <br />
+                  —first
                 </h2>
               </div>
             </div>
@@ -20,33 +20,33 @@ export default function FunFactArea() {
             <span className="line-4"></span>
             <div className="funfact-wrapper">
               <div className="funfact-item go-visible">
-                <span className="number">1.8M</span>
+                <span className="number">100%</span>
                 <p className="text">
-                  We helped to get companies with $200M+ funding.
+                  Full ownership and responsibility for your tech stack.
                 </p>
               </div>
               <div className="funfact-item go-visible">
-                <span className="number">260+</span>
+                <span className="number">24/7</span>
                 <p className="text">
-                  Crafted responsive, user-centered website & app.
+                  Continuous monitoring and support coverage.
                 </p>
               </div>
               <div className="funfact-item go-visible">
-                <span className="number">12+</span>
+                <span className="number">0</span>
                 <p className="text">
-                  We have had quite a run in our 12+ years of working.
+                  Technical burden on your team. We handle it all.
                 </p>
               </div>
               <div className="funfact-item go-visible">
-                <span className="number">80+</span>
+                <span className="number">∞</span>
                 <p className="text">
-                  Professional skilled designers and developers.
+                  Long-term partnership, not one-off projects.
                 </p>
               </div>
               <div className="funfact-item go-visible">
-                <span className="number">99%</span>
+                <span className="number">—</span>
                 <p className="text">
-                  Average 99% clients satisfaction with expertise.
+                  Systems built to scale with your business needs.
                 </p>
               </div>
             </div>

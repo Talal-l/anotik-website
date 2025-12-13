@@ -14,9 +14,9 @@ import TeamListArea from "@/components/team/team-list-area";
 import DigitalAgencyWrapper from "../(home)/_components/digital-agency-wrapper";
 
 export const metadata: Metadata = {
-  title: "About Page - Redox Next js Template",
+  title: "About - Anotik",
   description:
-    "Redox is a agency and portfolio template built with Next.js, designed to showcase your work and services effectively.",
+    "Anotik is your long-term technical partner. We remove the burden of tech for businesses through development, infrastructure, maintenance, and automation.",
 };
 
 export default function AboutPage() {
@@ -33,7 +33,7 @@ export default function AboutPage() {
         <AboutWrapper>
           <main>
             {/* page title area start */}
-            <PageTitle title="Since 2012" />
+            <PageTitle title="About Anotik" />
             {/* page title area end */}
 
             {/* about area details start */}
@@ -55,8 +55,7 @@ export default function AboutPage() {
                   <div className="section-header fade-anim">
                     <div className="text-wrapper">
                       <p className="text">
-                        Help to brands growing up and show their success stories
-                        to the world
+                        We own your technology infrastructure so you can focus on growing your business
                       </p>
                     </div>
                   </div>
@@ -112,7 +111,7 @@ export default function AboutPage() {
                       </div>
                       <div className="title-wrapper">
                         <h2 className="section-title font-sequelsans-romanbody">
-                          Meet the talented squad, behind the creativity
+                          The team that owns your technical infrastructure
                         </h2>
                       </div>
                     </div>

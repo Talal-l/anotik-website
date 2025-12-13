@@ -13,7 +13,7 @@ export default function ApproachAboutArea() {
               </div>
               <div className="title-wrapper">
                 <h2 className="section-title font-sequelsans-romanbody">
-                  Method of making better result
+                  How we remove the technical burden
                 </h2>
               </div>
             </div>
@@ -22,49 +22,49 @@ export default function ApproachAboutArea() {
             <div className="approach-wrapper fade-anim">
               <div className="approach-box">
                 <h2 className="title">
-                  Problem <br />
-                  discovery <Image src={shape} alt="image" />
+                  Understand <br />
+                  requirements <Image src={shape} alt="image" />
                 </h2>
                 <div className="approach-list">
                   <ul>
-                    <li>Usability Studies</li>
-                    <li>User Interviews</li>
-                    <li>Stakeholder Interviews</li>
-                    <li>Competitive Research</li>
-                    <li>Insights Report</li>
-                    <li>User Journey</li>
+                    <li>Technical Assessment</li>
+                    <li>Infrastructure Review</li>
+                    <li>Business Requirements</li>
+                    <li>Current State Analysis</li>
+                    <li>Solution Planning</li>
+                    <li>Implementation Roadmap</li>
                   </ul>
                 </div>
               </div>
               <div className="approach-box">
                 <h2 className="title">
-                  Design <br />
-                  system ready <Image src={shape} alt="image" />
+                  Build & <br />
+                  deploy <Image src={shape} alt="image" />
                 </h2>
                 <div className="approach-list">
                   <ul>
-                    <li>Thinking Workshops</li>
-                    <li>Sitemaps</li>
-                    <li>Concepts</li>
-                    <li>Designs</li>
-                    <li>Prototypes</li>
-                    <li>Usability Studies</li>
+                    <li>System Architecture</li>
+                    <li>Development</li>
+                    <li>Infrastructure Setup</li>
+                    <li>Testing & QA</li>
+                    <li>Deployment</li>
+                    <li>Documentation</li>
                   </ul>
                 </div>
               </div>
               <div className="approach-box">
                 <h2 className="title">
-                  Design <br />
-                  implementation{" "}
+                  Maintain & <br />
+                  support{" "}
                 </h2>
                 <div className="approach-list">
                   <ul>
-                    <li>Design</li>
-                    <li>Use Cases</li>
-                    <li>User Flows</li>
-                    <li>Various User Types</li>
-                    <li>Annotations</li>
-                    <li>Interactions</li>
+                    <li>Monitoring</li>
+                    <li>Security Updates</li>
+                    <li>Performance Optimization</li>
+                    <li>Bug Fixes</li>
+                    <li>Feature Updates</li>
+                    <li>24/7 Support</li>
                   </ul>
                 </div>
               </div>
