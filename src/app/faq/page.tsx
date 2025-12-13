@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import HeaderTwo from "@/layout/header/header-two";
 import MainWrapper from "@/components/wrapper/main-wrapper";
 import FooterInner from "@/layout/footer/footer-inner";
 import FaqWrapper from "./_components/faq-wrapper";
