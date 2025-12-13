@@ -3,7 +3,7 @@
 @use "../utils/variables" as *;
 
 .body-digital-agency {
-    background-color: #F8F8F8;
+    background-color: #f8f8f8;
     color: var(--secondary);
 
     &.dark {
@@ -77,7 +77,7 @@
     .section-title {
         font-size: 100px;
         font-weight: 500;
-        line-height: .9;
+        line-height: 0.9;
         max-width: 660px;
 
         @media #{$xxl} {
@@ -106,7 +106,6 @@
 
             @media #{$xl} {
                 width: 55px;
-
             }
 
             @media #{$lg} {
@@ -122,7 +121,7 @@
         .number {
             font-size: 100px;
             font-weight: 400;
-            line-height: .72;
+            line-height: 0.72;
             display: inline-block;
             color: var(--primary);
 
@@ -211,7 +210,7 @@
         .circle-text-wrapper {
             padding-top: 30px;
             padding-bottom: 30px;
-            background-color: #F9E6DC;
+            background-color: #f9e6dc;
 
             @include dark {
                 background-color: var(--bg);
@@ -224,7 +223,6 @@
             padding: 0;
         }
     }
-
 
     .features-wrapper-box {
         padding-bottom: 36px;
@@ -303,7 +301,7 @@ video.video-area {
         font-family: var(--font_thunder);
         font-size: 120px;
         font-weight: 700;
-        line-height: .83;
+        line-height: 0.83;
         text-transform: uppercase;
         display: inline;
         position: relative;
@@ -388,7 +386,9 @@ video.video-area {
         .text-wrapper {
             opacity: 0;
             transform: translateY(100px);
-            transition: transform 0.5s, opacity 0.5s;
+            transition:
+                transform 0.5s,
+                opacity 0.5s;
 
             @media #{$lg} {
                 opacity: 1;
@@ -400,7 +400,9 @@ video.video-area {
             margin-top: 62px;
             opacity: 0;
             transform: translateY(100px);
-            transition: transform 0.5s, opacity 0.5s;
+            transition:
+                transform 0.5s,
+                opacity 0.5s;
 
             @media #{$lg} {
                 opacity: 1;
@@ -422,7 +424,6 @@ video.video-area {
 
 /* work area style  */
 .work-area {
-
     &-inner {
         margin-top: 18px;
     }
@@ -434,7 +435,6 @@ video.video-area {
 
         @media #{$sm} {
             grid-template-columns: 1fr;
-
         }
 
         .text-wrapper {
@@ -443,7 +443,6 @@ video.video-area {
             @media #{$sm} {
                 text-align: start;
             }
-
 
             .text {
                 font-family: var(--font_dmsans);
@@ -511,7 +510,7 @@ video.video-area {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    >* {
+    > * {
         .image {
             transform-origin: bottom right;
         }
@@ -562,7 +561,10 @@ video.video-area {
                 left: 0;
                 opacity: 0;
                 margin: -25px 0 0 -65px;
-                transition: opacity 0.3s, transform 0.7s cubic-bezier(0.23, 1, 0.32, 1), -webkit-transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
+                transition:
+                    opacity 0.3s,
+                    transform 0.7s cubic-bezier(0.23, 1, 0.32, 1),
+                    -webkit-transform 0.7s cubic-bezier(0.23, 1, 0.32, 1);
                 pointer-events: none;
             }
         }
@@ -610,10 +612,8 @@ video.video-area {
     }
 }
 
-
 /* service area style  */
 .service-area {
-
     .services-wrapper-box {
         margin-top: 91px;
         margin-bottom: 20px;
@@ -630,7 +630,6 @@ video.video-area {
             margin-top: 41px;
         }
     }
-
 }
 
 .services-wrapper-1 {
@@ -867,7 +866,6 @@ video.video-area {
             max-width: 290px;
         }
 
-
         &:not(:first-child) {
             margin-top: 195px;
 
@@ -899,7 +897,7 @@ video.video-area {
         .number {
             font-size: 130px;
             font-weight: 500;
-            line-height: .7;
+            line-height: 0.7;
             display: inline-block;
             color: var(--white);
 
@@ -981,7 +979,7 @@ video.video-area {
             height: 433px;
         }
 
-        >* {
+        > * {
             position: absolute;
             display: inline-block;
             margin-bottom: 0;
@@ -1002,7 +1000,7 @@ video.video-area {
         justify-content: center;
         align-items: center;
         border-radius: 100px;
-        transform: translate(-50%, -50%) rotate(0.00rad);
+        transform: translate(-50%, -50%) rotate(0rad);
 
         @media #{$xxl} {
             width: 165px;
@@ -1048,7 +1046,6 @@ video.video-area {
         }
     }
 }
-
 
 /* cta area style  */
 .cta-area {
@@ -1117,13 +1114,11 @@ video.video-area {
 
     .section-content {
         text-align: center;
-
     }
 }
 
 /* productivity area style  */
 .productivity-area {
-
     .section-content {
         margin-top: 148px;
         margin-bottom: 105px;
@@ -1152,7 +1147,6 @@ video.video-area {
 
         @media #{$xl} {
             max-width: 737px;
-
         }
 
         @media #{$lg} {
@@ -1295,7 +1289,6 @@ video.video-area {
             }
         }
     }
-
 }
 
 /* text slider area style  */

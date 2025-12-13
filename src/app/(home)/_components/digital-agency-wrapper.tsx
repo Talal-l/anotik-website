@@ -2,7 +2,12 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { CustomEase, ScrollToPlugin, ScrollTrigger, SplitText } from "gsap/all";
-import { charAnimation, fadeAnimation, goVisibleAnimation, titleAnimation } from "@/utils/title-anim";
+import {
+  charAnimation,
+  fadeAnimation,
+  goVisibleAnimation,
+  titleAnimation,
+} from "@/utils/title-anim";
 import { growAnimation, scaleAnim } from "@/utils/img-anim";
 import { wordAnimation } from "@/utils/word-anim";
 import { throwableAnimation } from "@/utils/throwable-anim";
@@ -14,12 +19,12 @@ type Props = {
 
 export default function DigitalAgencyWrapper({ children }: Props) {
   useGSAP(() => {
-    gsap.registerPlugin(CustomEase, ScrollToPlugin,SplitText,ScrollTrigger);
+    gsap.registerPlugin(CustomEase, ScrollToPlugin, SplitText, ScrollTrigger);
     const timer = setTimeout(() => {
       titleAnimation();
       fadeAnimation();
       scaleAnim();
-      growAnimation()
+      growAnimation();
       goVisibleAnimation();
       wordAnimation();
       throwableAnimation();

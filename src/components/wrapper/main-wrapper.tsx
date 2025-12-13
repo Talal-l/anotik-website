@@ -1,7 +1,5 @@
-'use client';
+"use client";
 import { useEffect } from "react";
-import useScrollSmooth from "@/hooks/use-scroll-smooth";
-import ScrollToTop from "../common/scroll-to-top";
 
 type IProps = {
   children: React.ReactNode;
@@ -20,24 +18,5 @@ export default function MainWrapper({ children, bodyCls }: IProps) {
     };
   }, [bodyCls]);
 
-  // Run animations on component mount
-
-  // Smooth scrolling
-  useScrollSmooth();
-  return (
-    <>
-      {/* scroll to top start */}
-      <ScrollToTop />
-      {/* scroll to top end */}
-
-      <div className="has-smooth" id="has_smooth"></div>
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
-
-          {children}
-
-        </div>
-      </div>
-    </>
-  )
+  return <>{children}</>;
 }

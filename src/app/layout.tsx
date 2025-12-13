@@ -10,6 +10,7 @@ import "bootstrap/scss/bootstrap.scss";
 import "./globals.scss";
 import HeaderOne from "@/layout/header/header-one";
 import Header from "@/layout/header/header-one";
+import SmoothScrollWrapper from "@/components/wrapper/smooth-scroll-wrapper";
 
 const dm_sans = DM_Sans({
   weight: ["400", "500", "600", "700", "800"],
@@ -148,8 +149,10 @@ export default function RootLayout({
       <body
         className={`${dm_sans.variable} ${instrument_sans.variable} ${bdogrotesk.variable} ${tartuffo.variable} ${tartufffo_trial.variable} ${times_now.variable} ${thunder.variable} ${Sequel_sans_roman.variable} ${Sequel_sans_medium.variable}`}
       >
-        <Header />
-        {children}
+        <SmoothScrollWrapper>
+          <Header />
+          {children}
+        </SmoothScrollWrapper>
       </body>
     </html>
   );

@@ -11,25 +11,25 @@
   "dependencies": {
     "@gsap/react": "^2.1.2",
     "@types/imagesloaded": "^4.1.7",
-    "bootstrap": "^5.3.7",
-    "gsap": "3.13.0",
+    "bootstrap": "^5.3.8",
+    "gsap": "3.14.2",
     "imagesloaded": "^5.0.0",
     "jquery": "^3.7.1",
     "magnific-popup": "^1.2.0",
     "next": "15.4.10",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "sass": "^1.75.0",
+    "sass": "^1.96.0",
     "swiper": "^11.2.10"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@types/jquery": "^3.5.32",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^9",
+    "@eslint/eslintrc": "^3.3.3",
+    "@types/jquery": "^3.5.33",
+    "@types/node": "^20.19.26",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9.39.2",
     "eslint-config-next": "15.4.6",
-    "typescript": "^5"
+    "typescript": "^5.9.3"
   }
 }

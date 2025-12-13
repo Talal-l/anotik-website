@@ -11,6 +11,7 @@ import MediaAboutArea from "./_components/media-about-area";
 import { AwardBoxWrapper } from "@/components/award/award-area";
 import { TeamWrapperArea } from "@/components/team/team-area";
 import TeamListArea from "@/components/team/team-list-area";
+import DigitalAgencyWrapper from "../(home)/_components/digital-agency-wrapper";
 
 export const metadata: Metadata = {
   title: "About Page - Redox Next js Template",
