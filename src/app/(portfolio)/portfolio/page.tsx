@@ -20,10 +20,6 @@ export default function PortfolioPage() {
       <CustomCursor />
       {/* custom cursor end */}
 
-      {/* Header area start */}
-      <HeaderTwo />
-      {/* Header area end */}
-
       {/* Main wrapper start */}
       <MainWrapper
         bodyCls={[
@@ -41,7 +37,6 @@ export default function PortfolioPage() {
             {/* portfolio area start */}
             <WorkAreaEight />
             {/* portfolio area end */}
-
           </main>
 
           {/* Footer area start */}

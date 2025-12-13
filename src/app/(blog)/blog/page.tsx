@@ -1,11 +1,10 @@
 import { Metadata } from "next";
-import HeaderTwo from "@/layout/header/header-two";
 import MainWrapper from "@/components/wrapper/main-wrapper";
 import FooterInner from "@/layout/footer/footer-inner";
 import PageTitle from "@/components/common/page-title";
 import BlogAreaTwo from "@/components/blog/blog-area-2";
 import BlogWrapper from "./_components/blog-wrapper";
-
+import HeaderOne from "@/layout/header/header-one";
 
 export const metadata: Metadata = {
   title: "Blog Page - Redox Next js Template",
@@ -16,10 +15,6 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   return (
     <>
-      {/* Header area start */}
-      <HeaderTwo />
-      {/* Header area end */}
-
       {/* Main wrapper start */}
       <MainWrapper
         bodyCls={[
@@ -30,7 +25,6 @@ export default function BlogPage() {
       >
         <BlogWrapper>
           <main>
-
             {/* page title area start */}
             <PageTitle title="Journals" />
             {/* page title area end */}
@@ -38,7 +32,6 @@ export default function BlogPage() {
             {/* blog area start */}
             <BlogAreaTwo />
             {/* blog area end */}
-
           </main>
 
           {/* Footer area start */}

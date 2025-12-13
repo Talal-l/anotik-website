@@ -14,10 +14,6 @@ export const metadata: Metadata = {
 export default function PortfolioDetailsPage() {
   return (
     <>
-      {/* Header area start */}
-      <HeaderTwo />
-      {/* Header area end */}
-
       {/* Main wrapper start */}
       <MainWrapper
         bodyCls={[
@@ -28,11 +24,9 @@ export default function PortfolioDetailsPage() {
       >
         <PortfolioDetailsWrapper>
           <main>
-
             {/* portfolio details area start */}
-            <PortfolioDetailsArea/>
+            <PortfolioDetailsArea />
             {/* portfolio details area end */}
-
           </main>
 
           {/* Footer area start */}

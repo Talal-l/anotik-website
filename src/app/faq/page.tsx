@@ -15,10 +15,6 @@ export const metadata: Metadata = {
 export default function FaqPage() {
   return (
     <>
-      {/* Header area start */}
-      <HeaderTwo />
-      {/* Header area end */}
-
       {/* Main wrapper start */}
       <MainWrapper
         bodyCls={[
@@ -29,7 +25,6 @@ export default function FaqPage() {
       >
         <FaqWrapper>
           <main>
-
             {/* page title area start */}
             <PageTitle title="Question" />
             {/* page title area end */}
@@ -44,9 +39,9 @@ export default function FaqPage() {
                         <span className="section-subtitle">FAQ</span>
                       </div>
                       <div className="title-wrapper">
-                        <h2 className="section-title font-sequelsans-romanbody">Learn some common
-                          answers about newly
-                          projects</h2>
+                        <h2 className="section-title font-sequelsans-romanbody">
+                          Learn some common answers about newly projects
+                        </h2>
                       </div>
                     </div>
                   </div>
@@ -54,12 +49,10 @@ export default function FaqPage() {
                   {/* accordion wrapper */}
                   <AccordionWrapper />
                   {/* accordion wrapper */}
-
                 </div>
               </div>
             </section>
             {/* faq area end */}
-
           </main>
 
           {/* Footer area start */}

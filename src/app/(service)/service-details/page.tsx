@@ -18,10 +18,6 @@ export const metadata: Metadata = {
 export default function ServiceDetailsPage() {
   return (
     <>
-      {/* Header area start */}
-      <HeaderTwo />
-      {/* Header area end */}
-
       {/* Main wrapper start */}
       <MainWrapper
         bodyCls={[
@@ -32,9 +28,8 @@ export default function ServiceDetailsPage() {
       >
         <ServiceDetailsWrapper>
           <main>
-
             {/* service details hero area start */}
-            <ServiceDetailsHero />  
+            <ServiceDetailsHero />
             {/* service details hero area end */}
 
             {/* service details approach area start */}
@@ -42,17 +37,16 @@ export default function ServiceDetailsPage() {
             {/* service details approach area end */}
 
             {/* service details feature area start */}
-            <ServiceDetailsFeature/>
+            <ServiceDetailsFeature />
             {/* service details feature area end */}
 
             {/* service details value area start */}
-            <ServiceDetailsValueArea/>
+            <ServiceDetailsValueArea />
             {/* service details value area end */}
 
             {/* service details faq area start */}
             <FAQArea />
             {/* service details faq area end */}
-
           </main>
 
           {/* Footer area start */}

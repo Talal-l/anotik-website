@@ -6,7 +6,6 @@ import ContactArea from "./_components/contact-area";
 import FooterInner from "@/layout/footer/footer-inner";
 import PageTitle from "@/components/common/page-title";
 
-
 export const metadata: Metadata = {
   title: "Contact Page - Redox Next js Template",
   description:
@@ -16,10 +15,6 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      {/* Header area start */}
-      <HeaderTwo />
-      {/* Header area end */}
-
       {/* Main wrapper start */}
       <MainWrapper
         bodyCls={[
@@ -29,21 +24,18 @@ export default function ContactPage() {
         ]}
       >
         <ContactWrapper>
-
           <main>
-
             {/* page title area start */}
             <PageTitle title="Contact" />
             {/* page title area end */}
 
             {/* contact area start */}
-            <ContactArea/>
+            <ContactArea />
             {/* contact area end */}
-
           </main>
 
           {/* Footer area start */}
-          <FooterInner/>
+          <FooterInner />
           {/* Footer area end */}
         </ContactWrapper>
       </MainWrapper>

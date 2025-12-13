@@ -16,10 +16,6 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <>
-      {/* Header area start */}
-      <HeaderTwo />
-      {/* Header area end */}
-
       {/* Main wrapper start */}
       <MainWrapper
         bodyCls={[
@@ -39,7 +35,7 @@ export default function ServicesPage() {
             {/* services area end */}
 
             {/* client area start  */}
-            <ClientAreaFour/>
+            <ClientAreaFour />
             {/* client area end  */}
           </main>
 

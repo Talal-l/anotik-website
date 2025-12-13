@@ -18,10 +18,6 @@ export const metadata: Metadata = {
 export default function TeamPage() {
   return (
     <>
-      {/* Header area start */}
-      <HeaderTwo />
-      {/* Header area end */}
-
       {/* Main wrapper start */}
       <MainWrapper
         bodyCls={[
@@ -71,9 +67,10 @@ export default function TeamPage() {
                   <div className="section-content fade-anim">
                     <div className="section-title-wrapper">
                       <div className="title-wrapper">
-                        <h2 className="section-title font-sequelsans-romanbody">We think out of the box when it comes
-                          to strategy, design and creative. Want to join
-                          the talented team?</h2>
+                        <h2 className="section-title font-sequelsans-romanbody">
+                          We think out of the box when it comes to strategy,
+                          design and creative. Want to join the talented team?
+                        </h2>
                       </div>
                     </div>
                     <div className="btn-wrapper">
@@ -89,7 +86,6 @@ export default function TeamPage() {
               </div>
             </section>
             {/* cta area end */}
-
           </main>
 
           {/* Footer area start */}
