@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
@@ -30,6 +31,7 @@
     "@types/react-dom": "^19.2.3",
     "eslint": "^9.39.2",
     "eslint-config-next": "15.4.6",
+    "prettier": "^3.3.3",
     "typescript": "^5.9.3"
   }
 }
