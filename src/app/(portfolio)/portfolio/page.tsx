@@ -14,9 +14,7 @@ export const metadata: Metadata = {
 export default function PortfolioPage() {
   return (
     <>
-      {/* custom cursor start */}
       <CustomCursor />
-      {/* custom cursor end */}
 
       <PortfolioWrapper>
         <main>

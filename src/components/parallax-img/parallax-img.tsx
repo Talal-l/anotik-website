@@ -1,5 +1,5 @@
 import Image from "next/image";
-import gallery_img from "@/assets/imgs/gallery/image-7.webp";
+import gallery_img from "@/assets/imgs/gallery/anotik.png";
 
 export default function ParallaxImg() {
   return (

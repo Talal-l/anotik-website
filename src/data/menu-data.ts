@@ -5,7 +5,6 @@ const menuData: MenuItem[] = [
     title: "Home",
     href: "/",
   },
-  { title: "About Us", href: "/about" },
   {
     title: "Service",
     href: "#services",

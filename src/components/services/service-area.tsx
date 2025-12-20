@@ -8,7 +8,7 @@ const ServiceArea = () => {
       number: "(01)",
       title: "Development",
       list: ["Websites", "E-commerce", "Mobile Apps", "System Integration"],
-      image: "/assets/imgs/gallery/image-3.webp",
+      image: "/assets/imgs/gallery/development.png",
     },
     {
       number: "(02)",
@@ -20,7 +20,7 @@ const ServiceArea = () => {
         "Security Updates",
         "Ongoing Safety Reviews",
       ],
-      image: "/assets/imgs/gallery/image-4.webp",
+      image: "/assets/imgs/gallery/Security.png",
     },
     {
       number: "(03)",
@@ -32,7 +32,7 @@ const ServiceArea = () => {
         "Performance improvements",
         "Issue fixing",
       ],
-      image: "/assets/imgs/gallery/image-4.webp",
+      image: "/assets/imgs/gallery/Systems & Support.png",
     },
     {
       number: "(04)",
@@ -44,7 +44,7 @@ const ServiceArea = () => {
         "Data Processing",
         "Custom Solutions",
       ],
-      image: "/assets/imgs/gallery/image-6.webp",
+      image: "/assets/imgs/gallery/Automation & AI.png",
     },
   ];
 

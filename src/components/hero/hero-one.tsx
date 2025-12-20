@@ -1,5 +1,5 @@
 import Image from "next/image";
-import shape_3 from "@/assets/imgs/shape/shape-3-dark.webp";
+import spinnerText from "@/assets/imgs/shape/SpinnerText.png";
 import shape_2 from "@/assets/imgs/shape/shape-2-dark.webp";
 
 export default function Hero() {
@@ -16,7 +16,7 @@ export default function Hero() {
             >
               <div className="circle-text-wrapper">
                 <div className="circle-text">
-                  <Image src={shape_3} alt="image" className="text" />
+                  <Image src={spinnerText} alt="image" className="text" />
                   <Image src={shape_2} alt="image" className="icon" />
                 </div>
               </div>

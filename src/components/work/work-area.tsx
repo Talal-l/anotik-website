@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { portfolioData } from "@/data/portfolio-data";
 
 const WorkArea = () => {
   return (
@@ -17,39 +18,14 @@ const WorkArea = () => {
         </div>
         <div className="works-wrapper-box" style={{ marginTop: "20px" }}>
           <div className="works-wrapper-1 fade-anim">
-            {[
-              {
-                title: "POLYNUR DESIGN",
-                tag: "E-Commerce",
-                image: "/assets/imgs/project/POLYNUR.png",
-                date: "2023",
-              },
-              {
-                title: "Blush Layers",
-                tag: "E-Commerce",
-                image: "/assets/imgs/project/image-2.webp",
-                date: "2025",
-              },
-              {
-                title: "Try LIVE",
-                tag: "Mobile App",
-                image: "/assets/imgs/project/image-3.webp",
-                date: "2025",
-              },
-              {
-                title: "LayerWyse",
-                tag: "Web App",
-                image: "/assets/imgs/project/LayerWyse.png",
-                date: "2025",
-              },
-            ].map((work, index) => (
-              <div key={index} className="work-box">
+            {portfolioData.map((work) => (
+              <div key={work.id} className="work-box">
                 <div className="thumb">
                   <div className="image scale" data-cursor-text="View Project">
-                    <Link href="/portfolio-details">
+                    <Link href={`/portfolio-details/${work.slug}`}>
                       <Image
                         src={work.image}
-                        alt="image"
+                        alt={work.title}
                         width={840}
                         height={580}
                         style={{ height: "auto" }}
@@ -59,7 +35,9 @@ const WorkArea = () => {
                 </div>
                 <div className="content">
                   <h3 className="title">
-                    <Link href="/portfolio-details">{work.title}</Link>
+                    <Link href={`/portfolio-details/${work.slug}`}>
+                      {work.title}
+                    </Link>
                   </h3>
                   <div className="meta">
                     <span className="tag">{work.tag}</span>
