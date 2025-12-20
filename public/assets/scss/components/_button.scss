@@ -213,13 +213,13 @@
     &:focus {
       .btn-wrap {
         .text-two {
-          color: var(--white);
+          color: var(--black);
         }
       }
     }
 
     &::before {
-      background-color: var(--theme);
+      background-color: var(--action);
     }
 
     &.btn-border {

@@ -37,6 +37,7 @@ const Header = () => {
                 <a href="/contact" className="rr-btn hover-bg-theme">
                   <span className="btn-wrap">
                     <span className="text-one">Let’s Talk</span>
+                    <span className="text-two">Let’s Talk</span>
                   </span>
                 </a>
               </div>
