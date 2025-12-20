@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import FooterInner from "@/layout/footer/footer-inner";
+import Footer from "@/layout/footer/footer-one";
 import PageTitle from "@/components/common/page-title";
 import ServiceAreaSix from "@/components/services/service-area-6";
 import ServiceWrapper from "./_components/service-wrapper";
@@ -30,7 +30,7 @@ export default function ServicesPage() {
         </main>
 
         {/* Footer area start */}
-        <FooterInner />
+        <Footer />
         {/* Footer area end */}
       </ServiceWrapper>
     </>

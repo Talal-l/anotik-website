@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import FooterInner from "@/layout/footer/footer-inner";
+import Footer from "@/layout/footer/footer-one";
 import TeamWrapper from "./_components/team-wrapper";
 import PageTitle from "@/components/common/page-title";
 import TeamHeaderArea from "./_components/team-header-area";
@@ -79,7 +79,7 @@ export default function TeamPage() {
         </main>
 
         {/* Footer area start */}
-        <FooterInner />
+        <Footer />
         {/* Footer area end */}
       </TeamWrapper>
     </>

@@ -1,12 +1,19 @@
 "use client";
-import { FormEvent, useState } from "react";
+import { useActionState, useEffect, useRef } from "react";
+import { submitContactForm } from "../_actions/contact-action";
 
 export default function ContactArea() {
-  const [budget, setBudget] = useState("");
+  const formRef = useRef<HTMLFormElement>(null);
+  const [state, formAction, isPending] = useActionState(submitContactForm, {
+    success: false,
+    message: "",
+  });
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-  };
+  useEffect(() => {
+    if (state.success && formRef.current) {
+      formRef.current.reset();
+    }
+  }, [state.success]);
   return (
     <section className="contact-area-contact-page">
       <div className="container large">
@@ -33,20 +40,9 @@ export default function ContactArea() {
                   <a href="mailTo:info@anotik.com">info@anotik.com</a>
                 </p>
               </div>
-              <div className="contact-social">
-                <p className="title">Follow</p>
-                <div className="social-links">
-                  <a href="#">Facebook</a>
-                  <a href="#">Twitter</a>
-                  <a href="#">LinkedIn</a>
-                  <a href="#">Instagram</a>
-                  <a href="#">Dribbble</a>
-                  <a href="#">Behance</a>
-                </div>
-              </div>
             </div>
             <div className="contact-wrap">
-              <form onSubmit={handleSubmit} id="contact__form">
+              <form ref={formRef} action={formAction} id="contact__form">
                 <div className="contact-formwrap">
                   <div className="contact-formfield">
                     <input
@@ -54,22 +50,28 @@ export default function ContactArea() {
                       name="name"
                       id="name"
                       placeholder="Name*"
+                      required
+                      disabled={isPending}
                     />
                   </div>
                   <div className="contact-formfield">
                     <input
-                      type="text"
+                      type="email"
                       name="email"
                       id="email"
                       placeholder="Email*"
+                      required
+                      disabled={isPending}
                     />
                   </div>
                   <div className="contact-formfield">
                     <input
-                      type="text"
+                      type="tel"
                       name="phone"
                       id="phone"
                       placeholder="Phone*"
+                      required
+                      disabled={isPending}
                     />
                   </div>
                   <div className="contact-formfield">
@@ -78,6 +80,7 @@ export default function ContactArea() {
                       name="company"
                       id="company"
                       placeholder="Company"
+                      disabled={isPending}
                     />
                   </div>
                   <div className="contact-formfield">
@@ -86,26 +89,67 @@ export default function ContactArea() {
                       name="solution"
                       id="solution"
                       placeholder="Solution"
+                      disabled={isPending}
                     />
                   </div>
                   <div className="contact-formfield message">
-                    <input
-                      type="text"
+                    <textarea
                       name="message"
                       id="message"
                       placeholder="Message*"
+                      required
+                      disabled={isPending}
+                      rows={4}
+                      style={{
+                        width: "100%",
+                        minHeight: "40px",
+                        border: "none",
+                        borderBottom: "1px solid var(--primary)",
+                        outline: "none",
+                        backgroundColor: "transparent",
+                        transition: "all 0.5s",
+                        color: "var(--primary)",
+                        resize: "vertical",
+                        fontFamily: "inherit",
+                      }}
                     />
                   </div>
                 </div>
                 <div className="submit-btn">
-                  <button type="submit" className="rr-btn">
+                  <button
+                    type="submit"
+                    className="rr-btn"
+                    disabled={isPending}
+                  >
                     <span className="btn-wrap">
-                      <span className="text-one">Send Message</span>
-                      <span className="text-two">Send Message</span>
+                      <span className="text-one">
+                        {isPending ? "Sending..." : "Send Message"}
+                      </span>
+                      <span className="text-two">
+                        {isPending ? "Sending..." : "Send Message"}
+                      </span>
                     </span>
                   </button>
                 </div>
-                <div id="response-message"></div>
+                {state.message && (
+                  <div
+                    id="response-message"
+                    style={{
+                      marginTop: "20px",
+                      padding: "12px",
+                      borderRadius: "4px",
+                      backgroundColor: state.success
+                        ? "rgba(76, 175, 80, 0.1)"
+                        : "rgba(244, 67, 54, 0.1)",
+                      color: state.success ? "#4caf50" : "#f44336",
+                      border: `1px solid ${
+                        state.success ? "#4caf50" : "#f44336"
+                      }`,
+                    }}
+                  >
+                    {state.message}
+                  </div>
+                )}
               </form>
             </div>
           </div>

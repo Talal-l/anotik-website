@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import FooterInner from "@/layout/footer/footer-inner";
+import Footer from "@/layout/footer/footer-one";
 import PageTitle from "@/components/common/page-title";
 import BlogAreaTwo from "@/components/blog/blog-area-2";
 import BlogWrapper from "./_components/blog-wrapper";
@@ -25,7 +25,7 @@ export default function BlogPage() {
         </main>
 
         {/* Footer area start */}
-        <FooterInner />
+        <Footer />
         {/* Footer area end */}
       </BlogWrapper>
     </>

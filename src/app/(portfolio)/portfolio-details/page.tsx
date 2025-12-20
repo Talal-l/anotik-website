@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import FooterInner from "@/layout/footer/footer-inner";
+import Footer from "@/layout/footer/footer-one";
 import PortfolioDetailsWrapper from "./_components/portfolio-details-wrapper";
 import PortfolioDetailsArea from "./_components/portfolio-details-area";
 
@@ -20,7 +20,7 @@ export default function PortfolioDetailsPage() {
         </main>
 
         {/* Footer area start */}
-        <FooterInner />
+        <Footer />
         {/* Footer area end */}
       </PortfolioDetailsWrapper>
     </>

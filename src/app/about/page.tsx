@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import FooterInner from "@/layout/footer/footer-inner";
+import Footer from "@/layout/footer/footer-one";
 import PageTitle from "@/components/common/page-title";
 import AboutWrapper from "./_components/about-wrapper";
 import AboutAreaDetails from "@/components/about/about-area-details";
@@ -121,7 +121,7 @@ export default function AboutPage() {
         </main>
 
         {/* Footer area start */}
-        <FooterInner />
+        <Footer />
         {/* Footer area end */}
       </AboutWrapper>
     </>

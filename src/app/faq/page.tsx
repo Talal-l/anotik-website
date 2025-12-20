@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import FooterInner from "@/layout/footer/footer-inner";
+import Footer from "@/layout/footer/footer-one";
 import FaqWrapper from "./_components/faq-wrapper";
 import PageTitle from "@/components/common/page-title";
 import { AccordionWrapper } from "@/components/faq/faq-area";
@@ -46,7 +46,7 @@ export default function FaqPage() {
         </main>
 
         {/* Footer area start */}
-        <FooterInner />
+        <Footer />
         {/* Footer area end */}
       </FaqWrapper>
     </>

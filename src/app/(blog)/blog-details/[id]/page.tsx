@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import FooterInner from "@/layout/footer/footer-inner";
+import Footer from "@/layout/footer/footer-one";
 import { allBlogs } from "@/data/blog-data";
 import BlogWrapper from "../../blog/_components/blog-wrapper";
 import BlogDetailsArea from "@/components/blog/blog-details-area";
@@ -37,7 +37,7 @@ export default async function BlogDetailsPage({ params }: Props) {
         </main>
 
         {/* Footer area start */}
-        <FooterInner />
+        <Footer />
         {/* Footer area end */}
       </BlogWrapper>
     </>
