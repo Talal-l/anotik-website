@@ -28,8 +28,9 @@ export default function Hero() {
                   <h2
                     className="section-title font-instrumentsans-medium char-anim"
                     data-delay="0.45"
+                    aria-label="We handle your tech. You handle your business."
                   >
-                    We remove the burden
+                    We handle your tech.
                     <span>
                       <Image
                         className="title-shape-1 fade-anim"
@@ -40,7 +41,7 @@ export default function Hero() {
                         style={{ height: "auto" }}
                       />
                     </span>
-                    of tech for your business
+                    You handle your business.
                   </h2>
                 </div>
               </div>
@@ -52,7 +53,7 @@ export default function Hero() {
                     <div className="content">
                       <span className="number">100%</span>
                       <p className="text">
-                        Ownership of your technical infrastructure
+                        You own everything we build
                       </p>
                     </div>
                   </div>
@@ -60,7 +61,7 @@ export default function Hero() {
                     <div className="content">
                       <span className="number">24/7</span>
                       <p className="text">
-                        Ongoing support and maintenance coverage
+                        Always-on support when you need it
                       </p>
                     </div>
                   </div>
@@ -68,9 +69,8 @@ export default function Hero() {
               </div>
               <div className="text-wrapper fade-anim" data-delay="0.75">
                 <p className="text">
-                  Anotik is your long-term technical partner. We build,
-                  maintain, and own your technology infrastructure so you can
-                  focus on your business.
+                  We build, maintain, and own your technology so you can focus
+                  on what matters—growing your business.
                 </p>
               </div>
             </div>
