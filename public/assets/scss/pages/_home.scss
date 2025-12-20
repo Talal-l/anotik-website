@@ -142,6 +142,7 @@
   .text-wrapper {
     margin-top: 87px;
 
+    background-color: #171717;
     @media #{$xxl} {
       margin-top: 37px;
     }
@@ -206,7 +207,8 @@
     .circle-text-wrapper {
       padding-top: 30px;
       padding-bottom: 30px;
-      background-color: var(--bg);
+
+      background-color: #171717;
     }
 
     .circle-text {

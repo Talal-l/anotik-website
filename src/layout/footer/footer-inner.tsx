@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "@/assets/imgs/logo/logo-2.png";
+import logo from "@/assets/imgs/logo/logo-big-dark.png";
 import icon from "@/assets/imgs/icon/icon-1.webp";
 
 interface NavItem {
@@ -49,13 +49,15 @@ const FooterInner: React.FC = () => {
         <div className="footer-top-inner">
           <div className="footer-logo">
             <Link href="/">
-              <Image src={logo} alt="site-logo" />
+              <Image src={logo} alt="site-logo" style={{ height: "auto" }} />
             </Link>
           </div>
           <div className="info-text">
             <div className="text-wrapper">
               <p className="text">
-                Anotik removes the burden of tech for businesses. We build, maintain, and own your technology infrastructure as your long-term technical partner.
+                Anotik removes the burden of tech for businesses. We build,
+                maintain, and own your technology infrastructure as your
+                long-term technical partner.
               </p>
             </div>
             <div className="info-link">

@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import logo from "@/assets/imgs/logo/logo-2.png";
+import logo from "@/assets/imgs/logo/logo-big-dark.png";
 import Image from "next/image";
 import menuData from "@/data/menu-data";
 
@@ -116,9 +116,7 @@ export default function SideToggle({
                     <i className="fa-solid fa-envelope"></i>
                   </span>
                   <span className="text">
-                    <a href="mailto:info@anotik.com">
-                      info@anotik.com
-                    </a>
+                    <a href="mailto:info@anotik.com">info@anotik.com</a>
                   </span>
                 </div>
                 <div className="contact-item">

@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "@/assets/imgs/logo/logo.png";
+import logo from "@/assets/imgs/logo/logo-text-dark.png";
 import MainMenu from "./main-menu";
 import SideToggle from "@/components/common/side-toggle";
 
@@ -17,13 +17,12 @@ const Header = () => {
             <div className="header-area__inner">
               {/* Logo */}
               <div className="header__logo">
-                <Link href="/index">
+                <Link href="/">
                   <Image
                     src={logo}
                     className="normal-logo"
                     alt="Site Logo"
                     width={95}
-                    height={23}
                   />
                 </Link>
               </div>

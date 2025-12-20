@@ -1,6 +1,6 @@
 import Image from "next/image";
-import shape_3 from "@/assets/imgs/shape/shape-3.webp";
-import shape_2 from "@/assets/imgs/shape/shape-2.webp";
+import shape_3 from "@/assets/imgs/shape/shape-3-dark.webp";
+import shape_2 from "@/assets/imgs/shape/shape-2-dark.webp";
 import shape_1 from "@/assets/imgs/shape/shape-1.webp";
 
 export default function Hero() {
@@ -52,17 +52,13 @@ export default function Hero() {
                   <div className="feature-box">
                     <div className="content">
                       <span className="number">100%</span>
-                      <p className="text">
-                        You own everything we build
-                      </p>
+                      <p className="text">You own everything we build</p>
                     </div>
                   </div>
                   <div className="feature-box">
                     <div className="content">
                       <span className="number">24/7</span>
-                      <p className="text">
-                        Always-on support when you need it
-                      </p>
+                      <p className="text">Always-on support when you need it</p>
                     </div>
                   </div>
                 </div>

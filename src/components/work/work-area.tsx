@@ -44,9 +44,9 @@ const WorkArea = () => {
               {
                 title: "LayerWyse",
                 tag: "Web App",
-                image: "/assets/imgs/project/image-4.webp",
+                image: "/assets/imgs/project/LayerWyse.png",
                 date: "2025",
-                                },
+              },
             ].map((work, index) => (
               <div key={index} className="work-box">
                 <div className="thumb">

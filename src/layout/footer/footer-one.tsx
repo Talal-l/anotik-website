@@ -2,7 +2,7 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import Image from "next/image";
-import logo from "@/assets/imgs/logo/logo-2.png";
+import logo from "@/assets/imgs/logo/logo-big-dark.png";
 import icon from "@/assets/imgs/icon/icon-1.webp";
 
 const Footer: React.FC = () => {
@@ -27,7 +27,9 @@ const Footer: React.FC = () => {
           <div className="info-text">
             <div className="text-wrapper">
               <p className="text">
-                Anotik removes the burden of tech for businesses. We build, maintain, and own your technology infrastructure as your long-term technical partner.
+                Anotik removes the burden of tech for businesses. We build,
+                maintain, and own your technology infrastructure as your
+                long-term technical partner.
               </p>
             </div>
             <div className="info-link">
@@ -67,13 +69,11 @@ const Footer: React.FC = () => {
             <div className="footer-widget-box">
               <h2 className="title">Company</h2>
               <ul className="footer-nav-list">
-                {["About", "Services", "Work", "Contact"].map(
-                  (item) => (
-                    <li key={item}>
-                      <Link href="/contact">{item}</Link>
-                    </li>
-                  ),
-                )}
+                {["About", "Services", "Work", "Contact"].map((item) => (
+                  <li key={item}>
+                    <Link href="/contact">{item}</Link>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="footer-widget-box">
