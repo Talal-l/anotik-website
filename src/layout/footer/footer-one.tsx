@@ -1,39 +1,96 @@
 "use client";
 import Link from "next/link";
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
+import { usePathname, useRouter } from "next/navigation";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollToPlugin } from "gsap/all";
 import logo from "@/assets/imgs/logo/logo-big-dark.png";
-import icon from "@/assets/imgs/icon/icon-1.webp";
+import menuData from "@/data/menu-data";
 
 const Footer: React.FC = () => {
-  const [email, setEmail] = useState("");
+  const pathname = usePathname();
+  const router = useRouter();
 
-  const handleSubscribe = (e: React.MouseEvent<HTMLButtonElement>) => {
+  useGSAP(() => {
+    gsap.registerPlugin(ScrollToPlugin);
+  }, []);
+
+  const handleServicesClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
-    // Add subscription logic here (e.g., API call)
-    alert(`Subscribed with email: ${email}`);
-    setEmail(""); // Clear the input field after subscribing
+    const servicesElement = document.getElementById("services");
+    
+    if (pathname === "/" && servicesElement) {
+      gsap.to(window, {
+        duration: 1.2,
+        scrollTo: {
+          y: servicesElement,
+          offsetY: 0,
+        },
+        ease: "power2.inOut",
+      });
+    } else {
+      router.push("/");
+      let attempts = 0;
+      const maxAttempts = 50;
+      const checkElement = () => {
+        attempts++;
+        const element = document.getElementById("services");
+        if (element) {
+          gsap.to(window, {
+            duration: 1.2,
+            scrollTo: {
+              y: element,
+              offsetY: 0,
+            },
+            ease: "power2.inOut",
+          });
+        } else if (attempts < maxAttempts) {
+          setTimeout(checkElement, 100);
+        }
+      };
+      setTimeout(checkElement, 300);
+    }
   };
 
   return (
     <footer className="footer-area">
-      <div className="container large ">
+      <div className="container large">
         <div className="footer-top-inner">
           <div className="footer-logo">
             <Link href="/">
               <Image src={logo} alt="site-logo" style={{ height: "auto" }} />
             </Link>
           </div>
-          <div className="info-text">
-            <div className="text-wrapper">
-              <p className="text">
-                Anotik removes the burden of tech for businesses. We build,
-                maintain, and own your technology infrastructure as your
-                long-term technical partner.
-              </p>
-            </div>
+          <div className="footer-content-wrapper">
             <div className="info-link">
               <a href="mailto:info@anotik.com">info@anotik.com</a>
+            </div>
+            <nav className="footer-nav">
+              <ul className="footer-nav-list">
+                {menuData.map((item, index) => (
+                  <li key={index}>
+                    {item.href === "#services" ? (
+                      <a href="#" onClick={handleServicesClick}>
+                        {item.title}
+                      </a>
+                    ) : (
+                      <Link href={item.href}>{item.title}</Link>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </nav>
+            <div className="footer-social">
+              <a
+                href="https://wa.me/1234567890"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp"
+              >
+                WhatsApp
+              </a>
             </div>
           </div>
         </div>

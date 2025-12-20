@@ -40,7 +40,7 @@ export default function SideToggle({
     e.preventDefault();
     onSideToggle();
     const servicesElement = document.getElementById("services");
-    
+
     if (pathname === "/" && servicesElement) {
       setTimeout(() => {
         gsap.to(window, {
@@ -163,12 +163,6 @@ export default function SideToggle({
               <div className="contact-meta">
                 <div className="contact-item">
                   <span className="icon">
-                    <i className="fa-solid fa-location-dot"></i>
-                  </span>
-                  <span className="text">3891 Ranchview Dr. Richardson</span>
-                </div>
-                <div className="contact-item">
-                  <span className="icon">
                     <i className="fa-solid fa-envelope"></i>
                   </span>
                   <span className="text">
@@ -180,7 +174,7 @@ export default function SideToggle({
                     <i className="fa-solid fa-phone"></i>
                   </span>
                   <span className="text">
-                    <a href="tel:(505)555-0125">(505) 555-0125</a>
+                    <a href="tel:+965 6626 4368">+965 6626 4368</a>
                   </span>
                 </div>
               </div>

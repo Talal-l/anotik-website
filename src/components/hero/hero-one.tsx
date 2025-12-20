@@ -20,13 +20,13 @@ export default function Hero() {
                   <div
                     className="font-instrumentsans-medium"
                     style={{
-                      color: "var(--secondary)",
+                      color: "#d9d9d9",
                       fontSize: "48px",
                       fontFamily: "var(--font_thunder)",
                       fontWeight: "bold",
                     }}
                   >
-                    A
+                    A.
                   </div>
                 </div>
               </div>
