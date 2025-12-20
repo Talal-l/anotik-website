@@ -9,7 +9,7 @@ const WorkArea = () => {
           <div className="section-title-wrapper">
             <div className="title-wrapper">
               <h2 className="section-title font-instrumentsans-medium">
-                Our Work
+                SELECTED PROJECTS
               </h2>
             </div>
           </div>
@@ -42,16 +42,6 @@ const WorkArea = () => {
                 title: "Project Four",
                 tag: "Backend Systems",
                 image: "/assets/imgs/project/image-4.webp",
-              },
-              {
-                title: "Project Five",
-                tag: "DevOps",
-                image: "/assets/imgs/project/image-5.webp",
-              },
-              {
-                title: "Project Six",
-                tag: "AI Integration",
-                image: "/assets/imgs/project/image-6.webp",
               },
             ].map((work, index) => (
               <div key={index} className="work-box">

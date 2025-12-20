@@ -22,7 +22,7 @@ const TextSlider = () => {
               <SwiperSlide key={index}>
                 <div className="text-slider-item">
                   <h2 className="title">
-                    <span className="dot"></span>Our work
+                    <span className="dot"></span>SELECTED PROJECTS
                   </h2>
                 </div>
               </SwiperSlide>

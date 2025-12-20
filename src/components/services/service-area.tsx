@@ -62,7 +62,7 @@ const ServiceArea = () => {
             <div className="section-title-wrapper fade-anim">
               <div className="title-wrapper">
                 <h2 className="section-title font-instrumentsans-medium word-anim">
-                  What we <br /> do
+                  What we do
                 </h2>
               </div>
             </div>
