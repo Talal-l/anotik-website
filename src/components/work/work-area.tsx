@@ -24,25 +24,29 @@ const WorkArea = () => {
           <div className="works-wrapper-1 fade-anim">
             {[
               {
-                title: "Project One",
-                tag: "Development",
-                image: "/assets/imgs/project/image-1.webp",
+                title: "POLYNUR DESIGN",
+                tag: "E-Commerce",
+                image: "/assets/imgs/project/POLYNUR.png",
+                date: "2023",
               },
               {
-                title: "Project Two",
-                tag: "Infrastructure",
+                title: "Blush Layers",
+                tag: "E-Commerce",
                 image: "/assets/imgs/project/image-2.webp",
+                date: "2025",
               },
               {
-                title: "Project Three",
-                tag: "Automation",
+                title: "Try LIVE",
+                tag: "Mobile App",
                 image: "/assets/imgs/project/image-3.webp",
+                date: "2025",
               },
               {
-                title: "Project Four",
-                tag: "Backend Systems",
+                title: "LayerWyse",
+                tag: "Web App",
                 image: "/assets/imgs/project/image-4.webp",
-              },
+                date: "2025",
+                                },
             ].map((work, index) => (
               <div key={index} className="work-box">
                 <div className="thumb">
@@ -64,7 +68,7 @@ const WorkArea = () => {
                   </h3>
                   <div className="meta">
                     <span className="tag">{work.tag}</span>
-                    <span className="date">2025</span>
+                    <span className="date">{work.date}</span>
                   </div>
                 </div>
               </div>

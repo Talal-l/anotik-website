@@ -526,6 +526,9 @@ video.video-area {
         overflow: hidden;
         position: relative;
         border-radius: 20px;
+        border-style: solid;
+        border-width: 10px;
+        border-color: rgba(25, 187, 128, 1);
         transform: scale(0.9);
 
         img {
