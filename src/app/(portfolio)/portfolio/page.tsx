@@ -18,18 +18,10 @@ export default function PortfolioPage() {
 
       <PortfolioWrapper>
         <main>
-          {/* page title area start */}
           <PageTitle title="Portfolio" />
-          {/* page title area end */}
-
-          {/* portfolio area start */}
           <WorkAreaEight />
-          {/* portfolio area end */}
         </main>
-
-        {/* Footer area start */}
         <Footer />
-        {/* Footer area end */}
       </PortfolioWrapper>
     </>
   );

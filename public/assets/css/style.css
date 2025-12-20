@@ -21,7 +21,7 @@ button animation css
 menu css
 modal css
 cursor css
-home page css
+digital agency page css
 design agency page css
 creative agency page css
 marketing agency page css
@@ -3708,23 +3708,23 @@ section {
   color: var(--black);
 }
 
-/* home page css */
-.body-home {
+/* digital agency page css */
+.body-digital-agency {
   background-color: #f8f8f8;
   color: var(--secondary);
 }
-.body-home.dark {
+.body-digital-agency.dark {
   background-color: #111111;
 }
 @media (min-width: 1800px) {
-  .body-home .container.large {
+  .body-digital-agency .container.large {
     max-width: 1750px;
   }
 }
-.body-home .section-header {
+.body-digital-agency .section-header {
   margin-top: 20px;
 }
-.body-home .section-subtitle {
+.body-digital-agency .section-subtitle {
   font-size: 14px;
   font-weight: 500;
   line-height: 1;

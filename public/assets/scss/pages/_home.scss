@@ -993,6 +993,8 @@ video.video-area {
     height: 100px;
     padding: 10px 20px;
     background-color: var(--primary);
+    color: var(--primary) !important;
+
     display: inline-flex;
     justify-content: center;
     align-items: center;
