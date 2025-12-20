@@ -19,7 +19,11 @@ export default function AboutOne() {
             </div>
             <div className="text-wrapper">
               <p className="text">
-                Anotik takes care of your business tech. We build and maintain your website/apps, run your infrastructure, and automate busywork. Security-first, reliable support—so you can focus on your business.
+                Anotik takes care of your business technology. We build and
+                maintain your websites and applications, operate your
+                infrastructure, and automate operational work. Everything is
+                designed with security and reliability in mind so you can focus
+                on running your business
               </p>
             </div>
             <div className="btn-wrapper ">

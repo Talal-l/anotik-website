@@ -17,7 +17,17 @@ export default function Hero() {
               <div className="circle-text-wrapper">
                 <div className="circle-text">
                   <Image src={spinnerText} alt="image" className="text" />
-                  <Image src={shape_2} alt="image" className="icon" />
+                  <div
+                    className="font-instrumentsans-medium"
+                    style={{
+                      color: "var(--secondary)",
+                      fontSize: "48px",
+                      fontFamily: "var(--font_thunder)",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    A
+                  </div>
                 </div>
               </div>
             </div>
