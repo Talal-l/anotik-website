@@ -85,24 +85,10 @@ export default function PortfolioDetailsArea({ portfolio }: Props) {
         </div>
         <div className="container large">
           <div className="section-info fade-anim">
-            {portfolio.description && (
-              <div className="title-wrapper">
-                <h2 className="title">{portfolio.title}</h2>
-              </div>
-            )}
             <div className="content">
               {portfolio.description && (
                 <div className="text-wrapper">
                   <p className="text">{portfolio.description}</p>
-                </div>
-              )}
-              {portfolio.features && portfolio.features.length > 0 && (
-                <div className="feature-list">
-                  <ul>
-                    {portfolio.features.map((feature, index) => (
-                      <li key={index}>{feature}</li>
-                    ))}
-                  </ul>
                 </div>
               )}
             </div>
@@ -122,18 +108,6 @@ export default function PortfolioDetailsArea({ portfolio }: Props) {
                 />
               </div>
             ))}
-          </div>
-        )}
-        {portfolio.details && portfolio.details.length > 0 && (
-          <div className="container large">
-            <div className="section-details fade-anim">
-              {portfolio.details.map((detail, index) => (
-                <div key={index} className="details-info">
-                  <h3 className="title">{detail.title}</h3>
-                  <p className="text">{detail.text}</p>
-                </div>
-              ))}
-            </div>
           </div>
         )}
         {galleryImages.length > 0 && (

@@ -259,7 +259,7 @@ p {
   font-weight: 400;
   font-size: 22px;
   line-height: 30px;
-  color: var(--secondary);
+  color: var(--primary);
 }
 @media only screen and (max-width: 1399px) {
   p {
@@ -1497,7 +1497,7 @@ html {
 
 body {
   background-color: #f8f8f8;
-  color: var(--secondary);
+  color: var(--primary);
 }
 
 .body-wrapper {
@@ -3711,7 +3711,7 @@ section {
 /* digital agency page css */
 .body-digital-agency {
   background-color: #f8f8f8;
-  color: var(--secondary);
+  color: var(--primary);
 }
 .body-digital-agency.dark {
   background-color: #111111;
@@ -8873,7 +8873,7 @@ video.video-area {
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
-  color: var(--secondary);
+  color: var(--primary);
 }
 .blog-area .blog .meta span.has-left-line {
   padding-inline-start: 15px;
@@ -13948,7 +13948,7 @@ video.video-area {
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
-  color: var(--secondary);
+  color: var(--primary);
 }
 .blog-area-3 .blog .meta span.has-left-line {
   padding-inline-start: 15px;
@@ -14231,7 +14231,7 @@ video.video-area {
   font-size: 14px;
   font-weight: 400;
   line-height: 24px;
-  color: var(--secondary);
+  color: var(--primary);
 }
 .blog-area-2 .blog .meta span.has-left-line {
   padding-inline-start: 15px;
@@ -15377,7 +15377,7 @@ video.video-area {
   font-size: 20px;
   font-weight: 400;
   line-height: 28px;
-  color: var(--secondary);
+  color: var(--primary);
   padding: 4px 0 43px;
   border: none;
 }
@@ -16161,9 +16161,6 @@ video.video-area {
 .work-details-area .section-info {
   margin-top: 59px;
   margin-bottom: 93px;
-  display: grid;
-  gap: 20px 60px;
-  grid-template-columns: 1fr 825px;
 }
 @media only screen and (max-width: 1919px) {
   .work-details-area .section-info {
@@ -16171,21 +16168,10 @@ video.video-area {
     margin-bottom: 63px;
   }
 }
-@media only screen and (max-width: 1399px) {
-  .work-details-area .section-info {
-    grid-template-columns: 1fr 650px;
-  }
-}
 @media only screen and (max-width: 1199px) {
   .work-details-area .section-info {
-    grid-template-columns: 1fr 550px;
     margin-top: 29px;
     margin-bottom: 43px;
-  }
-}
-@media only screen and (max-width: 991px) {
-  .work-details-area .section-info {
-    grid-template-columns: 1fr;
   }
 }
 .work-details-area .section-info .title {

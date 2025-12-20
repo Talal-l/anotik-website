@@ -86,27 +86,15 @@
   .section-info {
     margin-top: 59px;
     margin-bottom: 93px;
-    display: grid;
-    gap: 20px 60px;
-    grid-template-columns: 1fr 825px;
 
     @media #{$xxl} {
       margin-top: 49px;
       margin-bottom: 63px;
     }
 
-    @media #{$xl} {
-      grid-template-columns: 1fr 650px;
-    }
-
     @media #{$lg} {
-      grid-template-columns: 1fr 550px;
       margin-top: 29px;
       margin-bottom: 43px;
-    }
-
-    @media #{$md} {
-      grid-template-columns: 1fr;
     }
 
     .title {

@@ -29,7 +29,7 @@ export const portfolioData: IPortfolio[] = [
     client: "Polynur",
     technology: "Shopify, React, Node.js",
     description:
-      "A comprehensive e-commerce solution built with modern technologies to provide an exceptional shopping experience.",
+      "An e-commerce platform for a 3D printing business in Kuwait specializing in collectibles, magnets, and hand-painted figurines. The store showcases a diverse range of products including gaming and anime-themed magnets, custom figurines, busts, book nooks, and hobby supplies. The platform features intuitive navigation for browsing categories like magnets, collectibles, unpainted items, and hobby tools, with a focus on showcasing the craftsmanship of 3D printing, modeling, hand-painting, and mold making services.",
     features: [
       "E-Commerce Development",
       "UX/UI Design",
@@ -38,16 +38,6 @@ export const portfolioData: IPortfolio[] = [
       "Payment Gateway Setup",
     ],
     gallery: [],
-    details: [
-      {
-        title: "Visual Hierarchy",
-        text: "Visual hierarchy is the principle of arranging elements to show their order of importance. information easily. By laying out elements logically designers working process by wireframing.",
-      },
-      {
-        title: "Components",
-        text: "From textile design to murals, editorial illustrations and book covers, her style is recognized by her simple and perfectly arranged shapes as well as her rich and vibrant color palette.",
-      },
-    ],
   },
   {
     id: 2,
@@ -60,7 +50,7 @@ export const portfolioData: IPortfolio[] = [
     client: "Blush Layers",
     technology: "Shopify, React",
     description:
-      "An elegant e-commerce platform designed to showcase beauty products with a focus on user experience and visual appeal.",
+      "A cute and girly e-commerce platform for a Kuwait-based FDM 3D printing studio specializing in adorable pastel collectibles. The store features charming 3D printed items including clickers, vases, coasters, keychains, and gift-ready products. Every piece is carefully 3D-printed and finished by hand, with a focus on unique, character-packed designs that bring little pieces of happy to desks and shelves. The platform emphasizes eco-friendly materials, handcrafted quality, and gift-ready packaging.",
     features: [
       "Brand Development",
       "UX/UI Design",
@@ -69,16 +59,6 @@ export const portfolioData: IPortfolio[] = [
       "Shopify Development",
     ],
     gallery: [],
-    details: [
-      {
-        title: "User Experience",
-        text: "Focused on creating an intuitive shopping experience that guides users through the product discovery and purchase process seamlessly.",
-      },
-      {
-        title: "Design System",
-        text: "Implemented a cohesive design system that maintains brand consistency across all touchpoints and devices.",
-      },
-    ],
   },
   {
     id: 3,
@@ -91,7 +71,7 @@ export const portfolioData: IPortfolio[] = [
     client: "Try LIVE",
     technology: "React Native, Node.js",
     description:
-      "A mobile application that enables users to experience products in real-time with innovative features and smooth performance.",
+      "An AI-powered mobile application that uses hardware features and advanced AI models to evaluate indoor space quality and lighting conditions. The app scans and analyzes indoor environments using camera-based technology, providing sustainability-based insights and practical suggestions to enhance comfort, clarity, and wellbeing. It detects key environmental qualities and prepares wellness-inspired assessments, helping users create healthier, more balanced living and working spaces through intelligent design guidance.",
     features: [
       "Mobile App Development",
       "UX/UI Design",
@@ -100,16 +80,6 @@ export const portfolioData: IPortfolio[] = [
       "Real-time Features",
     ],
     gallery: [],
-    details: [
-      {
-        title: "Performance",
-        text: "Optimized for speed and efficiency, ensuring smooth user experience even with complex real-time interactions.",
-      },
-      {
-        title: "User Interface",
-        text: "Designed with a focus on simplicity and clarity, making complex features accessible to all users.",
-      },
-    ],
   },
   {
     id: 4,
@@ -122,7 +92,7 @@ export const portfolioData: IPortfolio[] = [
     client: "LayerWyse",
     technology: "Next.js, TypeScript, Tailwind CSS",
     description:
-      "A 3D Printing Pricing Calculator that helps businesses calculate project costs and generate accurate pricing quotes. The application allows users to upload 3D model files, configure printing details, manage materials, and set profit margins to create comprehensive project estimates.",
+      "A comprehensive pricing calculator designed to help 3D printing businesses accurately price their work and improve sustainability. The tool enables businesses to calculate project costs, manage production workflows, and generate precise pricing quotes. By providing accurate cost analysis and profit margin management, it helps 3D printing businesses become more sustainable while streamlining production management and ensuring fair pricing for their services.",
     features: [
       "File Upload System",
       "Real-time Pricing Calculator",
@@ -132,16 +102,6 @@ export const portfolioData: IPortfolio[] = [
       "Financial Summary Dashboard",
     ],
     gallery: [],
-    details: [
-      {
-        title: "Project Overview",
-        text: "The LayerWyse Calculator is a web application designed to simplify pricing for 3D printing businesses. Users can upload 3D model files and reference images, configure project details including printing parameters, materials, and services like modeling, painting, and sanding. The calculator automatically computes costs based on material weight, print time, difficulty levels, and other factors.",
-      },
-      {
-        title: "Key Features",
-        text: "The application supports multiple services that can be combined for a complete project quote. Users can add multiple materials with different costs per kilogram, set difficulty levels for each service, and include extras like licensed assets or non-print components. The calculator offers preset profit margin options (Competitive, Standard, Premium, Luxury) or allows custom margins, providing real-time financial summaries with price, cost, and profit breakdowns.",
-      },
-    ],
   },
 ];
 
