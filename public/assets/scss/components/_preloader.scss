@@ -92,15 +92,11 @@
   }
 
   .loader-section {
-    background-color: var(--white);
+    background-color: var(--bg);
     height: 100%;
     position: fixed;
     top: 0;
     width: calc(50% + 1px);
-
-    @include dark {
-      background-color: var(--black);
-    }
 
     &.section-left {
       left: 0;

@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import MainWrapper from "@/components/wrapper/main-wrapper";
 import FooterInner from "@/layout/footer/footer-inner";
 import PortfolioWrapper from "./_components/portfolio-wrapper";
 import PageTitle from "@/components/common/page-title";
@@ -19,31 +18,21 @@ export default function PortfolioPage() {
       <CustomCursor />
       {/* custom cursor end */}
 
-      {/* Main wrapper start */}
-      <MainWrapper
-        bodyCls={[
-          "body-wrapper",
-          "body-page-inner",
-          "font-heading-sequelsans-romanbody",
-        ]}
-      >
-        <PortfolioWrapper>
-          <main>
-            {/* page title area start */}
-            <PageTitle title="Portfolio" />
-            {/* page title area end */}
+      <PortfolioWrapper>
+        <main>
+          {/* page title area start */}
+          <PageTitle title="Portfolio" />
+          {/* page title area end */}
 
-            {/* portfolio area start */}
-            <WorkAreaEight />
-            {/* portfolio area end */}
-          </main>
+          {/* portfolio area start */}
+          <WorkAreaEight />
+          {/* portfolio area end */}
+        </main>
 
-          {/* Footer area start */}
-          <FooterInner />
-          {/* Footer area end */}
-        </PortfolioWrapper>
-      </MainWrapper>
-      {/* Main wrapper end */}
+        {/* Footer area start */}
+        <FooterInner />
+        {/* Footer area end */}
+      </PortfolioWrapper>
     </>
   );
 }

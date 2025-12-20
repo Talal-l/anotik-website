@@ -262,13 +262,10 @@
       option {
         width: 100%;
         max-width: 100%;
-
-        @include dark {
-          background-color: var(--black);
-        }
+        background-color: var(--bg);
 
         &[disabled] {
-          background-color: var(--black) !important;
+          background-color: var(--bg) !important;
         }
       }
     }

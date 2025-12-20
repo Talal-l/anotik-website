@@ -1,14 +1,10 @@
-/* digital agency page css */
+/* home page css */
 @use "../utils/mixin" as *;
 @use "../utils/variables" as *;
 
-.body-digital-agency {
-  background-color: #f0f2ed;
+.body-home {
+  background-color: var(--bg);
   color: var(--secondary);
-
-  &.dark {
-    background-color: #00000d;
-  }
 
   .container {
     &.large {
@@ -210,11 +206,7 @@
     .circle-text-wrapper {
       padding-top: 30px;
       padding-bottom: 30px;
-      background-color: #f9e6dc;
-
-      @include dark {
-        background-color: var(--bg);
-      }
+      background-color: var(--bg);
     }
 
     .circle-text {

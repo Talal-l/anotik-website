@@ -21,7 +21,7 @@ button animation css
 menu css
 modal css
 cursor css
-digital agency page css
+home page css
 design agency page css
 creative agency page css
 marketing agency page css
@@ -49,24 +49,24 @@ work page css
 
 // Colors
 :root {
-  --primary: #19BB80;
-  --secondary: #A32148;
+  --primary: #19bb80;
+  --secondary: #a32148;
   --border: rgba(25, 187, 128, 0.1);
-  --bg: #00000D;
-  --theme: #19BB80;
+  --bg: #f0f2ed;
+  --theme: #19bb80;
 
-  --black: #00000D;
+  --black: #00000d;
   --black-2: #999999;
   --white: #ffffff;
-  --white-2: #F0F2ED;
+  --white-2: #f0f2ed;
 
-  --action: #19BB80;
+  --action: #19bb80;
 
   .dark {
+    --bg: #00000d;
     --primary: #ffffff;
-    --secondary: #A32148;
+    --secondary: #a32148;
     --border: rgba(255, 255, 255, 0.1);
-    --bg: #00000D;
   }
 }
 

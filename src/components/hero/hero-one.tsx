@@ -3,7 +3,7 @@ import shape_3 from "@/assets/imgs/shape/shape-3.webp";
 import shape_2 from "@/assets/imgs/shape/shape-2.webp";
 import shape_1 from "@/assets/imgs/shape/shape-1.webp";
 
-export default function HeroOne() {
+export default function Hero() {
   return (
     <section className="hero-area">
       <div className="container large">
@@ -68,7 +68,9 @@ export default function HeroOne() {
               </div>
               <div className="text-wrapper fade-anim" data-delay="0.75">
                 <p className="text">
-                  Anotik is your long-term technical partner. We build, maintain, and own your technology infrastructure so you can focus on your business.
+                  Anotik is your long-term technical partner. We build,
+                  maintain, and own your technology infrastructure so you can
+                  focus on your business.
                 </p>
               </div>
             </div>

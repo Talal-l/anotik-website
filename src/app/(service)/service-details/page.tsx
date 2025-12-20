@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import MainWrapper from "@/components/wrapper/main-wrapper";
 import FooterInner from "@/layout/footer/footer-inner";
 import FAQArea from "@/components/faq/faq-area";
 import ServiceDetailsWrapper from "./_components/service-details-wrapper";
@@ -17,43 +16,33 @@ export const metadata: Metadata = {
 export default function ServiceDetailsPage() {
   return (
     <>
-      {/* Main wrapper start */}
-      <MainWrapper
-        bodyCls={[
-          "body-wrapper",
-          "body-page-inner",
-          "font-heading-sequelsans-romanbody",
-        ]}
-      >
-        <ServiceDetailsWrapper>
-          <main>
-            {/* service details hero area start */}
-            <ServiceDetailsHero />
-            {/* service details hero area end */}
+      <ServiceDetailsWrapper>
+        <main>
+          {/* service details hero area start */}
+          <ServiceDetailsHero />
+          {/* service details hero area end */}
 
-            {/* service details approach area start */}
-            <ServiceDetailsApproach />
-            {/* service details approach area end */}
+          {/* service details approach area start */}
+          <ServiceDetailsApproach />
+          {/* service details approach area end */}
 
-            {/* service details feature area start */}
-            <ServiceDetailsFeature />
-            {/* service details feature area end */}
+          {/* service details feature area start */}
+          <ServiceDetailsFeature />
+          {/* service details feature area end */}
 
-            {/* service details value area start */}
-            <ServiceDetailsValueArea />
-            {/* service details value area end */}
+          {/* service details value area start */}
+          <ServiceDetailsValueArea />
+          {/* service details value area end */}
 
-            {/* service details faq area start */}
-            <FAQArea />
-            {/* service details faq area end */}
-          </main>
+          {/* service details faq area start */}
+          <FAQArea />
+          {/* service details faq area end */}
+        </main>
 
-          {/* Footer area start */}
-          <FooterInner />
-          {/* Footer area end */}
-        </ServiceDetailsWrapper>
-      </MainWrapper>
-      {/* Main wrapper end */}
+        {/* Footer area start */}
+        <FooterInner />
+        {/* Footer area end */}
+      </ServiceDetailsWrapper>
     </>
   );
 }

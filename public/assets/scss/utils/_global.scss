@@ -745,7 +745,7 @@
 }
 
 .side-info {
-  background: var(--white) none repeat scroll 0 0;
+  background: var(--bg) none repeat scroll 0 0;
   padding: 40px 45px;
   position: fixed;
   right: 0;
@@ -770,10 +770,6 @@
   overflow-y: scroll;
   overscroll-behavior-y: contain;
   scrollbar-width: none;
-
-  @include dark {
-    background-color: var(--black);
-  }
 
   ::-webkit-scrollbar {
     display: none;

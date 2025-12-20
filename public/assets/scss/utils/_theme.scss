@@ -35,11 +35,7 @@ body {
 }
 
 .body-wrapper {
-  background-color: var(--white);
-
-  &.dark {
-    background-color: var(--black);
-  }
+  background-color: var(--bg);
 }
 
 .img_anim_reveal {

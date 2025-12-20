@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import MainWrapper from "@/components/wrapper/main-wrapper";
 import FooterInner from "@/layout/footer/footer-inner";
 import { allBlogs } from "@/data/blog-data";
 import BlogWrapper from "../../blog/_components/blog-wrapper";
@@ -26,31 +25,21 @@ export default async function BlogDetailsPage({ params }: Props) {
   const post = await allBlogs.find((post) => post.id === Number(id));
   return (
     <>
-      {/* Main wrapper start */}
-      <MainWrapper
-        bodyCls={[
-          "body-wrapper",
-          "body-page-inner",
-          "font-heading-sequelsans-romanbody",
-        ]}
-      >
-        <BlogWrapper>
-          <main>
-            {/* blog details area start */}
-            <BlogDetailsArea />
-            {/* blog details area end */}
+      <BlogWrapper>
+        <main>
+          {/* blog details area start */}
+          <BlogDetailsArea />
+          {/* blog details area end */}
 
-            {/* recent blog area start */}
-            <RecentBlogs />
-            {/* recent blog area end */}
-          </main>
+          {/* recent blog area start */}
+          <RecentBlogs />
+          {/* recent blog area end */}
+        </main>
 
-          {/* Footer area start */}
-          <FooterInner />
-          {/* Footer area end */}
-        </BlogWrapper>
-      </MainWrapper>
-      {/* Main wrapper end */}
+        {/* Footer area start */}
+        <FooterInner />
+        {/* Footer area end */}
+      </BlogWrapper>
     </>
   );
 }

@@ -5,7 +5,6 @@ import Image from "next/image";
 import logo from "@/assets/imgs/logo/logo.png";
 import MainMenu from "./main-menu";
 import SideToggle from "@/components/common/side-toggle";
-import ThemeToggle from "@/components/common/theme-toggle";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -32,11 +31,6 @@ const Header = () => {
               {/* Navigation */}
               <div className="header__nav">
                 <MainMenu />
-              </div>
-
-              {/* Theme Toggle */}
-              <div className="header__theme-toggle">
-                <ThemeToggle />
               </div>
 
               {/* Button */}

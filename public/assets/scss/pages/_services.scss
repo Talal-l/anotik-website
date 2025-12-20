@@ -88,12 +88,8 @@
 
   .services-wrapper-2 {
     .service-box {
-      background-color: var(--white);
+      background-color: var(--bg);
       border-color: var(--border);
-
-      @include dark {
-        background-color: var(--black);
-      }
 
       &:last-child {
         border-color: var(--border);

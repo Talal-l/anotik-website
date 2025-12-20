@@ -17,7 +17,7 @@ type Props = {
   children: React.ReactNode;
 };
 
-export default function DigitalAgencyWrapper({ children }: Props) {
+export default function HomeWrapper({ children }: Props) {
   useGSAP(() => {
     gsap.registerPlugin(CustomEase, ScrollToPlugin, SplitText, ScrollTrigger);
     const timer = setTimeout(() => {
@@ -35,3 +35,4 @@ export default function DigitalAgencyWrapper({ children }: Props) {
   }, {});
   return children;
 }
+
