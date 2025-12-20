@@ -18,7 +18,7 @@ export default function ContactArea() {
               </div>
               <div className="title-wrapper">
                 <h2 className="section-title font-sequelsans-romanbody">
-                  Let’s drop us a line and get the project started.
+                  Let’s get your project started.
                 </h2>
               </div>
             </div>
@@ -30,9 +30,7 @@ export default function ContactArea() {
                 <p className="text">
                   We’re excited to hear from you and let’s start something
                   special together <br />
-                  <a href="mailTo:info@anotik.com">
-                    info@anotik.com
-                  </a>
+                  <a href="mailTo:info@anotik.com">info@anotik.com</a>
                 </p>
               </div>
               <div className="contact-social">
@@ -83,28 +81,11 @@ export default function ContactArea() {
                     />
                   </div>
                   <div className="contact-formfield">
-                    <select
-                      name="Budget"
-                      id="Budget"
-                      value={budget}
-                      onChange={(e) => setBudget(e.target.value)}
-                    >
-                      <option value="" disabled>
-                        Budget*
-                      </option>
-                      <option value="1">5,000 - 10,000</option>
-                      <option value="2">10,000 - 15,000</option>
-                      <option value="3">15,000 - 20,000</option>
-                      <option value="4">20,000 - 25,000</option>
-                      <option value="5">25,000 - Above</option>
-                    </select>
-                  </div>
-                  <div className="contact-formfield">
                     <input
                       type="text"
                       name="solution"
                       id="solution"
-                      placeholder="Solution*"
+                      placeholder="Solution"
                     />
                   </div>
                   <div className="contact-formfield message">

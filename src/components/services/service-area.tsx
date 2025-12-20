@@ -7,38 +7,32 @@ const ServiceArea = () => {
     {
       number: "(01)",
       title: "Development",
-      list: [
-        "Web Applications",
-        "Mobile Apps",
-        "Backend Systems",
-        "API Development",
-        "System Integration",
-      ],
+      list: ["Websites", "E-commerce", "Mobile Apps", "System Integration"],
       image: "/assets/imgs/gallery/image-3.webp",
     },
     {
       number: "(02)",
-      title: "Infrastructure & DevOps",
+      title: "Security",
       list: [
-        "Cloud Setup",
-        "Server Management",
-        "CI/CD Pipelines",
-        "Monitoring & Alerts",
-        "Scalability Planning",
+        "Code Review",
+        "Industry Standards",
+        "Data protection",
+        "Security Updates",
+        "Ongoing Safety Reviews",
       ],
       image: "/assets/imgs/gallery/image-4.webp",
     },
     {
       number: "(03)",
-      title: "Maintenance & Support",
+      title: "Technical Support",
       list: [
-        "Ongoing Maintenance",
-        "Security Updates",
-        "Performance Optimization",
-        "Bug Fixes",
-        "24/7 Support",
+        "Cloud setup",
+        "System monitoring",
+        "Continuous support",
+        "Performance improvements",
+        "Issue fixing",
       ],
-      image: "/assets/imgs/gallery/image-5.webp",
+      image: "/assets/imgs/gallery/image-4.webp",
     },
     {
       number: "(04)",
@@ -55,7 +49,7 @@ const ServiceArea = () => {
   ];
 
   return (
-    <section className="service-area">
+    <section id="services" className="service-area">
       <div className="container large">
         <div className="service-area-inner section-spacing">
           <div className="section-header">
@@ -76,12 +70,12 @@ const ServiceArea = () => {
                   </div>
                   <div className="content">
                     <h3 className="title">
-                      <Link href="/service-details">{service.title}</Link>
+                      <div>{service.title}</div>
                     </h3>
                     <ul className="service-list">
                       {service.list.map((item, i) => (
                         <li key={i}>
-                          <Link href="/service-details">{item}</Link>
+                          <div>{item}</div>
                         </li>
                       ))}
                     </ul>

@@ -1,8 +1,13 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import logo from "@/assets/imgs/logo/logo-big-dark.png";
 import Image from "next/image";
 import menuData from "@/data/menu-data";
+import { usePathname, useRouter } from "next/navigation";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollToPlugin } from "gsap/all";
 
 type IProps = {
   isOpen: boolean;
@@ -16,13 +21,58 @@ export default function SideToggle({
   showMobileMenu,
 }: IProps) {
   const [navTitle, setNavTitle] = React.useState<string>("");
+  const pathname = usePathname();
+  const router = useRouter();
 
-  //openMobileMenu
+  useGSAP(() => {
+    gsap.registerPlugin(ScrollToPlugin);
+  }, []);
+
   const openMobileMenu = (menu: string) => {
     if (navTitle === menu) {
       setNavTitle("");
     } else {
       setNavTitle(menu);
+    }
+  };
+
+  const handleServicesClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    onSideToggle();
+    const servicesElement = document.getElementById("services");
+    
+    if (pathname === "/" && servicesElement) {
+      setTimeout(() => {
+        gsap.to(window, {
+          duration: 1.2,
+          scrollTo: {
+            y: servicesElement,
+            offsetY: 0,
+          },
+          ease: "power2.inOut",
+        });
+      }, 300);
+    } else {
+      router.push("/");
+      let attempts = 0;
+      const maxAttempts = 50;
+      const checkElement = () => {
+        attempts++;
+        const element = document.getElementById("services");
+        if (element) {
+          gsap.to(window, {
+            duration: 1.2,
+            scrollTo: {
+              y: element,
+              offsetY: 0,
+            },
+            ease: "power2.inOut",
+          });
+        } else if (attempts < maxAttempts) {
+          setTimeout(checkElement, 100);
+        }
+      };
+      setTimeout(checkElement, 300);
     }
   };
   return (
@@ -62,7 +112,13 @@ export default function SideToggle({
                           menu.children ? "menu-item-has-children" : ""
                         }`}
                       >
-                        <Link href={menu.href}>{menu.title}</Link>
+                        {menu.href === "#services" ? (
+                          <a href="#" onClick={handleServicesClick}>
+                            {menu.title}
+                          </a>
+                        ) : (
+                          <Link href={menu.href}>{menu.title}</Link>
+                        )}
                         {menu.children && (
                           <ul
                             className="dp-menu"

@@ -7,9 +7,6 @@ export const titleAnimation = () => {
 
   mm.add("(min-width: 1200px)", () => {
     if (document.querySelectorAll(".hero-area").length > 0) {
-      // Detect dark mode via body class
-      const isDarkMode = document.body.classList.contains("dark");
-      const bigtextColor = isDarkMode ? "#FFFFFF" : "#111111";
       const ab2 = gsap.timeline({
         duration: 5,
         scrollTrigger: {
@@ -21,7 +18,6 @@ export const titleAnimation = () => {
       });
       ab2.to(".big-text-wrapper .big-text", {
         scale: 0.1,
-        color: bigtextColor,
         duration: 2,
         y: "76%",
         transformOrigin: "bottom center",

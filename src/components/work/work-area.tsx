@@ -13,14 +13,9 @@ const WorkArea = () => {
               </h2>
             </div>
           </div>
-          <div className="text-wrapper">
-            <p className="text">Technical solutions that deliver results</p>
-          </div>
-          <div className="total-count">
-            <span className="number">(—)</span>
-          </div>
+          <div className="text-wrapper"></div>
         </div>
-        <div className="works-wrapper-box">
+        <div className="works-wrapper-box" style={{ marginTop: "20px" }}>
           <div className="works-wrapper-1 fade-anim">
             {[
               {
@@ -74,14 +69,6 @@ const WorkArea = () => {
               </div>
             ))}
           </div>
-        </div>
-        <div className="all-btn-wrapper fade-anim">
-          <Link href="/portfolio" className="rr-btn btn-border hover-bg-theme">
-            <span className="btn-wrap">
-              <span className="text-one">View All Work</span>
-              <span className="text-two">View All Work</span>
-            </span>
-          </Link>
         </div>
       </div>
     </div>

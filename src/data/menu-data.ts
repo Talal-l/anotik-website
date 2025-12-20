@@ -8,11 +8,7 @@ const menuData: MenuItem[] = [
   { title: "About Us", href: "/about" },
   {
     title: "Service",
-    href: "/services",
-  },
-  {
-    title: "Blog",
-    href: "/blog",
+    href: "#services",
   },
   {
     title: "Work",

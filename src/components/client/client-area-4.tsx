@@ -9,8 +9,8 @@ export default function ClientAreaFour() {
             <div className="section-title-wrapper">
               <div className="title-wrapper">
                 <h2 className="section-title font-sequelsans-romanbody">
-                  <span>Client:</span> Helping brands to grow and say their
-                  success stories to the world.
+                  <span>Client:</span> Helping businesses expand into the
+                  digital world with confidence.
                 </h2>
               </div>
             </div>
