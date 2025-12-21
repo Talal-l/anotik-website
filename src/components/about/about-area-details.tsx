@@ -1,8 +1,8 @@
 import Image from "next/image";
-import gallery_img_1 from "@/assets/imgs/gallery/image-19.webp";
-import gallery_img_2 from "@/assets/imgs/gallery/image-20.webp";
-import gallery_img_3 from "@/assets/imgs/gallery/image-21.webp";
-import gallery_img_4 from "@/assets/imgs/gallery/image-22.webp";
+import gallery_img_1 from "@/assets/imgs/gallery/anotik.png";
+import gallery_img_2 from "@/assets/imgs/gallery/anotik.png";
+import gallery_img_3 from "@/assets/imgs/gallery/anotik.png";
+import gallery_img_4 from "@/assets/imgs/gallery/anotik.png";
 import Link from "next/link";
 
 const gallery_images = [

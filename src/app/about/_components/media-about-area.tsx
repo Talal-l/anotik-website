@@ -1,5 +1,5 @@
 import Image from "next/image";
-import gallery_img from "@/assets/imgs/gallery/image-23.webp";
+import gallery_img from "@/assets/imgs/gallery/anotik.png";
 import Link from "next/link";
 
 export default function MediaAboutArea() {

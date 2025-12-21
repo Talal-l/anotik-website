@@ -1,5 +1,5 @@
 import Image from "next/image";
-import gallery_img from "@/assets/imgs/gallery/image-25.webp";
+import gallery_img from "@/assets/imgs/gallery/anotik.png";
 
 interface ValueItem {
   number: string;

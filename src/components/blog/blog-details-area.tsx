@@ -1,8 +1,8 @@
 import Image from "next/image";
-import gallery_img from "@/assets/imgs/gallery/image-35.webp";
-import gallery_img_2 from "@/assets/imgs/gallery/image-36.webp";
-import gallery_img_3 from "@/assets/imgs/gallery/image-37.webp";
-import gallery_img_4 from "@/assets/imgs/gallery/image-38.webp";
+import gallery_img from "@/assets/imgs/gallery/anotik.png";
+import gallery_img_2 from "@/assets/imgs/gallery/anotik.png";
+import gallery_img_3 from "@/assets/imgs/gallery/anotik.png";
+import gallery_img_4 from "@/assets/imgs/gallery/anotik.png";
 
 export default function BlogDetailsArea() {
   return (
