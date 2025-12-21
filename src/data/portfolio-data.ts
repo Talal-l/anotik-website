@@ -86,7 +86,7 @@ export const portfolioData: IPortfolio[] = [
     slug: "layerwyse",
     title: "LayerWyse Calculator",
     tag: "Web App",
-    image: "/assets/imgs/project/layerwyse.png",
+    image: "/assets/imgs/project/layerWyse.png",
     date: "2025",
     service: "Web Application Development, UX/UI Design",
     client: "LayerWyse",

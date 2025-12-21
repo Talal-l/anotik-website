@@ -8,7 +8,7 @@ const ServiceArea = () => {
       number: "(01)",
       title: "Development",
       list: ["Websites", "E-commerce", "Mobile Apps", "System Integration"],
-      image: "/assets/imgs/gallery/development.png",
+      image: "/assets/imgs/gallery/Development.png",
     },
     {
       number: "(02)",
