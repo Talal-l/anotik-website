@@ -38,6 +38,7 @@ export default function PortfolioDetailsArea({ portfolio }: Props) {
                   width={840}
                   height={580}
                   style={imgStyle}
+                  unoptimized={portfolio.slug === "layerwyse"}
                 />
               </div>
               <div className="title-wrapper">
@@ -81,6 +82,7 @@ export default function PortfolioDetailsArea({ portfolio }: Props) {
             height={1080}
             data-speed="0.8"
             style={imgStyle}
+            unoptimized={portfolio.slug === "layerwyse"}
           />
         </div>
         <div className="container large">

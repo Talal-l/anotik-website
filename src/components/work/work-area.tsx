@@ -29,6 +29,7 @@ const WorkArea = () => {
                         width={840}
                         height={580}
                         style={{ height: "auto" }}
+                        unoptimized={work.slug === "layerwyse"}
                       />
                     </Link>
                   </div>
