@@ -250,6 +250,20 @@
       path {
         fill: #ffffff !important;
       }
+
+      @media #{$sm} {
+        width: 65px;
+        height: 65px;
+        max-width: 90%;
+        max-height: 90%;
+      }
+
+      @media #{$md} {
+        width: 55px;
+        height: 55px;
+        max-width: 85%;
+        max-height: 85%;
+      }
     }
 
     span.tech-text,

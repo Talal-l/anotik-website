@@ -15,6 +15,7 @@ function getIcon(techName: string) {
     TypeScript: "siTypescript",
     JavaScript: "siJavascript",
     WordPress: "siWordpress",
+    Firebase: "siFirebase",
     Python: "siPython",
     Docker: "siDocker",
     Git: "siGitHub",
@@ -65,71 +66,53 @@ function getIcon(techName: string) {
 }
 
 export default function ClientCapsules({ isHome }: Props) {
-  const technologies = techData.map((tech, index) => {
-    const colorIndex = tech.name.split("").reduce((acc, char) => acc + char.charCodeAt(0), 0);
-    const capsuleColor = colorIndex % 2 === 0 ? "var(--secondary)" : "var(--action)";
-    
-    return {
+  const technologiesWithIcons = techData
+    .map((tech) => ({
       ...tech,
-      bgTheme: tech.bgTheme !== undefined ? tech.bgTheme : isHome && index % 3 === 0,
-      capsuleColor,
-    };
-  });
+      icon: getIcon(tech.name),
+    }))
+    .filter((tech) => tech.icon !== null)
+    .map((tech, index) => {
+      const colorIndex = tech.name.split("").reduce((acc, char) => acc + char.charCodeAt(0), 0);
+      const capsuleColor = colorIndex % 2 === 0 ? "var(--secondary)" : "var(--action)";
+      
+      return {
+        ...tech,
+        bgTheme: tech.bgTheme !== undefined ? tech.bgTheme : isHome && index % 3 === 0,
+        capsuleColor,
+      };
+    });
 
   return (
     <div className="client-capsule-wrapper-box" data-t-throwable-scene="true">
       <div className="client-capsule-wrapper">
-        {technologies.map((tech, index) => {
-          const icon = getIcon(tech.name);
-          return (
-            <p key={index} data-t-throwable-el="">
-              <span 
-                className={`client-box ${tech.bgTheme ? "bg-theme" : ""}`}
-                style={{ backgroundColor: tech.capsuleColor }}
+        {technologiesWithIcons.map((tech, index) => (
+          <p key={index} data-t-throwable-el="">
+            <span 
+              className={`client-box ${tech.bgTheme ? "bg-theme" : ""}`}
+              style={{ backgroundColor: tech.capsuleColor }}
+            >
+              <svg
+                role="img"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+                className="tech-icon"
+                style={{
+                  width: "40px",
+                  height: "40px",
+                  fill: "#ffffff",
+                  maxWidth: "80%",
+                  maxHeight: "80%",
+                  flexShrink: 0,
+                  display: "block",
+                }}
               >
-                {icon ? (
-                  <svg
-                    role="img"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="tech-icon"
-                    style={{
-                      width: "40px",
-                      height: "40px",
-                      fill: "#ffffff",
-                      maxWidth: "80%",
-                      maxHeight: "80%",
-                      flexShrink: 0,
-                      display: "block",
-                    }}
-                  >
-                    <title>{icon.title}</title>
-                    <path d={icon.path} fill="#ffffff" />
-                  </svg>
-                ) : (
-                  <span
-                    className="tech-text"
-                    style={{
-                      fontSize: "16px",
-                      fontWeight: 600,
-                      whiteSpace: "nowrap",
-                      overflow: "hidden",
-                      textOverflow: "ellipsis",
-                      width: "100%",
-                      textAlign: "center",
-                      display: "block",
-                      pointerEvents: "none",
-                      color: "#ffffff",
-                      padding: "0 10px",
-                    }}
-                  >
-                    {tech.name}
-                  </span>
-                )}
-              </span>
-            </p>
-          );
-        })}
+                <title>{tech.icon!.title}</title>
+                <path d={tech.icon!.path} fill="#ffffff" />
+              </svg>
+            </span>
+          </p>
+        ))}
       </div>
     </div>
   );

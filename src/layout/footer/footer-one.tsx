@@ -84,7 +84,7 @@ const Footer: React.FC = () => {
             </nav>
             <div className="footer-social">
               <a
-                href="https://wa.me/1234567890"
+                href="https://wa.me/+96566264368"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp"
