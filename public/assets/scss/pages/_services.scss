@@ -204,7 +204,6 @@
     width: 215px;
     height: 100px;
     padding: 10px 20px;
-    background-color: var(--primary);
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -235,6 +234,33 @@
       pointer-events: none;
       max-width: 100%;
       max-height: 100%;
+    }
+
+    svg.tech-icon,
+    svg {
+      pointer-events: none;
+      max-width: 80%;
+      max-height: 80%;
+      width: 40px;
+      height: 40px;
+      flex-shrink: 0;
+      fill: #ffffff !important;
+      display: block !important;
+      
+      path {
+        fill: #ffffff !important;
+      }
+    }
+
+    span.tech-text,
+    > span {
+      pointer-events: none;
+      width: 100%;
+      text-align: center;
+      display: block !important;
+      color: #ffffff !important;
+      font-size: 16px;
+      font-weight: 600;
     }
   }
 

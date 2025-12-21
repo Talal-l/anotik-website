@@ -37,11 +37,11 @@ export default function Hero() {
                   <h2
                     className="section-title font-instrumentsans-medium char-anim"
                     data-delay="0.45"
-                    aria-label="We handle your tech. You handle your business."
+                    aria-label="We Handle Your Tech. You Handle Your Business."
                   >
-                    We handle your tech
+                    We Handle Your Tech
                     <span style={{ color: "var(--secondary)" }}>.</span>
-                    You handle your business.
+                    You Handle Your Business.
                   </h2>
                 </div>
               </div>
