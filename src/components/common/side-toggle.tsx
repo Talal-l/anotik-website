@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Link from "next/link";
 import logo from "@/assets/imgs/logo/logo-big-dark.png";
 import Image from "next/image";
@@ -23,10 +23,18 @@ export default function SideToggle({
   const [navTitle, setNavTitle] = React.useState<string>("");
   const pathname = usePathname();
   const router = useRouter();
+  const prevPathnameRef = useRef(pathname);
 
   useGSAP(() => {
     gsap.registerPlugin(ScrollToPlugin);
   }, []);
+
+  useEffect(() => {
+    if (prevPathnameRef.current !== pathname && isOpen) {
+      onSideToggle();
+    }
+    prevPathnameRef.current = pathname;
+  }, [pathname, isOpen]);
 
   const openMobileMenu = (menu: string) => {
     if (navTitle === menu) {
@@ -82,7 +90,7 @@ export default function SideToggle({
           <div className="side-info-content">
             <div className="offset-widget offset-header">
               <div className="offset-logo">
-                <Link href="/">
+                <Link href="/" onClick={onSideToggle}>
                   <Image
                     src={logo}
                     alt="site logo"
@@ -117,7 +125,9 @@ export default function SideToggle({
                             {menu.title}
                           </a>
                         ) : (
-                          <Link href={menu.href}>{menu.title}</Link>
+                          <Link href={menu.href} onClick={onSideToggle}>
+                            {menu.title}
+                          </Link>
                         )}
                         {menu.children && (
                           <ul
@@ -129,7 +139,9 @@ export default function SideToggle({
                           >
                             {menu.children.map((subMenu, subIndex) => (
                               <li key={subIndex}>
-                                <Link href={subMenu.href}>{subMenu.title}</Link>
+                                <Link href={subMenu.href} onClick={onSideToggle}>
+                                  {subMenu.title}
+                                </Link>
                               </li>
                             ))}
                           </ul>
@@ -151,7 +163,11 @@ export default function SideToggle({
             </div>
             {/* mobile menu */}
             <div className="offset-button">
-              <Link href="/contact" className="rr-btn hover-bg-theme">
+              <Link
+                href="/contact"
+                className="rr-btn hover-bg-theme"
+                onClick={onSideToggle}
+              >
                 <span className="btn-wrap">
                   <span className="text-one">{"Let's"} Talk</span>
                   <span className="text-two">{"Let's"} Talk</span>

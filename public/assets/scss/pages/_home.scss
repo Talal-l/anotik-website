@@ -866,6 +866,7 @@ video.video-area {
   .funfact-item {
     max-width: 360px;
     opacity: 0.2;
+    padding-left: 8px;
 
     @media #{$lg} {
       max-width: 290px;
