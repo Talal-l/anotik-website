@@ -80,31 +80,40 @@ export const fadeAnimation = () => {
         item.getAttribute("data-on-scroll") || "1",
       );
 
-      const animation_settings: gsap.TweenVars = {
+      const from_state: gsap.TweenVars = {
         opacity: 0,
+      };
+
+      const to_state: gsap.TweenVars = {
+        opacity: 1,
         ease: ease_value,
         duration: duration_value,
         delay: delay_value,
       };
 
       if (fade_direction === "top") {
-        animation_settings.y = -fade_offset;
+        from_state.y = -fade_offset;
+        to_state.y = 0;
       } else if (fade_direction === "left") {
-        animation_settings.x = -fade_offset;
+        from_state.x = -fade_offset;
+        to_state.x = 0;
       } else if (fade_direction === "bottom") {
-        animation_settings.y = fade_offset;
+        from_state.y = fade_offset;
+        to_state.y = 0;
       } else if (fade_direction === "right") {
-        animation_settings.x = fade_offset;
+        from_state.x = fade_offset;
+        to_state.x = 0;
       }
 
       if (onscroll_value === 1) {
-        animation_settings.scrollTrigger = {
+        to_state.scrollTrigger = {
           trigger: item,
           start: "top 85%",
+          immediateRender: false,
         };
       }
 
-      gsap.from(item, animation_settings);
+      gsap.fromTo(item, from_state, to_state);
     });
   }
 };
@@ -179,101 +188,180 @@ export const charAnimation = () => {
       const hasX = !!translateX_value;
       const hasY = !!translateY_value;
 
-      const split_char = new SplitText(item, { type: "chars, words" });
+      // gsap.set(item, { opacity: 0 });
+
+      const split_char = new SplitText(item, { type: "lines, chars" });
+
+      gsap.set(split_char.chars, { autoAlpha: 0 });
 
       if (onscroll_value === 1) {
         if (hasX && !hasY) {
-          gsap.from(split_char.chars, {
-            duration: data_duration,
-            delay: data_delay,
-            x: translateX_value,
-            autoAlpha: 0,
-            stagger: stagger_value,
-            ease: ease_value,
+          const tl = gsap.timeline({
             scrollTrigger: {
               trigger: item,
               start: "top 85%",
+              immediateRender: false,
             },
           });
+          tl.set(item, { opacity: 1 });
+          tl.fromTo(
+            split_char.chars,
+            {
+              x: translateX_value,
+              autoAlpha: 0,
+            },
+            {
+              x: 0,
+              autoAlpha: 1,
+              duration: data_duration,
+              delay: data_delay,
+              stagger: stagger_value,
+              ease: ease_value,
+            },
+          );
         } else if (hasY && !hasX) {
-          gsap.from(split_char.chars, {
-            duration: data_duration,
-            delay: data_delay,
-            y: translateY_value,
-            autoAlpha: 0,
-            ease: ease_value,
-            stagger: stagger_value,
+          const tl = gsap.timeline({
             scrollTrigger: {
               trigger: item,
               start: "top 85%",
+              immediateRender: false,
             },
           });
+          tl.set(item, { opacity: 1 });
+          tl.fromTo(
+            split_char.chars,
+            {
+              y: translateY_value,
+              autoAlpha: 0,
+            },
+            {
+              y: 0,
+              autoAlpha: 1,
+              duration: data_duration,
+              delay: data_delay,
+              ease: ease_value,
+              stagger: stagger_value,
+            },
+          );
         } else if (hasX && hasY) {
-          gsap.from(split_char.chars, {
-            duration: data_duration,
-            delay: data_delay,
-            y: translateY_value,
-            x: translateX_value,
-            autoAlpha: 0,
-            ease: ease_value,
-            stagger: stagger_value,
+          const tl = gsap.timeline({
             scrollTrigger: {
               trigger: item,
               start: "top 85%",
+              immediateRender: false,
             },
           });
+          tl.set(item, { opacity: 1 });
+          tl.fromTo(
+            split_char.chars,
+            {
+              y: translateY_value,
+              x: translateX_value,
+              autoAlpha: 0,
+            },
+            {
+              y: 0,
+              x: 0,
+              autoAlpha: 1,
+              duration: data_duration,
+              delay: data_delay,
+              ease: ease_value,
+              stagger: stagger_value,
+            },
+          );
         } else {
-          gsap.from(split_char.chars, {
-            duration: data_duration,
-            delay: data_delay,
-            x: 50,
-            autoAlpha: 0,
-            stagger: stagger_value,
-            ease: ease_value,
+          const tl = gsap.timeline({
             scrollTrigger: {
               trigger: item,
               start: "top 85%",
+              immediateRender: false,
             },
           });
+          tl.set(item, { opacity: 1 });
+          tl.fromTo(
+            split_char.chars,
+            {
+              x: 50,
+              autoAlpha: 0,
+            },
+            {
+              x: 0,
+              autoAlpha: 1,
+              duration: data_duration,
+              delay: data_delay,
+              stagger: stagger_value,
+              ease: ease_value,
+            },
+          );
         }
       } else {
+        gsap.set(item, { opacity: 1 });
         if (hasX && !hasY) {
-          gsap.from(split_char.chars, {
-            duration: data_duration,
-            delay: data_delay,
-            x: translateX_value,
-            ease: ease_value,
-            autoAlpha: 0,
-            stagger: stagger_value,
-          });
+          gsap.fromTo(
+            split_char.chars,
+            {
+              x: translateX_value,
+              autoAlpha: 0,
+            },
+            {
+              x: 0,
+              autoAlpha: 1,
+              duration: data_duration,
+              delay: data_delay,
+              ease: ease_value,
+              stagger: stagger_value,
+            },
+          );
         } else if (hasY && !hasX) {
-          gsap.from(split_char.chars, {
-            duration: data_duration,
-            delay: data_delay,
-            y: translateY_value,
-            autoAlpha: 0,
-            ease: ease_value,
-            stagger: stagger_value,
-          });
+          gsap.fromTo(
+            split_char.chars,
+            {
+              y: translateY_value,
+              autoAlpha: 0,
+            },
+            {
+              y: 0,
+              autoAlpha: 1,
+              duration: data_duration,
+              delay: data_delay,
+              ease: ease_value,
+              stagger: stagger_value,
+            },
+          );
         } else if (hasX && hasY) {
-          gsap.from(split_char.chars, {
-            duration: data_duration,
-            delay: data_delay,
-            y: translateY_value,
-            x: translateX_value,
-            ease: ease_value,
-            autoAlpha: 0,
-            stagger: stagger_value,
-          });
+          gsap.fromTo(
+            split_char.chars,
+            {
+              y: translateY_value,
+              x: translateX_value,
+              autoAlpha: 0,
+            },
+            {
+              y: 0,
+              x: 0,
+              autoAlpha: 1,
+              duration: data_duration,
+              delay: data_delay,
+              ease: ease_value,
+              stagger: stagger_value,
+            },
+          );
         } else {
-          gsap.from(split_char.chars, {
-            duration: data_duration,
-            delay: data_delay,
-            ease: ease_value,
-            x: 50,
-            autoAlpha: 0,
-            stagger: stagger_value,
-          });
+          gsap.fromTo(
+            split_char.chars,
+            {
+              x: 500,
+              autoAlpha: 0,
+            },
+            {
+              x: 0,
+              autoAlpha: 1,
+              duration: data_duration,
+              delay: data_delay,
+              ease: ease_value,
+              stagger: stagger_value,
+            },
+          );
         }
       }
     });

@@ -4,7 +4,6 @@ import { useGSAP } from "@gsap/react";
 import { CustomEase, ScrollToPlugin, ScrollTrigger, SplitText } from "gsap/all";
 import {
   charAnimation,
-  fadeAnimation,
   goVisibleAnimation,
   titleAnimation,
 } from "@/utils/title-anim";
@@ -22,7 +21,6 @@ export default function HomeWrapper({ children }: Props) {
     gsap.registerPlugin(CustomEase, ScrollToPlugin, SplitText, ScrollTrigger);
     const timer = setTimeout(() => {
       titleAnimation();
-      fadeAnimation();
       scaleAnim();
       growAnimation();
       goVisibleAnimation();
@@ -35,4 +33,3 @@ export default function HomeWrapper({ children }: Props) {
   }, {});
   return children;
 }
-

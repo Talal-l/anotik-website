@@ -39,6 +39,14 @@
     background-color: #171717;
   }
 
+  .fade-anim {
+    opacity: 0;
+  }
+
+  .char-anim {
+    opacity: 0;
+  }
+
   .hero-content {
     display: grid;
     gap: 40px 100px;

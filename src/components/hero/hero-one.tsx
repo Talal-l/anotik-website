@@ -36,12 +36,15 @@ export default function Hero() {
                 <div className="title-wrapper">
                   <h2
                     className="section-title font-instrumentsans-medium char-anim"
-                    data-delay="0.45"
-                    aria-label="We Handle Your Tech. You Handle Your Business."
+                    data-delay="0.3"
+                    aria-label="We Handle Your Tech.You Handle Your Business."
                   >
-                    We Handle Your Tech
-                    <span style={{ color: "var(--secondary)" }}>.</span>
-                    You Handle Your Business.
+                    <div>We Handle </div>{" "}
+                    <div>
+                      Your Tech
+                      <span style={{ color: "var(--action)" }}>.</span>
+                    </div>
+                    <div>You Handle</div> <div>Your Business</div>
                   </h2>
                 </div>
               </div>
