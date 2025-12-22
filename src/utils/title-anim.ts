@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export const titleAnimation = () => {
   const mm = gsap.matchMedia();
@@ -170,7 +171,29 @@ export const RRTitleAnimation = () => {
   }
 };
 
+const charAnimationInstances: Array<{
+  splitText: SplitText;
+  item: HTMLElement;
+}> = [];
+
+export const cleanupCharAnimation = () => {
+  charAnimationInstances.forEach((instance) => {
+    ScrollTrigger.getAll().forEach((st) => {
+      if (st.trigger === instance.item || instance.item.contains(st.trigger as Node)) {
+        st.kill();
+      }
+    });
+    if (instance.splitText) {
+      instance.splitText.revert();
+    }
+    gsap.killTweensOf(instance.splitText.chars);
+  });
+  charAnimationInstances.length = 0;
+};
+
 export const charAnimation = () => {
+  cleanupCharAnimation();
+  
   const charAnimItems = document.querySelectorAll<HTMLElement>(".char-anim");
   if (charAnimItems.length > 0) {
     charAnimItems.forEach((item) => {
@@ -184,11 +207,8 @@ export const charAnimation = () => {
       const data_duration = Number(item.getAttribute("data-duration")) || 1;
       const ease_value = item.getAttribute("data-ease") || "power2.out";
 
-      // Helper to check if a value is set and > 0
       const hasX = !!translateX_value;
       const hasY = !!translateY_value;
-
-      // gsap.set(item, { opacity: 0 });
 
       const split_char = new SplitText(item, { type: "lines, chars" });
 
@@ -364,6 +384,11 @@ export const charAnimation = () => {
           );
         }
       }
+
+      charAnimationInstances.push({
+        splitText: split_char,
+        item,
+      });
     });
 
     const revealContainers = document.querySelectorAll<HTMLElement>(".return");
