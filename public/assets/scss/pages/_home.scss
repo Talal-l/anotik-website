@@ -49,7 +49,7 @@
 
   .hero-content {
     display: grid;
-    gap: 40px 100px;
+    gap: 10px 20px;
     grid-template-columns: 130px 1fr 560px;
     margin-top: 61px;
     margin-bottom: 220px;
@@ -1049,7 +1049,7 @@ video.video-area {
       flex-shrink: 0;
       fill: #ffffff !important;
       display: block !important;
-      
+
       path {
         fill: #ffffff !important;
       }
