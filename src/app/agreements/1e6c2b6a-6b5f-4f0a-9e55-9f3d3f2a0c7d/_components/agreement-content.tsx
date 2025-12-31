@@ -1,8 +1,11 @@
 "use client";
 
-import { useActionState, useRef } from "react";
+import { useActionState, useRef, startTransition, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { submitAgreement } from "../_actions/submit-agreement";
 import dynamic from "next/dynamic";
+import { pdf } from "@react-pdf/renderer";
+import { AgreementDocument } from "./agreement-pdf";
 
 const AgreementPDF = dynamic(() => import("./agreement-pdf"), {
   ssr: false,
@@ -20,12 +23,19 @@ function getKuwaitTime(): string {
 
 export default function AgreementContent() {
   const formRef = useRef<HTMLFormElement>(null);
+  const router = useRouter();
   const [state, formAction, isPending] = useActionState(submitAgreement, {
     success: false,
     message: "",
   });
 
   const acceptanceDate = getKuwaitTime();
+
+  useEffect(() => {
+    if (state.success) {
+      router.push("/agreements/1e6c2b6a-6b5f-4f0a-9e55-9f3d3f2a0c7d/thank-you");
+    }
+  }, [state.success, router]);
 
   return (
     <section className="agreement-area section-spacing-top">
@@ -478,7 +488,29 @@ export default function AgreementContent() {
             </div>
 
             <div className="agreement-acceptance">
-              <form ref={formRef} action={formAction} id="agreement-form">
+              <form
+                ref={formRef}
+                action={async (formData: FormData) => {
+                  try {
+                    const pdfBlob = await pdf(
+                      <AgreementDocument acceptanceDate={acceptanceDate} />
+                    ).toBlob();
+                    const pdfFile = new File([pdfBlob], "agreement.pdf", {
+                      type: "application/pdf",
+                    });
+                    formData.append("pdf", pdfFile);
+                    startTransition(() => {
+                      formAction(formData);
+                    });
+                  } catch (error) {
+                    console.error("Error generating PDF:", error);
+                    startTransition(() => {
+                      formAction(formData);
+                    });
+                  }
+                }}
+                id="agreement-form"
+              >
                 <div className="acceptance-checkbox">
                   <label>
                     <input

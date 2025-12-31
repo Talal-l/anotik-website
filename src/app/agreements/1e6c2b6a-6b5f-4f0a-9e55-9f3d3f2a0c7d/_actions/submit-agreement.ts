@@ -1,6 +1,9 @@
 "use server";
 
 import nodemailer from "nodemailer";
+import { render } from "@react-email/render";
+import React from "react";
+import { AgreementEmail } from "../_components/agreement-email";
 
 type AgreementSubmissionData = {
   clientName: string;
@@ -25,7 +28,9 @@ function escapeHtml(text: string): string {
 
 function getKuwaitTime(): string {
   const now = new Date();
-  const kuwaitTime = new Date(now.toLocaleString("en-US", { timeZone: "Asia/Kuwait" }));
+  const kuwaitTime = new Date(
+    now.toLocaleString("en-US", { timeZone: "Asia/Kuwait" }),
+  );
   return kuwaitTime.toLocaleString("en-US", {
     timeZone: "Asia/Kuwait",
     year: "numeric",
@@ -38,18 +43,26 @@ function getKuwaitTime(): string {
   });
 }
 
-async function sendAgreementEmails(data: AgreementSubmissionData): Promise<void> {
+async function sendAgreementEmails(
+  data: AgreementSubmissionData,
+  pdfFile: File | null,
+): Promise<void> {
   const user = process.env.ZOHO_EMAIL_USER;
   const password = process.env.ZOHO_EMAIL_PASSWORD;
 
   if (!user || !password) {
     throw new Error(
-      "Zoho email credentials are not configured. Please set ZOHO_EMAIL_USER and ZOHO_EMAIL_PASSWORD environment variables."
+      "Zoho email credentials are not configured. Please set ZOHO_EMAIL_USER and ZOHO_EMAIL_PASSWORD environment variables.",
     );
   }
 
-  const internalRecipient = process.env.AGREEMENT_EMAIL_RECIPIENT || process.env.CONTACT_EMAIL_RECIPIENT || user;
-  const agreementUrl = `${process.env.NEXT_PUBLIC_SITE_URL || "https://anotik.com"}/agreements/1e6c2b6a-6b5f-4f0a-9e55-9f3d3f2a0c7d`;
+  const internalRecipient =
+    process.env.AGREEMENT_EMAIL_RECIPIENT ||
+    process.env.CONTACT_EMAIL_RECIPIENT ||
+    user;
+  const agreementUrl = `${
+    process.env.NEXT_PUBLIC_SITE_URL || "https://anotik.com"
+  }/agreements/1e6c2b6a-6b5f-4f0a-9e55-9f3d3f2a0c7d`;
   const timestamp = getKuwaitTime();
 
   const transporter = nodemailer.createTransport({
@@ -87,6 +100,25 @@ Agreement URL: ${agreementUrl}
     </div>
   `;
 
+  const clientEmailHtml = await render(
+    React.createElement(AgreementEmail, {
+      clientName: data.clientName,
+      clientEmail: data.clientEmail,
+      monthlyRetainer: data.monthlyRetainer,
+      timestamp,
+      agreementUrl,
+    }),
+  );
+
+  const pdfBuffer = pdfFile ? Buffer.from(await pdfFile.arrayBuffer()) : null;
+
+  const pdfAttachment = pdfBuffer
+    ? {
+        filename: "Maintenance_Proposal_Dueling_Area.pdf",
+        content: pdfBuffer,
+      }
+    : null;
+
   await Promise.all([
     transporter.sendMail({
       from: `"Anotik" <${user}>`,
@@ -95,34 +127,23 @@ Agreement URL: ${agreementUrl}
       subject: `Agreement Accepted - ${data.clientName}`,
       text: emailContent,
       html: htmlContent,
+      attachments: pdfAttachment ? [pdfAttachment] : [],
     }),
     transporter.sendMail({
       from: `"Anotik" <${user}>`,
       replyTo: user,
       to: data.clientEmail,
       subject: `Agreement Confirmation - Anotik`,
-      text: `Dear ${data.clientName},\n\nThank you for accepting the agreement. We're excited to work with you!\n\nAgreement Details:\n- Monthly Retainer: ${data.monthlyRetainer}\n- Accepted: ${timestamp}\n\nYou can view the agreement at: ${agreementUrl}\n\nBest regards,\nAnotik Team`,
-      html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #333;">Agreement Confirmation</h2>
-          <p>Dear ${escapeHtml(data.clientName)},</p>
-          <p>Thank you for accepting the agreement. We're excited to work with you!</p>
-          <div style="background-color: #f5f5f5; padding: 20px; border-radius: 5px; margin: 20px 0;">
-            <p><strong>Agreement Details:</strong></p>
-            <p>Monthly Retainer: ${escapeHtml(data.monthlyRetainer)}</p>
-            <p>Accepted: ${escapeHtml(timestamp)}</p>
-          </div>
-          <p>You can view the agreement at: <a href="${escapeHtml(agreementUrl)}">${escapeHtml(agreementUrl)}</a></p>
-          <p>Best regards,<br>Anotik Team</p>
-        </div>
-      `,
+      text: `Dear ${data.clientName},\n\nThank you for accepting the agreement. We're excited to work with you!\n\nAgreement Details:\n- Monthly Retainer: ${data.monthlyRetainer}\n- Accepted: ${timestamp}\n\nA copy of your signed agreement has been attached to this email for your records.\n\nYou can view the agreement at: ${agreementUrl}\n\nBest regards,\nAnotik Team`,
+      html: clientEmailHtml,
+      attachments: pdfAttachment ? [pdfAttachment] : [],
     }),
   ]);
 }
 
 export async function submitAgreement(
   prevState: ActionResult | null,
-  formData: FormData | null
+  formData: FormData | null,
 ): Promise<ActionResult> {
   try {
     if (!formData || !(formData instanceof FormData)) {
@@ -141,6 +162,8 @@ export async function submitAgreement(
       };
     }
 
+    const pdfFile = formData.get("pdf") as File | null;
+
     const agreementData: AgreementSubmissionData = {
       clientName: "Mohammed Alenezi",
       clientEmail: "talal@anotik.com",
@@ -148,13 +171,16 @@ export async function submitAgreement(
       accepted: true,
     };
 
-    await sendAgreementEmails(agreementData);
+    await sendAgreementEmails(agreementData, pdfFile);
 
-    console.log(`Agreement accepted by ${agreementData.clientName} at ${getKuwaitTime()}`);
+    console.log(
+      `Agreement accepted by ${agreementData.clientName} at ${getKuwaitTime()}`,
+    );
 
     return {
       success: true,
-      message: "Agreement submitted successfully! Confirmation emails have been sent.",
+      message:
+        "Agreement submitted successfully! Confirmation emails have been sent.",
     };
   } catch (error) {
     console.error("Agreement submission error:", error);
@@ -166,4 +192,3 @@ export async function submitAgreement(
     };
   }
 }
-

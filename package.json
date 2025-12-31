@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
+    "@react-email/components": "^1.0.3",
+    "@react-email/render": "^2.0.1",
     "@react-pdf/renderer": "^4.3.2",
     "@types/imagesloaded": "^4.1.7",
     "bootstrap": "^5.3.8",
@@ -22,6 +24,7 @@
     "nodemailer": "^7.0.11",
     "react": "19.1.0",
     "react-dom": "19.1.0",
+    "react-email": "^5.1.1",
     "sass": "^1.96.0",
     "simple-icons": "^16.2.0",
     "swiper": "^11.2.10"

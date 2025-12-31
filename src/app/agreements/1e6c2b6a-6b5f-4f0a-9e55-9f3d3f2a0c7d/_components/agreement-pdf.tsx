@@ -24,7 +24,7 @@ interface AgreementDocumentProps {
   acceptanceDate?: string;
 }
 
-const AgreementDocument = ({ acceptanceDate }: AgreementDocumentProps) => {
+export const AgreementDocument = ({ acceptanceDate }: AgreementDocumentProps) => {
   const currentDate = new Date().toLocaleDateString("en-UK", {
     year: "numeric",
     month: "long",
