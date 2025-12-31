@@ -4,6 +4,11 @@ import { useActionState, useRef, useEffect, useState } from "react";
 import { submitAgreement } from "../_actions/submit-agreement";
 import dynamic from "next/dynamic";
 
+const AgreementPDF = dynamic(() => import("./agreement-pdf"), {
+  ssr: false,
+  loading: () => <div>Loading PDF component...</div>,
+});
+
 function getKuwaitTime(): string {
   const now = new Date();
   return now.toLocaleString("en-US", {
@@ -19,11 +24,6 @@ function getKuwaitTime(): string {
 }
 
 export default function AgreementContent() {
-  const AgreementPDF = dynamic(() => import("./agreement-pdf"), {
-    ssr: false,
-    loading: () => <div>Loading PDF component...</div>,
-  });
-
   const formRef = useRef<HTMLFormElement>(null);
   const [state, formAction, isPending] = useActionState(submitAgreement, {
     success: false,
