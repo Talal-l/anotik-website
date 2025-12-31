@@ -62,6 +62,7 @@ export default function ThankYouPage() {
                 </div>
               </div>
             </div>
+
           </section>
         </main>
 
