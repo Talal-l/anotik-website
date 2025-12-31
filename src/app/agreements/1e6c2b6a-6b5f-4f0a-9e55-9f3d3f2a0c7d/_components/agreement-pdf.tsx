@@ -7,6 +7,7 @@ import {
   View,
   StyleSheet,
   PDFDownloadLink,
+  PDFViewer,
 } from "@react-pdf/renderer";
 
 // Register fonts
@@ -29,13 +30,6 @@ const AgreementDocument = () => {
   return (
     <Document>
       <Page size="A4" style={styles.page}>
-        {/* Header */}
-        <View style={styles.header} fixed>
-          <Text style={styles.headerText}>
-            Technical Services & Maintenance Agreement
-          </Text>
-        </View>
-
         {/* Document Title */}
         <View style={styles.titleSection}>
           <Text style={styles.mainTitle}>
@@ -106,7 +100,7 @@ const AgreementDocument = () => {
         </View>
 
         {/* Section 2: Scope of Services */}
-        <View style={styles.section}>
+        <View style={styles.section} break>
           <Text style={styles.sectionTitle}>2. Scope of Services</Text>
           <Text style={styles.paragraph}>
             Anotik will provide ongoing technical services and maintenance for
@@ -171,7 +165,7 @@ const AgreementDocument = () => {
         </View>
 
         {/* Section 3: Support & Availability */}
-        <View style={styles.section} break>
+        <View style={styles.section}>
           <Text style={styles.sectionTitle}>3. Support & Availability</Text>
           <Text style={styles.paragraph}>
             Anotik commits to providing up to 24 hours of support per week under
@@ -202,7 +196,7 @@ const AgreementDocument = () => {
         </View>
 
         {/* Section 4: Service Levels */}
-        <View style={styles.section}>
+        <View style={styles.section} break>
           <Text style={styles.sectionTitle}>4. Service Levels</Text>
           <Text style={styles.paragraph}>
             To help us prioritize and manage requests effectively, we categorize
@@ -259,7 +253,7 @@ const AgreementDocument = () => {
         </View>
 
         {/* Section 5: Communication & Requests */}
-        <View style={styles.section} break>
+        <View style={styles.section}>
           <Text style={styles.sectionTitle}>5. Communication & Requests</Text>
           <Text style={styles.paragraph}>
             Clear communication is essential for a successful partnership. We
@@ -283,7 +277,7 @@ const AgreementDocument = () => {
         </View>
 
         {/* Section 6: Changes & Larger Work */}
-        <View style={styles.section}>
+        <View style={styles.section} break>
           <Text style={styles.sectionTitle}>6. Changes & Larger Work</Text>
           <Text style={styles.paragraph}>
             Minor changes, bug fixes, and small updates are included in the
@@ -326,7 +320,7 @@ const AgreementDocument = () => {
         </View>
 
         {/* Section 8: Security & Data */}
-        <View style={styles.section} break>
+        <View style={styles.section}>
           <Text style={styles.sectionTitle}>8. Security & Data</Text>
           <Text style={styles.paragraph}>
             We take security seriously and follow industry best practices to
@@ -351,7 +345,7 @@ const AgreementDocument = () => {
         </View>
 
         {/* Section 9: Pricing & Billing */}
-        <View style={styles.section}>
+        <View style={styles.section} break>
           <Text style={styles.sectionTitle}>9. Pricing & Billing</Text>
           <Text style={styles.paragraph}>
             Services under this agreement are provided on a monthly retainer
@@ -397,7 +391,7 @@ const AgreementDocument = () => {
         </View>
 
         {/* Section 11: Termination & Transition */}
-        <View style={styles.section} break>
+        <View style={styles.section}>
           <Text style={styles.sectionTitle}>11. Termination & Transition</Text>
           <Text style={styles.paragraph}>
             If either party wishes to end this agreement, we ask for 30 days'
@@ -420,7 +414,7 @@ const AgreementDocument = () => {
         </View>
 
         {/* Section 12: Closing Statement */}
-        <View style={styles.section}>
+        <View style={[styles.section, { flexGrow: 1 }]} break>
           <Text style={styles.sectionTitle}>12. Closing Statement</Text>
           <Text style={styles.paragraph}>
             This agreement represents our commitment to being your trusted
@@ -442,7 +436,7 @@ const AgreementDocument = () => {
         </View>
 
         {/* Acceptance Record */}
-        <View style={styles.section} break>
+        <View style={[styles.section, { justifySelf: "end" }]}>
           <Text style={styles.sectionTitle}>Acceptance Record</Text>
           <View style={styles.acceptanceBox}>
             <View style={styles.acceptanceRow}>
@@ -471,10 +465,11 @@ const AgreementDocument = () => {
         </View>
 
         {/* Footer with page numbers */}
+
         <Text
-          style={styles.pageNumber}
+          style={styles.pageNumbers}
           render={({ pageNumber, totalPages }) =>
-            `Page ${pageNumber} of ${totalPages}`
+            `${pageNumber} / ${totalPages}`
           }
           fixed
         />
@@ -484,19 +479,28 @@ const AgreementDocument = () => {
 };
 
 const styles = StyleSheet.create({
+  pageNumbers: {
+    position: "absolute",
+    minHeight: 100,
+    textAlign: "center",
+    left: 0,
+    right: 0,
+    // for some strange reason if we just use bottom: 0 it only renders on the 4th page and after but never before!
+    top: 820,
+  },
   page: {
-    paddingTop: 50,
-    paddingBottom: 60,
-    paddingHorizontal: 50,
+    display: "flex",
+    flexDirection: "column",
+    padding: 50,
     fontSize: 10,
     fontFamily: "Helvetica",
     lineHeight: 1.6,
   },
   header: {
-    position: "absolute",
-    top: 20,
-    left: 50,
-    right: 50,
+    // position: "absolute",
+    // top: 20,
+    // left: 50,
+    // right: 50,
     borderBottomWidth: 1,
     borderBottomColor: "#333",
     borderBottomStyle: "solid",
@@ -542,6 +546,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   section: {
+    flexGrow: 1,
     marginBottom: 20,
   },
   sectionTitle: {
@@ -658,35 +663,39 @@ const styles = StyleSheet.create({
     color: "#333",
     flex: 1,
   },
-  pageNumber: {
-    position: "absolute",
-    fontSize: 9,
-    bottom: 30,
-    left: 0,
-    right: 0,
-    textAlign: "center",
-    color: "#666",
+  footer: {
+    alignSelf: "center",
   },
 });
 
 export default function AgreementPDF() {
   return (
-    <PDFDownloadLink
-      document={<AgreementDocument />}
-      fileName="Maintenance_Proposal_Dueling_Area.pdf"
-      style={{
-        textDecoration: "none",
-        padding: "10px 20px",
-        color: "#fff",
-        backgroundColor: "#000",
-        borderRadius: "4px",
-        display: "inline-block",
-      }}
-    >
-      {({ blob, url, loading, error }) => {
-        if (error) return "Error generating PDF";
-        return loading ? "Preparing PDF..." : "Download PDF";
-      }}
-    </PDFDownloadLink>
+    <div>
+      <PDFDownloadLink
+        document={<AgreementDocument />}
+        fileName="Maintenance_Proposal_Dueling_Area.pdf"
+        style={{
+          textDecoration: "none",
+          padding: "10px 20px",
+          color: "#fff",
+          backgroundColor: "#000",
+          borderRadius: "4px",
+          display: "inline-block",
+        }}
+      >
+        {({ blob, url, loading, error }) => {
+          if (error) return "Error generating PDF";
+          return loading ? "Preparing PDF..." : "Download PDF";
+        }}
+      </PDFDownloadLink>
+      <PDFViewer
+        style={{
+          width: "100%",
+          height: "1000px",
+        }}
+      >
+        <AgreementDocument />
+      </PDFViewer>
+    </div>
   );
 }

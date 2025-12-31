@@ -52,13 +52,6 @@ export default function AgreementContent() {
     }
   }, []);
 
-  const handlePrint = () => {
-    const timestampElement = document.getElementById("print-timestamp");
-    if (timestampElement) {
-      timestampElement.textContent = getKuwaitTime();
-    }
-  };
-
   return (
     <section className="agreement-area section-spacing-top">
       <div className="container large">
@@ -480,10 +473,7 @@ export default function AgreementContent() {
                 </p>
               </div>
 
-              <div
-                className="agreement-section print-only"
-                style={{ display: "none" }}
-              >
+              <div className="agreement-section " style={{ display: "none" }}>
                 <h3 className="agreement-section-title">Acceptance Record</h3>
                 <div className="acceptance-record">
                   <div className="record-item">
@@ -513,18 +503,9 @@ export default function AgreementContent() {
             </div>
 
             <div className="agreement-actions">
-              <button
-                type="button"
-                onClick={handlePrint}
-                className="rr-btn print-btn"
-              >
-                <span className="btn-wrap">
-                  <span className="text-one">Print</span>
-                  <span className="text-two">Print</span>
-                </span>
-              </button>
               <AgreementPDF />
             </div>
+            <AgreementPDF />
 
             <div className="agreement-acceptance">
               <form ref={formRef} action={formAction} id="agreement-form">
