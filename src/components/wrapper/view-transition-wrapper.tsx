@@ -64,6 +64,10 @@ export default function ViewTransitionWrapper({
         const link = target.closest("a[href]") as HTMLAnchorElement;
         
         if (link && link.href) {
+          if (link.hasAttribute("download") || link.href.startsWith("blob:")) {
+            return;
+          }
+          
           const url = new URL(link.href);
           const currentUrl = new URL(window.location.href);
           
