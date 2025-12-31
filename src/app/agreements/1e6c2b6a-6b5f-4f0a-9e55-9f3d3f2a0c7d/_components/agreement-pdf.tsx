@@ -20,8 +20,12 @@ Font.register({
   ],
 });
 
-const AgreementDocument = () => {
-  const currentDate = new Date().toLocaleDateString("en-US", {
+interface AgreementDocumentProps {
+  acceptanceDate?: string;
+}
+
+const AgreementDocument = ({ acceptanceDate }: AgreementDocumentProps) => {
+  const currentDate = new Date().toLocaleDateString("en-UK", {
     year: "numeric",
     month: "long",
     day: "numeric",
@@ -30,6 +34,13 @@ const AgreementDocument = () => {
   return (
     <Document>
       <Page size="A4" style={styles.page}>
+        {/* Header */}
+        {/*<View style={styles.header} fixed>
+          <Text style={styles.headerText}>
+            Technical Services & Maintenance Agreement
+          </Text>
+        </View>*/}
+
         {/* Document Title */}
         <View style={styles.titleSection}>
           <Text style={styles.mainTitle}>
@@ -454,11 +465,9 @@ const AgreementDocument = () => {
               <Text style={styles.acceptanceValue}>500 KD / month</Text>
             </View>
             <View style={styles.acceptanceRow}>
-              <Text style={styles.acceptanceLabel}>
-                Date/Time of Acceptance:
-              </Text>
+              <Text style={styles.acceptanceLabel}>Date:</Text>
               <Text style={styles.acceptanceValue}>
-                [To be recorded upon acceptance]
+                {acceptanceDate || "[To be recorded upon acceptance]"}
               </Text>
             </View>
           </View>
@@ -668,34 +677,23 @@ const styles = StyleSheet.create({
   },
 });
 
-export default function AgreementPDF() {
+interface AgreementPDFProps {
+  acceptanceDate?: string;
+}
+
+export default function AgreementPDF({ acceptanceDate }: AgreementPDFProps) {
   return (
     <div>
       <PDFDownloadLink
-        document={<AgreementDocument />}
+        document={<AgreementDocument acceptanceDate={acceptanceDate} />}
         fileName="Maintenance_Proposal_Dueling_Area.pdf"
-        style={{
-          textDecoration: "none",
-          padding: "10px 20px",
-          color: "#fff",
-          backgroundColor: "#000",
-          borderRadius: "4px",
-          display: "inline-block",
-        }}
+        className="download-pdf-btn"
       >
         {({ blob, url, loading, error }) => {
           if (error) return "Error generating PDF";
           return loading ? "Preparing PDF..." : "Download PDF";
         }}
       </PDFDownloadLink>
-      <PDFViewer
-        style={{
-          width: "100%",
-          height: "1000px",
-        }}
-      >
-        <AgreementDocument />
-      </PDFViewer>
     </div>
   );
 }

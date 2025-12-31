@@ -1,6 +1,6 @@
 "use client";
 
-import { useActionState, useRef, useEffect, useState } from "react";
+import { useActionState, useRef } from "react";
 import { submitAgreement } from "../_actions/submit-agreement";
 import dynamic from "next/dynamic";
 
@@ -11,16 +11,11 @@ const AgreementPDF = dynamic(() => import("./agreement-pdf"), {
 
 function getKuwaitTime(): string {
   const now = new Date();
-  return now.toLocaleString("en-US", {
-    timeZone: "Asia/Kuwait",
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-    hour12: true,
-  });
+  const kuwaitDate = new Date(now.toLocaleString("en-US", { timeZone: "Asia/Kuwait" }));
+  const day = String(kuwaitDate.getDate()).padStart(2, "0");
+  const month = String(kuwaitDate.getMonth() + 1).padStart(2, "0");
+  const year = kuwaitDate.getFullYear();
+  return `${day}/${month}/${year}`;
 }
 
 export default function AgreementContent() {
@@ -29,28 +24,8 @@ export default function AgreementContent() {
     success: false,
     message: "",
   });
-  const [printTimestamp, setPrintTimestamp] = useState<string>("");
 
-  useEffect(() => {
-    if (state.success && formRef.current) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-      const acceptanceTime = getKuwaitTime();
-      setPrintTimestamp(acceptanceTime);
-      const timestampElement = document.getElementById("print-timestamp");
-      if (timestampElement) {
-        timestampElement.textContent = acceptanceTime;
-      }
-    }
-  }, [state.success]);
-
-  useEffect(() => {
-    const initialTime = getKuwaitTime();
-    setPrintTimestamp(initialTime);
-    const timestampElement = document.getElementById("print-timestamp");
-    if (timestampElement && !state.success) {
-      timestampElement.textContent = initialTime;
-    }
-  }, []);
+  const acceptanceDate = getKuwaitTime();
 
   return (
     <section className="agreement-area section-spacing-top">
@@ -494,18 +469,13 @@ export default function AgreementContent() {
                     <span className="record-label">
                       Date/Time of Acceptance:
                     </span>
-                    <span className="record-value" id="print-timestamp">
-                      {printTimestamp || "Not yet accepted"}
+                    <span className="record-value">
+                      {acceptanceDate}
                     </span>
                   </div>
                 </div>
               </div>
             </div>
-
-            <div className="agreement-actions">
-              <AgreementPDF />
-            </div>
-            <AgreementPDF />
 
             <div className="agreement-acceptance">
               <form ref={formRef} action={formAction} id="agreement-form">
@@ -523,29 +493,32 @@ export default function AgreementContent() {
                     </span>
                   </label>
                 </div>
-                <div className="submit-btn">
-                  <button
-                    type="submit"
-                    className="rr-btn"
-                    disabled={isPending || state.success}
-                  >
-                    <span className="btn-wrap">
-                      <span className="text-one">
-                        {isPending
-                          ? "Submitting..."
-                          : state.success
-                            ? "Submitted"
-                            : "Confirm & Submit"}
+                <div className="agreement-actions">
+                  <div className="submit-btn">
+                    <button
+                      type="submit"
+                      className="rr-btn"
+                      disabled={isPending || state.success}
+                    >
+                      <span className="btn-wrap">
+                        <span className="text-one">
+                          {isPending
+                            ? "Submitting..."
+                            : state.success
+                              ? "Submitted"
+                              : "Confirm & Submit"}
+                        </span>
+                        <span className="text-two">
+                          {isPending
+                            ? "Submitting..."
+                            : state.success
+                              ? "Submitted"
+                              : "Confirm & Submit"}
+                        </span>
                       </span>
-                      <span className="text-two">
-                        {isPending
-                          ? "Submitting..."
-                          : state.success
-                            ? "Submitted"
-                            : "Confirm & Submit"}
-                      </span>
-                    </span>
-                  </button>
+                    </button>
+                  </div>
+                  <AgreementPDF acceptanceDate={acceptanceDate} />
                 </div>
                 {state.message && (
                   <div
