@@ -61,23 +61,11 @@ export default function AgreementContent() {
           <div className="agreement-content fade-anim">
             <div className="section-header">
               <div className="section-title-wrapper">
+                <div className="subtitle-wrapper"></div>
                 <div className="title-wrapper">
                   <h2 className="section-title font-sequelsans-romanbody">
-                    SERVICE AGREEMENT
+                    Maintenance Proposal For Dueling Area
                   </h2>
-                </div>
-                <div className="subtitle-wrapper">
-                  <p className="section-subtitle">Technical Services & Maintenance Proposal</p>
-                </div>
-                <div className="prepared-for-info">
-                  <p className="prepared-for-item">
-                    <span className="prepared-for-label">Prepared for:</span>
-                    <span className="prepared-for-value">Dueling Area</span>
-                  </p>
-                  <p className="prepared-for-item">
-                    <span className="prepared-for-label">Authorized Representative:</span>
-                    <span className="prepared-for-value">Mohammed Alenezi</span>
-                  </p>
                 </div>
               </div>
               <div className="proposal-meta">
@@ -106,24 +94,21 @@ export default function AgreementContent() {
                 <div className="engagement-summary">
                   <div className="summary-item">
                     <span className="summary-label">
-                      Client / Company Name:
+                      Client Name / Company:
                     </span>
                     <span className="summary-value">Mohammed Alenezi</span>
                   </div>
                   <div className="summary-item">
                     <span className="summary-label">Email Address:</span>
                     <span className="summary-value">
-                      mohammed@duelingarea.com
+                      Mohammed@duelingarea.com
                     </span>
                   </div>
                   <div className="summary-item">
                     <span className="summary-label">Monthly Retainer:</span>
-                    <span className="summary-value highlight">500 KD / month</span>
+                    <span className="summary-value highlight">500 KD</span>
                   </div>
                 </div>
-                <p className="reassurance-text">
-                  This proposal reflects the agreed scope and pricing discussed as of the date above.
-                </p>
                 <p className="agreement-text">
                   Thank you for considering Anotik as your technical partner.
                   This proposal outlines our recommended approach to providing
@@ -399,7 +384,7 @@ export default function AgreementContent() {
                 </h3>
                 <p className="agreement-text">
                   Services under this agreement are provided on a monthly
-                  retainer basis. The monthly fee of <strong>500 KD / month</strong>{" "}
+                  retainer basis. The monthly fee of <strong>500 KD</strong>{" "}
                   covers up to 24 hours of support per week and includes all the
                   services outlined in this agreement.
                 </p>
@@ -503,7 +488,7 @@ export default function AgreementContent() {
                   <div className="record-item">
                     <span className="record-label">Client Email:</span>
                     <span className="record-value">
-                      mohammed@duelingarea.com
+                      Mohammed@duelingarea.com
                     </span>
                   </div>
                   <div className="record-item">
