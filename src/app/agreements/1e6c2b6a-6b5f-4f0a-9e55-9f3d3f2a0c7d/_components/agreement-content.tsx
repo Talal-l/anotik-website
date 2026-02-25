@@ -1,6 +1,6 @@
 "use client";
 
-import { useActionState, useRef, startTransition, useEffect } from "react";
+import { useActionState, useRef, useState, startTransition, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { submitAgreement } from "../_actions/submit-agreement";
 import dynamic from "next/dynamic";
@@ -29,6 +29,8 @@ export default function AgreementContent() {
     message: "",
   });
 
+  const [clientName, setClientName] = useState("");
+  const [committedName, setCommittedName] = useState("");
   const acceptanceDate = getKuwaitTime();
 
   useEffect(() => {
@@ -493,7 +495,7 @@ export default function AgreementContent() {
                 action={async (formData: FormData) => {
                   try {
                     const pdfBlob = await pdf(
-                      <AgreementDocument acceptanceDate={acceptanceDate} />
+                      <AgreementDocument acceptanceDate={acceptanceDate} clientName={clientName} />
                     ).toBlob();
                     const pdfFile = new File([pdfBlob], "agreement.pdf", {
                       type: "application/pdf",
@@ -511,6 +513,42 @@ export default function AgreementContent() {
                 }}
                 id="agreement-form"
               >
+                <div className="acceptance-name-input">
+                  <label htmlFor="clientName">Full Name</label>
+                  <input
+                    type="text"
+                    id="clientName"
+                    name="clientName"
+                    required
+                    placeholder="Type your full name"
+                    value={clientName}
+                    onChange={(e) => setClientName(e.target.value)}
+                    onBlur={() => setCommittedName(clientName)}
+                    disabled={isPending || state.success}
+                  />
+                </div>
+                <div className="acceptance-name-input">
+                  <label htmlFor="clientEmail">Email Address</label>
+                  <input
+                    type="email"
+                    id="clientEmail"
+                    name="clientEmail"
+                    required
+                    placeholder="Type your email address"
+                    disabled={isPending || state.success}
+                  />
+                </div>
+                <div className="acceptance-name-input">
+                  <label htmlFor="clientPhone">Phone Number</label>
+                  <input
+                    type="tel"
+                    id="clientPhone"
+                    name="clientPhone"
+                    required
+                    placeholder="Type your phone number"
+                    disabled={isPending || state.success}
+                  />
+                </div>
                 <div className="acceptance-checkbox">
                   <label>
                     <input
@@ -550,7 +588,7 @@ export default function AgreementContent() {
                       </span>
                     </button>
                   </div>
-                  <AgreementPDF acceptanceDate={acceptanceDate} />
+                  <AgreementPDF acceptanceDate={acceptanceDate} clientName={committedName} />
                 </div>
                 {state.message && (
                   <div

@@ -1,4 +1,5 @@
 "use client";
+import { useMemo } from "react";
 import {
   Font,
   Document,
@@ -22,9 +23,10 @@ Font.register({
 
 interface AgreementDocumentProps {
   acceptanceDate?: string;
+  clientName?: string;
 }
 
-export const AgreementDocument = ({ acceptanceDate }: AgreementDocumentProps) => {
+export const AgreementDocument = ({ acceptanceDate, clientName }: AgreementDocumentProps) => {
   const currentDate = new Date().toLocaleDateString("en-UK", {
     year: "numeric",
     month: "long",
@@ -452,7 +454,15 @@ export const AgreementDocument = ({ acceptanceDate }: AgreementDocumentProps) =>
           <View style={styles.acceptanceBox}>
             <View style={styles.acceptanceRow}>
               <Text style={styles.acceptanceLabel}>Client Name:</Text>
-              <Text style={styles.acceptanceValue}>Mohammed Alenezi</Text>
+              <Text style={styles.acceptanceValue}>
+                {clientName || "Mohammed Alenezi"}
+              </Text>
+            </View>
+            <View style={styles.acceptanceRow}>
+              <Text style={styles.acceptanceLabel}>Accepted By:</Text>
+              <Text style={styles.acceptanceValue}>
+                {clientName || "[To be recorded upon acceptance]"}
+              </Text>
             </View>
             <View style={styles.acceptanceRow}>
               <Text style={styles.acceptanceLabel}>Client Email:</Text>
@@ -679,13 +689,19 @@ const styles = StyleSheet.create({
 
 interface AgreementPDFProps {
   acceptanceDate?: string;
+  clientName?: string;
 }
 
-export default function AgreementPDF({ acceptanceDate }: AgreementPDFProps) {
+export default function AgreementPDF({ acceptanceDate, clientName }: AgreementPDFProps) {
+  const document = useMemo(
+    () => <AgreementDocument acceptanceDate={acceptanceDate} clientName={clientName} />,
+    [acceptanceDate, clientName],
+  );
+
   return (
     <div>
       <PDFDownloadLink
-        document={<AgreementDocument acceptanceDate={acceptanceDate} />}
+        document={document}
         fileName="Maintenance_Proposal_Dueling_Area.pdf"
         className="download-pdf-btn"
       >

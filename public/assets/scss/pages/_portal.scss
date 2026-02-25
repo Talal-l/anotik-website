@@ -277,6 +277,52 @@
     }
   }
 
+  .agreement-subsection-title {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--primary);
+    margin-top: 30px;
+    margin-bottom: 16px;
+    font-family: var(--font_sequelsansromanbody);
+
+    @media #{$xl} {
+      font-size: 20px;
+    }
+
+    @media #{$lg} {
+      font-size: 18px;
+    }
+  }
+
+  .agreement-callout {
+    background-color: rgba(163, 33, 72, 0.05);
+    border-left: 3px solid var(--action);
+    border-radius: 4px;
+    padding: 16px 20px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+    @include dark {
+      background-color: var(--border);
+    }
+
+    .agreement-text {
+      margin-bottom: 0;
+    }
+  }
+
+  .agreement-note {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--primary);
+    font-family: var(--font_dmsans);
+    margin-top: 16px;
+    margin-bottom: 0;
+    opacity: 0.7;
+    font-style: italic;
+  }
+
   .service-levels {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -387,6 +433,49 @@
     }
   }
 
+  .acceptance-name-input {
+    margin-bottom: 30px;
+
+    label {
+      display: block;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--primary);
+      font-family: var(--font_dmsans);
+      margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+      width: 100%;
+      max-width: 400px;
+      padding: 14px 18px;
+      font-size: 16px;
+      font-family: var(--font_dmsans);
+      color: var(--primary);
+      background-color: var(--bg);
+      border: 2px solid var(--border);
+      border-radius: 8px;
+      outline: none;
+      transition: border-color 0.3s;
+
+      &::placeholder {
+        color: var(--primary);
+        opacity: 0.4;
+      }
+
+      &:focus {
+        border-color: var(--action);
+      }
+
+      &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+    }
+  }
+
   .acceptance-checkbox {
     margin-bottom: 30px;
 
@@ -480,6 +569,7 @@
     .agreement-actions,
     .agreement-acceptance,
     .submit-btn,
+    .acceptance-name-input,
     .acceptance-checkbox,
     .response-message {
       display: none !important;

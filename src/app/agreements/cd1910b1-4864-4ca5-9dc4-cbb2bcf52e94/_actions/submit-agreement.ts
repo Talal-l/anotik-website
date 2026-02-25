@@ -9,7 +9,7 @@ type AgreementSubmissionData = {
   clientName: string;
   clientEmail: string;
   clientPhone: string;
-  monthlyRetainer: string;
+  developmentFee: string;
   accepted: boolean;
 };
 
@@ -63,7 +63,7 @@ async function sendAgreementEmails(
     user;
   const agreementUrl = `${
     process.env.NEXT_PUBLIC_SITE_URL || "https://anotik.com"
-  }/agreements/1e6c2b6a-6b5f-4f0a-9e55-9f3d3f2a0c7d`;
+  }/agreements/cd1910b1-4864-4ca5-9dc4-cbb2bcf52e94`;
   const timestamp = getKuwaitTime();
 
   const transporter = nodemailer.createTransport({
@@ -77,28 +77,28 @@ async function sendAgreementEmails(
   });
 
   const emailContent = `
-Agreement Accepted - ${data.clientName}
+Proposal Accepted - ${data.clientName}
 
 Client Name: ${data.clientName}
 Client Email: ${data.clientEmail}
 Client Phone: ${data.clientPhone}
-Monthly Retainer: ${data.monthlyRetainer}
+Development Fee: ${data.developmentFee}
 Accepted: ${data.accepted ? "Yes" : "No"}
 Timestamp: ${timestamp}
-Agreement URL: ${agreementUrl}
+Proposal URL: ${agreementUrl}
   `.trim();
 
   const htmlContent = `
     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-      <h2 style="color: #333;">Agreement Accepted - ${escapeHtml(data.clientName)}</h2>
+      <h2 style="color: #333;">Proposal Accepted - ${escapeHtml(data.clientName)}</h2>
       <div style="background-color: #f5f5f5; padding: 20px; border-radius: 5px; margin: 20px 0;">
         <p><strong>Client Name:</strong> ${escapeHtml(data.clientName)}</p>
         <p><strong>Client Email:</strong> <a href="mailto:${escapeHtml(data.clientEmail)}">${escapeHtml(data.clientEmail)}</a></p>
         <p><strong>Client Phone:</strong> ${escapeHtml(data.clientPhone)}</p>
-        <p><strong>Monthly Retainer:</strong> ${escapeHtml(data.monthlyRetainer)}</p>
+        <p><strong>Development Fee:</strong> ${escapeHtml(data.developmentFee)}</p>
         <p><strong>Accepted:</strong> ${data.accepted ? "Yes" : "No"}</p>
         <p><strong>Timestamp:</strong> ${escapeHtml(timestamp)}</p>
-        <p><strong>Agreement URL:</strong> <a href="${escapeHtml(agreementUrl)}">${escapeHtml(agreementUrl)}</a></p>
+        <p><strong>Proposal URL:</strong> <a href="${escapeHtml(agreementUrl)}">${escapeHtml(agreementUrl)}</a></p>
       </div>
     </div>
   `;
@@ -107,7 +107,7 @@ Agreement URL: ${agreementUrl}
     React.createElement(AgreementEmail, {
       clientName: data.clientName,
       clientEmail: data.clientEmail,
-      monthlyRetainer: data.monthlyRetainer,
+      developmentFee: data.developmentFee,
       timestamp,
       agreementUrl,
     }),
@@ -117,7 +117,7 @@ Agreement URL: ${agreementUrl}
 
   const pdfAttachment = pdfBuffer
     ? {
-        filename: "Maintenance_Proposal_Dueling_Area.pdf",
+        filename: "Real_Estate_Platform_Proposal.pdf",
         content: pdfBuffer,
       }
     : null;
@@ -127,7 +127,7 @@ Agreement URL: ${agreementUrl}
       from: `"Anotik" <${user}>`,
       replyTo: data.clientEmail,
       to: internalRecipient,
-      subject: `Agreement Accepted - ${data.clientName}`,
+      subject: `Proposal Accepted - ${data.clientName}`,
       text: emailContent,
       html: htmlContent,
       attachments: pdfAttachment ? [pdfAttachment] : [],
@@ -136,8 +136,8 @@ Agreement URL: ${agreementUrl}
       from: `"Anotik" <${user}>`,
       replyTo: user,
       to: data.clientEmail,
-      subject: `Agreement Confirmation - Anotik`,
-      text: `Dear ${data.clientName},\n\nThank you for accepting the agreement. We're excited to work with you!\n\nAgreement Details:\n- Monthly Retainer: ${data.monthlyRetainer}\n- Accepted: ${timestamp}\n\nA copy of your signed agreement has been attached to this email for your records.\n\nYou can view the agreement at: ${agreementUrl}\n\nBest regards,\nAnotik Team`,
+      subject: `Proposal Confirmation - Anotik`,
+      text: `Dear ${data.clientName},\n\nThank you for accepting the proposal. We're excited to work with you!\n\nProposal Details:\n- Development Fee: ${data.developmentFee}\n- Accepted: ${timestamp}\n\nA copy of your signed proposal has been attached to this email for your records.\n\nYou can view the proposal at: ${agreementUrl}\n\nBest regards,\nAnotik Team`,
       html: clientEmailHtml,
       attachments: pdfAttachment ? [pdfAttachment] : [],
     }),
@@ -185,7 +185,7 @@ export async function submitAgreement(
     if (!accepted) {
       return {
         success: false,
-        message: "Please accept the agreement terms to proceed.",
+        message: "Please accept the proposal terms to proceed.",
       };
     }
 
@@ -195,23 +195,23 @@ export async function submitAgreement(
       clientName,
       clientEmail,
       clientPhone,
-      monthlyRetainer: "500 KD",
+      developmentFee: "1,950 KWD",
       accepted: true,
     };
 
     await sendAgreementEmails(agreementData, pdfFile);
 
     console.log(
-      `Agreement accepted by ${agreementData.clientName} at ${getKuwaitTime()}`,
+      `Proposal accepted by ${agreementData.clientName} at ${getKuwaitTime()}`,
     );
 
     return {
       success: true,
       message:
-        "Agreement submitted successfully! Confirmation emails have been sent.",
+        "Proposal submitted successfully! Confirmation emails have been sent.",
     };
   } catch (error) {
-    console.error("Agreement submission error:", error);
+    console.error("Proposal submission error:", error);
     const errorMessage =
       error instanceof Error ? error.message : "An unknown error occurred";
     return {
